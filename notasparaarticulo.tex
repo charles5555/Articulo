@@ -1,10 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{xcolor}
 
-\title{Quantum H theorem, Variational Entropy, and Relaxation Processes}
+\title{Quantum H theorem, variational entropy, and relaxation processes}
 \author{labfqot}
 \date{March 2020}
 
@@ -13,21 +12,61 @@
 \maketitle
 
 \section{Abstract}
-We review in detail the quantum formulation of the Boltzamnns' H theorem. Starting from a H functional defined in the energy space, by means a variational procedure, we demonstrate the analogous of the quantum H theorem. At difference of the Tolmans' procedure to demonstrate the H theorem,  we start from the hypothesis of an out of equilibrium, spatially non homogeneous system, and show that when $\frac{dH}{dt}=0$ the system reaches the equilibrium condition and then the proposed H functional becomes the well known expression of the entropy of an ideal quantum gas. The time evolution of the system occurs in such a way that $\frac{dH}{dt}<0$. Based on this, we propose a theoretical scheme that allows to describe the time evolution toward the equilibrium of an ideal quantum gas, it is the relaxation process of an out equilibrium.
+We review in detail the quantum formulation of the Boltzamnns' H theorem. Starting from a H functional defined in the energy space. By means a variational procedure, we demonstrate the analogous of the quantum H theorem. At difference of the Tolmans' procedure to demonstrate the H theorem,  we start from the hypothesis of an out of equilibrium, spatially non homogeneous, system, and show that when $\frac{dH}{dt}=0$, the system reaches the equilibrium condition and then proposed H functional becomes the well known expression of the entropy of an ideal quantum gas. The time evolution of the system happens in such a way that $\frac{dH}{dt}<0$. Based on this, we propose a theoretical scheme that allows to describe the time evolution toward the equilibrium of an ideal quantum gas, it is the relaxation process of an out equilibrium.
+
+
+
 
 
 %Variational entropy is defined as new $H$ functional that, performing varitational procedures, the Bose-Einstein and Fermi-Dirac distributions are obtained in the quantum scheme and the Maxwell-Boltzman distribution in the classical scheme. The $H$ theorem is proved in the quantum and classical schemes making use of the system is in a relaxation process. In t ssical scheme, a new $H$ functional is proposed according to the $H$ functional proposed by Boltzman. Besides, a ent expression for quantum systems is found in the varational procedure.%
 
 \section{Introduction}
-The evolution of the systems is a topic analyzed in many schemes in physics. The time reversal invariance is shown in classical mechanics as a symmetry of systems, that is, for any classical system, if one inverts the flux of time, the system keeps the same evolution\cite{goldstein}. That symmetry is presented in quantum mechanics \cite{sakurai}. That symmetry was broken in statistical mechanics when Boltzmann introduced the $H$-theorem. Using the Boltzmann homogeneous transport equation, the molecular chaos hypothesis and a homogeneous distribution function, Boltzmann showed that the evolution of the system is always in one preferential direction \cite{huang}.\\
-In other hand, the Poincaré's theorem establishes that any system placed in any initial conditions, in a certain finite time, the system will be in the same initial conditions, making a paradox with the $H$-theorem \cite{paradox1, paradox2}. That paradox was solved by Boltzmann calculating the time that the system takes to arrive to the initial conditions. Than number is extremely big, even more that the time of life of the universe.
-The behavior of the $H$ functional in times bigger than collisions, will be soft and decreasing. When the change of $H$ is zero, the system will be in equilibrium and the corresponding distribution function will be the Maxwell-Boltzmann distribution\cite{huang, patrick}. \\
-In Quantum Mechanics, Tolman established the quantum $H$ theorem \cite{tolman} using the probability transition relation, the random phases hypothesis and a homogeneous distribution function. The lack of the quantum Boltzmann transport equation in analogy to classical statistical mechanics has stopped the development of the quantum transport formulation and the quantum non-equilibrium formulation. In order to find answers to conceptual questions for the quantum $H$ theorem, the scientific community has been studying it. The quantum $H$ theorem was proved using not only binary conditions. That work uses n-colissions to prove the quantum $H$ theorem, this idea completes in a classical scheme the $H$ theorem \cite{binary}. There are some special conditions in quantum mechanics where the second law of thermodynamics is violated \cite{contradictions}, making that the quantum $H$ theorem is not thoroughly understood.\\
-In transport phenomena, the Boltzmann transport equation is solved using the zero and first order approximation. When one uses the zero order approximation, one finds that the total heat flux in the system is zero, that is a contradiction. However, when one applies the first order approximation, one finds the evolution operator expressed by the left expression from the Boltzmann transport equation. That evolution operator tends to zero when time tends to infinity, this is the equilibrium condition\cite{reif}. This result, that describes inhomogeneties, is not expressed in the $H$ theorem.\\
-In order to contribute to a consistent $H$ theorem, in this paper, the quantum and classical $H$ theorem will be proved proposing a new $H$ functional for both cases considering a non-homogeneous distribution function and a system divided into imaginary cells. With those assumptions, particles transport is allowed inside the system. Performing variational procedures, one finds that, in the quantum case, Bose-Einstein and Fermi-Dirac distributions minimize the $H$ functional and, in the classical case, Maxwell-Boltzmann distribution minimize the other $H$ functional. A expression of entropy to quantum systems will be obtained in the variational procedure. In other hand, making use of the hypothesis that the system is in a relaxation process and the non-homogeneous distribution function, the $H$ theorem will be proved for both cases.
 
+%The evolution of the systems is a topic analyzed in many schemes in physics. The time reversal invariance is shown in classical mechanics as a symmetry of systems, that is, for any classical system, if one inverts the flux of time, the system keeps the same evolution\cite{goldstein}. That symmetry is presented in quantum mechanics \cite{sakurai}. That symmetry was broken in statistical mechanics when Boltzmann introduced the $H$-theorem. Using the Boltzmann homogeneous transport equation, the molecular chaos hypothesis and a homogeneous distribution function, Boltzmann showed that the evolution of the system is always in one preferential direction \cite{huang}.In other hand, the PoincarÃ©'s theorem establishes that any system placed in any initial conditions, in a certain finite time, the system will be in the same initial conditions, making a paradox with the $H$-theorem \cite{paradox1, paradox2}. That paradox was solved by Boltzmann calculating the time that the system takes to arrive to the initial conditions. Than number is extremely big, even more that the time of life of the universe.%
 
-\section{Equilibrium}
+It is well known for the Physics community that the set of schemes, methods, techniques, and approximations of Statistical Physics to deal with equilibrium systems, are relatively well stablished. Liouvilles' theorem, Ergodic hypothesis and the main corollary of the H theorem, are some of the conceptual basis on which the theoretical structures of Statistical Thermodynamics have been grown and are sustained \cite{huang, reif, patrick}. This is not the case of the Statistical Physics of out of equilibrium systems, in which Poincares' theorem, Ergodic hypothesis, and H theorem establish the general conceptual basis of the theoretical developments, but these later are not as general and satisfactory as those for equilibrium [ref]. There are of course some well stablished theoretical schemes to deal with out of equilibrium systems like those developed by Onsager known as linear thermodynamics, and some few other restricted developments proposed by some outstanding theoretical authors \cite{kei, onsager}. Nevertheless, even the very fundamentals of out of equilibrium Statistical physics like Boltzmanns' H Theorem, still presents some aspects that deserve some review in order to accomplish better consistency [ref]. In the framework of classical mechanics, the prove of the Boltzmanns' H theorem in the scheme of Kinetic Theory of dilute gases, is founded on the Boltzmann Transport  Equation, which in turn is supported on the Molecular Chaos Hypothesis. 
+It is commonly accepted that BHT solves in a more complete way the Poicares' paradox and concilies the the theoretical conflict between a time reversible microscopic dynamics and an inherent macroscopic one \cite{paradox1, paradox2}. The quantum version of H Theorem, still currently is under analysis and discussion \cite{quantum1, quantum2, quantum3, quantum4}.
+
+%The behavior of the $H$ functional in times bigger than collisions, will be soft and decreasing. When the change of $H$ is zero, the system will be in equilibrium and the corresponding distribution function will be the Maxwell-Boltzmann distribution\cite{huang, patrick}. \\%
+
+%revisar la redaccion y coherencia de estas ideas% 
+One of those discussions is the propose of Tolman. He established the quantum $H$ theorem \cite{tolman} using the probability transition relation, the random phases hypothesis and a homogeneous distribution function. The lack of the quantum Boltzmann transport equation in analogy to classical statistical mechanics has stopped the development of the quantum transport formulation and the quantum non-equilibrium formulation. Another discission is the prove of the quantum $H$ theorem using n-colissions. This idea completes the $H$ theorem in a classical and quantum scheme \cite{binary}. There are some special conditions in quantum mechanics where the second law of thermodynamics is violated \cite{contradictions}, making that the quantum $H$ theorem is not thoroughly understood.\\
+In transport phenomena, the Boltzmann transport equation is solved using the zero and first order approximation. When one uses the zero order approximation, one finds that the total heat flux in the system is zero, that is a contradiction. However, when one applies the first order approximation, one finds the evolution operator expressed by the left expression from the Boltzmann transport equation. That evolution operator tends to zero when time tends to infinity, this is the equilibrium condition \cite{reif}. This result, that describes inhomogeneties, is not expressed in the $H$ theorem.\\
+In order to contribute to a consistent $H$ theorem, in this paper, the quantum and classical $H$ theorem are proved proposing a new $H$ functional for both cases considering a non-homogeneous distribution function and a system divided into imaginary cells. With those assumptions, particles transport is allowed inside the system. Performing variational procedures, one finds that, in the quantum case, Bose-Einstein and Fermi-Dirac distributions minimize the $H$ functional and, in the classical case, Maxwell-Boltzmann distribution minimize the other $H$ functional. A expression of entropy to quantum systems will be obtained in the variational procedure. In other hand, making use of the hypothesis that the system is in a relaxation process and the non-homogeneous distribution function, the $H$ theorem will be proved for both cases.
+
+\section{The equilibrium of dilute gases: a review}
+We recall that the classical Kinetic description of the equilibrium condition of a dilute gas as proposed by Boltzmann, can be done by means the Maxwell-Boltzmann distribution which is obtained imposing the condition dH/dt=0, where $H$ is defined as
+\begin{equation}
+    H=\int f(v,t) \ln f(v,t) \mathrm{d}^{3}v,
+\end{equation} \label{hfunctional} 
+where $f$ is the homogeneous distribution function.
+In Quantum Mechanics the equilibrium of an ideal gas is done by means of the Fermi-Dirac or the Bose-Einstein distributions that can be obtained imposing the equiprobabilities and the random phases hypothesis and applying the quantum methods. The previous method in classical Kinetic description is not developed in quantum mechanics. A very short review for a classical and quantum mechanics about the H-theorem is presented in the next subsections. 
+
+\subsection{Classical approach}
+In the classical version, the Boltzmann transport equation is used to shown the $H$-theorem. That equation is
+\begin{equation}
+    \left( \frac{\partial }{\partial t}+v_1 \cdot \nabla_r +\frac{F}{m} \cdot \nabla_{v_1} \right)f_1=\int \mathrm{d}\Omega \int \mathrm{d}^{3}v_2\sigma(\Omega)|v_1-v_2|(f_2'f_1'-f_2f_1),
+\end{equation}
+where $\Omega$ is the solid angle, $\sigma$ is the scattering section, $F$ the external force applied to the system and $f_1, f_2$ are the distribution function of the particles 1 and 2 respectively. Defining the functional (\ref{hfunctional}), the $H$ theorem is proved derivating the $H$ functional and applying the Boltzmann transport equation. The direction of the evolution of any system is predicted by the $H$-theorem. That direction always will be the equilibrium.
+\
+\subsection{Quantum approach}
+In the quantum version presented by Tolman, the $H$ functional is defined as 
+\begin{equation}
+    H=\sum_i n_i \ln n_i -(n_i\pm g_i)\ln (g_i \pm n_i)\pm g_i\ln g_i, \label{quantumh}
+\end{equation}
+where $n_i$ is the occupation number and $g_i$ is a energy cell. Also, an equation for the rate of change in the number of particles in group $\kappa$ is obtained
+\begin{eqnarray}
+    \frac{d n_{\kappa}}{dt}&=&-\sum_{\lambda,(\mu \nu)}A_{\kappa\lambda,\mu\nu} n_{\kappa}n_{\lambda}(g_{\mu}\pm n_{\mu})(g_{\nu}\pm n_{\nu})\nonumber \\
+    &&+\sum_{\lambda,(\mu \nu)}A_{\mu\nu,\kappa\lambda} n_{\mu}n_{\nu}(g_{\kappa}\pm n_{\kappa})(g_{\lambda}\pm n_{\lambda}),\label{changen}
+\end{eqnarray}
+where $A_{\kappa\lambda,\mu\nu}$ is a tensor expressed as
+\begin{equation}
+  A_{\kappa\lambda,\mu\nu}=\frac{4\pi^{2}}{h}\frac{|I_1\pm I_2|^2}{\Delta \epsilon},
+\end{equation}
+where $\epsilon$ is the energy and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where $V_{mn,kl}$ is the perturbation matrix of binary particles. Those expression are obtained by the perturbation theory.\\
+The $H$-theorem is proved using (\ref{changen}) into (\ref{quantumh}). This prove is in the same way as in the classical version.  That prove is developed taking account of the homogeneous distribution function, as in the classical version.
+\section{Ensemble approach: quantum scheme}
+
 We begin by defining the form of the functional $H$
 \begin{eqnarray}
     H(t)&=&\sum_{M} \int_V \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
@@ -47,7 +86,7 @@ function and local energy spectra, $\{\epsilon_{n}\}$, the last three properties
     {\mathcal{N}}_M&=&\int_V \sum_{n}f_{Mn}(\epsilon_{n} ,t)\mathrm{d}V, \nonumber \\
 {\mathcal{E}}_M&=&\int_V \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{n}\mathrm{d}V.
 \end{eqnarray}
-When the system is in equilibrium, the quantities $\bar{\mathcal{N}}_M$ and $\bar{\mathcal{E}}_M$ will not depend on the cell number. This is
+When the system is in equilibrium, the local number of particles and the local energy don't depend on the cell number. This is
 \begin{equation}
    {\mathcal{N}}_M=\mathcal{N}\equiv \bar{\mathcal{N}}; \ \ \ \  {\mathcal{E}}_M=\mathcal{E}\equiv \bar{\mathcal{E}}.
 \end{equation}
@@ -59,11 +98,20 @@ therefore the energy spectrum, denoted by $\epsilon_n$, is the same for all cell
     &&\sum_{M}\left[\int_V \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{Mn}\mathrm{d}V\right]=\sum_M {\mathcal{E}}_M=E, \label{restriccions1}
 \end{eqnarray}
 where $N$ and $E$ are the total particle number and the total energy of the system respectively.\\ 
-Inspired by the Hamilton principle, H will be maximized with those restrictions to obtain the equilibrium distribution functions for quantum gasses using the Lagrange multipliers method obtaining
+Inspired by the Hamilton principle, $H$ will be maximized with those restrictions to obtain the equilibrium distribution functions for quantum gasses using the Lagrange multipliers method obtaining
 \begin{eqnarray}
 &&\ln \left(\frac{1\mp f_{Mn}(\epsilon_{n},t)}{f_{Mn}(\epsilon_{n},t)} \right)=-\alpha_M(t)-\beta_M(t) \epsilon_{n}, \label{relation}\\ &&\Rightarrow \ \ f_{Mn}(\epsilon_{n},t)=\frac{1}{e^{-\alpha_M(t)-\beta_M(t) \epsilon_{n}}\pm 1} \equiv \bar{f}_{Mn}(\epsilon_{n},t) \label{distributionequilibrium}.
 \end{eqnarray}
-where $\alpha_M(t), \beta_M(t)$ are the Lagrange multipliers. In equilibrium, the energy and the Lagrange multiplier do not depend on the cell number and time, therefore
+where $\alpha_M(t), \beta_M(t)$ are the Lagrange multipliers. \textcolor{red}{We can obtain from the variational procedure that 
+\begin{equation}
+    \alpha_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{N}_M}, \ \ \ \beta_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{E}_M},\label{multipliers}
+\end{equation}
+where we have used that the $H$ functional in equilibrium is proportional to the entropy of the system.
+In other hand, in the expression (\ref{multipliers}), we expect that the variation of the logarithm with the number of particles by cells is indifferent from a particular cell. With this, we conclude  
+\begin{equation}
+    \alpha_M=\alpha; \ \ \ \ \beta_M=\beta.
+\end{equation}}
+In equilibrium, the energy and the Lagrange multiplier do not depend on the cell number and time, therefore
 \begin{equation}
     \bar f_{Mn}(\epsilon_{n},t)=\bar f_n(\epsilon_{n}) =\frac{1}{e^{-\alpha-\beta \epsilon_n}\pm 1}.
 \end{equation}{}
@@ -75,102 +123,14 @@ and finally
 \begin{eqnarray}
     \bar{f}_{n}(\epsilon_{n})&=&\frac{1}{e^{(\frac{{\epsilon_n}-\bar{\mu}}{kT})}\pm 1}\equiv \bar{f}_{n}.
 \end{eqnarray}{}
-It is necessary to remark that the microcanonical ensemble is used, but the Bose-Einstein and Fermi-Dirac distribution functions are obtained from the grant canonical ensemble. This result is a consequence of describing the system by its cells. The appearing of the chemical potential is a consequence of this description. Equiprobability assumption from the microcanonical ensemble is recovered because of the chemical potential and the temperature are equal and constants in equilibrium, then the total distribution function is a constant.\\    
-From here, one can calculate the entropy from an ideal system, in other words, if one substitute (\ref{distributionequilibrium}) to (\ref{entropy}) one obtains
-\begin{equation}
-      H(t)=\sum_M \sum_n \int_V \left[\left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right)\ln \left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}} \right) \right]\mathrm{d}V \pm \int_V \ln \left[\prod_{M} \prod_{n}\left(1 \mp \frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right) \right]\mathrm{d}V\label{H-entropy}.
-  \end{equation}
-  This result lets us calculate the entropy of a quantum system with inhomogenities, this functional could be used as a thermodynamic variable to describe quantum systems.
-\section{The change of H for relaxation processes}
-
-The functional H has the following form
-\begin{equation}
-    H(t)=\sum_{M} \int_V\sum_{n} \left[ f_{Mn} \ln f_{Mn} \pm (1 \mp f_{Mn}) \ln (1 \mp f_{Mn}) \right]\mathrm{d}V \label{entropy2},
-\end{equation}
-where, for simplicity, we have defined $f(\bar{r},\epsilon_{n},t)\equiv f_{Mn}$.
-These functional has the following microcanonical restrictions
+We have proved that when the system is in equilibrium, the Lagrange multipliers don't depend on the cell number. In other words, Lagrange multiplier are homogeneous in the system.\\
+We can calculate the entropy from an ideal system, in other words, if one substitute (\ref{distributionequilibrium}) to (\ref{entropy}) one obtains
 \begin{eqnarray}
-        \int_V\sum_{n}f_{Mn}\mathrm{d}V=\bar{\mathcal{N}}+\Delta_M(t); \ \ \ \ \int_V\sum_{n}\epsilon_{n}f_{Mn}\mathrm{d}V=\bar{\mathcal{E}}+ \delta_M(t), \label{restrictionoutside}
-  \end{eqnarray}{}
-  where $\bar \mathcal{ N}$ and $\bar \mathcal{E}$ are the mean particle number and the mean energy by cell in equilibrium
-  \begin{equation}
-      \bar{\mathcal{N}}=\int_V \sum_n \bar{f}_n; \ \ \ \ \bar{\mathcal{E}}=\int_V \sum_n \epsilon_n\bar{f}_n
-  \end{equation}
-  and $\Delta_M,\delta_M$ could be seen as a deviation from the mean number of particles and mean energy by cell from the equilibrium respectively, with $\Delta_M(t)\ll N$ and $\delta_M(t) \ll E$. Those condition described a system out of equilibrium but no so far from it.  \\
-If one performs the derivative of the functional H with respect to time
-\begin{equation}
-   \frac{dH(t)}{dt}= \sum_n \sum_M \int_{V}\dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right]\mathrm{d}V.\label{deltaH}
-\end{equation}{}
-Using the first-order approximation, that is
-\begin{eqnarray}
-   f_{Mn}=\bar{f}_{n}(1+g_{Mn}): \ \ \ \bar{f}_{n}\gg \bar{f}_{n}g_{Mn}, \label{firstorder}
-\end{eqnarray}{}
-one obtains 
-
-\begin{eqnarray}
-    \frac{dH(t)}{dt}&=&\sum_n \sum_M \int_V\bar{f}_{n}\ln \left[ \frac{\bar{f}_{n}(1+g_{nM})}{1\mp \bar{f}_{n} (1+ g_{nM})} \right]\dot{g}_{nM}\mathrm{d}V \nonumber \\
-    &=&\sum_n \sum_M \int_V\bar{f}_n \left \{ \ln [\bar{f}_n+\bar{f}_n g_{nM}]\dot{g}_{nM}-\ln [1\mp\bar{f}_n\mp\bar{f}_n g_{nM}]\dot{g}_{nM}  \right \}\mathrm{d}V.\nonumber \\
-    \label{cambioH1}
-\end{eqnarray}{}
-Here the deviation $g_{Mn}=g_{Mn}(\bar{r},\epsilon_{n},t)$.\\
-It's necessary to remark that, in the case of fermions
-\begin{eqnarray}
-   1-\bar f_n -\bar f_n g_{nM}>0 \ \ \Rightarrow \ \ \frac{1}{\bar f_n}>1+g_{nM}.
-\end{eqnarray}{}
-The previous expression establishes that the value of $g_{nM}$ is determined by $\bar f_n$. Furthermore, whether $\bar f_{n}=0$, this is, all energy levels are occupied, then the system will not have inhomogenities because of the exclusion principle and as consequence of this,  $g_{nM}=0$.\\
-In the case of bosons, if $\bar{f}_n \gg \bar{f}_n |g_{nM}|$ then $1+\bar{f}_n \gg \bar{f}_n |g_{nM}|$. In fermions, in the case of a non-extremely degenerated condition, it is true that $1-\bar{f}_n \gg \bar{f}_n |g_{nM}|$. With those relations, one can approximate the logarithm functions to their first-order Taylor series. Besides, this approximation is for both signs for $g_{nM}$.
-That approximation applied to logarithm functions in (\ref{cambioH1}) around $\bar f_n g_{nM}=0$ is
-\begin{equation}
-    \ln [\bar{f}_n+\bar{f}_n g_{nM}] \approx \ln [\bar{f}_n]+ g_{nM}; \ \ \ \ \ln[1\mp\bar{f}_n\mp\bar{f}_n g_{nM}] \approx \ln[1\mp\bar{f}_n]\mp\frac{\bar{f}_n}{1\mp\bar{f}_{n}} g_{nM}. \label{lnapproximation}
-\end{equation}{}
-with the previous approximation, (\ref{cambioH1}) will be
-\begin{eqnarray}
-    \frac{dH}{dt}&=&\sum_n \sum_M \int_V\bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\}\mathrm{d}V \nonumber \\
-    &&-\sum_{n}\sum_{M}\int_V\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\mathrm{d}V.\label{cambioH2}
-\end{eqnarray}{}
-Making use of the expression (\ref{relation}),
-(\ref{cambioH2}) casts into
-\begin{eqnarray}
-    \frac{dH}{dt}&=&\sum_n \sum_M \int_V\bar{f}_n\left \{ (\bar{\alpha}+\bar{\beta}{\epsilon}_n)\dot{g}_{nM}+ g_{nM}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\dot{g}_{nM} \right \}\mathrm{d}V. \nonumber \\
-    \label{cambioH3}
-\end{eqnarray}{}
-On the other hand, one can obtain from the restrictions the following expressions
-\begin{eqnarray}
-    &&\int_V\sum_n \bar{f}_n g_{nM}\mathrm{d}V=\Delta_M(t) \ \  \Rightarrow \ \ \int_V \sum_n \bar{f}_n \dot{g}_{nM}\mathrm{d}V=\dot{\Delta}_M(t), \nonumber \\
-    &&\sum_n \int_V \bar{f}_n g_{nM}\epsilon_n\mathrm{d}V=\delta_M(t) \ \  \Rightarrow \ \ \int_V \sum_n \bar{f}_n \dot{g}_{nM}\epsilon_n\mathrm{d}V=\dot{\delta}_M(t)
-\end{eqnarray}{}
-and as a consequence of $\sum_M \Delta_M(t)=\sum_M \delta_M(t)=0$, one finds
-\begin{equation}
-    \sum_M \dot{\Delta}_M(t)=\sum_M \dot{\delta}_{M}(t)=0.
-\end{equation}{}
-Substituting the previous expression to (\ref{cambioH3}) one obtains
-\begin{eqnarray}
-   \frac{dH}{dt}&=& \bar{\alpha}\sum_M \dot{\Delta}_M(t)+\bar{\beta}\sum_M \dot{\delta}_M(t)+\sum_n \sum_M \int_V\left \{ \bar{f}_{n}g_{nM}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\dot{g}_{nM} \right \}\mathrm{d}V \nonumber \\
-   &=&\sum_n  \bar{f}_{n}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\sum_M \int_V g_{nM}\dot{g}_{nM}\mathrm{d}V= \sum_n \left(\frac{1\pm e^{\bar{\alpha}+\bar{\beta}\epsilon_n}}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_n}\pm 1} \right)\sum_M \int_V g_{nM}\dot{g}_{nM}\mathrm{d}V. \nonumber \\ \label{cambioH4}
-\end{eqnarray}{}
-Now, the summation over M will be expressed in two summations
-\begin{equation}
-    \frac{dH}{dt}=\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L}\int_V g^{+}_{nJ}\dot{g}^{+}_{nJ}\mathrm{d}V+\sum^{N}_J \int_V g^{-}_{nJ}\dot{g}^{-}_{nJ}\mathrm{d}V \right), \label{cambioH5}
-\end{equation}{}
-where $L+N=M$. Besides, $\dot{g}^{+}_{nJ}$ and $\dot{g}^{-}_{nJ}$  represent the change on the deviations on cells that have excess or missing of particles or energy respectively while $g^{+}_{nJ}$ and $g^{-}_{nJ}$ represent the deviation on cells that have excess or missing of particles or energy respectively.\\
-On the one hand, $\dot{g}^{+}_{nJ}<0$ as a consequence of lost of particles or energy and so , $g^{+}_{nJ}>0$. On the other hand, $\dot{g}^{-}_{nJ}>0$ as a consequence of gain of particles or energy and therefore $g^{-}_{nJ}<0$. As a result of the previous idea
-\begin{eqnarray}
-   &&g^{+}_{nJ}=+|g^{+}_{nJ}|; \ \ \  \dot{g}^{+}_{nJ}=-|\dot{g}^{+}_{nJ}| \nonumber \\
-   &&g^{-}_{nJ}=-|g^{-}_{nJ}|; \ \ \ \dot{g}^{-}_{nJ}=+|\dot{g}^{-}_{nJ}| \label{separacion},
-\end{eqnarray}{}
-\\
-and consequently, (\ref{cambioH5}) obtains the following form
-\begin{equation}
-    \frac{dH}{dt}=-\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L}\int_V |g^{+}_{nJ}||\dot{g}^{+}_{nJ}|\mathrm{d}V+\sum^{N}_J \int_V |g^{-}_{nJ}||\dot{g}^{-}_{nJ}|\mathrm{d}V \right). \label{cambioH6}
-\end{equation}{}
-In conclusion, $\frac{dH}{dt}<0$.\\
-When the system is in equilibrium, $g_{nM}=0$ and in consequence of that, $\dot g_{nM}=0$ and finally from (\ref{cambioH1}) that $\frac{dH}{dt}=0$.
-with the previous prove, in analogous to the classical scheme, the homogeneous distribution function hypothesis must be eliminated to be consistent with this prove. Now, in the following section, variational procedure and the relaxation processes will be used in the classical scheme to prove the $H$ theorem eliminating the homogeneous distribution function hypothesis.
-
-
-
-\section{Classical scheme}
-\subsection{Variational procedure}
+      H(t)&=&\sum_M \sum_n \int_V \left[\left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right)\ln \left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}} \right) \right]\mathrm{d}V\nonumber \\
+      &&\pm \int_V \ln \left[\prod_{M} \prod_{n}\left(1 \mp \frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right) \right]\mathrm{d}V\label{H-entropy}.
+  \end{eqnarray}
+  This result lets us calculate the entropy of a quantum ideal gases. This entropy could be used as a thermodynamic variable to describe quantum ideal gases.
+\subsection{Classical scheme: variational procedure}
 We proposed the following $H$ functional
 
 \begin{equation}
@@ -196,16 +156,112 @@ where $C$ is a constant. It is trivial that using the variational procedures, on
 As $H$ in equilibrium is a density of entropy, it is trivial to think that Lagrange multipliers do not depend on the position because of the system is in equilibrium and consequently, the distribution function is homogeneous, that is
 \begin{equation}
     f(v)=Ce^{\alpha+\beta \epsilon(v)}.
+\end{equation}{} 
+The constant $C$ can be omitted defining the following $H$ functional
+\begin{equation}
+   H(t)=\int_{}^{}\int_{}^{} \left[f(r,v,t) \ln f(r,v,t)-f(r,v,t)\right]\mathrm{d}^3v \mathrm{d}^3r \label{CH3},
 \end{equation}{}
+  but $\int \int f(r,v,t)\mathrm{d}^3v \mathrm{d}^3r=N$ where $N$ is the total particle number. As $N$ is a constant and the functional $H$ has sense when one calculates the change of $H$, this constant can be omitted. 
+\section{H for relaxation processes in out of equilibrium systems}
 
 
-\subsubsection{Relaxation processes}
+\subsection{Quantum Scheme}
+
+The functional H has the following form
+\begin{equation}
+    H(t)=\sum_{M} \int_V\sum_{n} \left[ f_{Mn} \ln f_{Mn} \pm (1 \mp f_{Mn}) \ln (1 \mp f_{Mn}) \right]\mathrm{d}V \label{entropy2},
+\end{equation}
+where, for simplicity, we have defined $f(\bar{r},\epsilon_{n},t)\equiv f_{Mn}$.
+These functional has the following microcanonical restrictions
+\begin{eqnarray}
+        \int_V\sum_{n}f_{Mn}\mathrm{d}V=\bar{\mathcal{N}}+\Delta_M(t); \ \ \ \ \int_V\sum_{n}\epsilon_{n}f_{Mn}\mathrm{d}V=\bar{\mathcal{E}}+ \delta_M(t), \label{restrictionoutside}
+  \end{eqnarray}
+  where $\bar {\mathcal{N}}$ and $\bar{\mathcal{E}}$ are the local particle number and the local energy in equilibrium
+  \begin{equation}
+      \bar{\mathcal{N}}=\int_V \sum_n \bar{f}_n; \ \ \ \ \bar{\mathcal{E}}=\int_V \sum_n \epsilon_n\bar{f}_n,
+  \end{equation}
+  and $\Delta_M,\delta_M$ could be seen as a deviation from $\bar{\mathcal{N}}$ and $\bar{\mathcal{E}}$ respectively, with $\Delta_M(t)\ll \bar{\mathcal{N}}$ and $\delta_M(t) \ll \bar{\mathcal{E}}$. Those condition described a system out of equilibrium but no so far from it.  \\
+If one performs the derivative of the functional H with respect to time, we obtain
+\begin{equation}
+   \frac{dH(t)}{dt}= \sum_n \sum_M \int_{V}\dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right]\mathrm{d}V.\label{deltaH}
+\end{equation}{}
+Using the first-order approximation
+\begin{eqnarray}
+   f_{Mn}=\bar{f}_{n}(1+g_{Mn}): \ \ \ \bar{f}_{n}\gg \bar{f}_{n}|g_{Mn}|, \label{firstorder}
+\end{eqnarray}{}
+we get 
+
+\begin{eqnarray}
+    \frac{dH(t)}{dt}&=&\sum_n \sum_M \int_V\bar{f}_{n}\ln \left[ \frac{\bar{f}_{n}(1+g_{nM})}{1\mp \bar{f}_{n} (1+ g_{nM})} \right]\dot{g}_{nM}\mathrm{d}V \nonumber \\
+    &=&\sum_n \sum_M \int_V\bar{f}_n \left \{ \ln [\bar{f}_n+\bar{f}_n g_{nM}]\dot{g}_{nM}-\ln [1\mp\bar{f}_n\mp\bar{f}_n g_{nM}]\dot{g}_{nM}  \right \}\mathrm{d}V.\nonumber \\
+    \label{cambioH1}
+\end{eqnarray}{}
+It's necessary to remark that, in the case of fermions
+\begin{eqnarray}
+   1-\bar f_n -\bar f_n g_{nM}>0 \ \ \Rightarrow \ \ \frac{1}{\bar f_n}>1+g_{nM}. \label{fermionrestriction}
+\end{eqnarray}{}
+The previous expression establishes that the value of $g_{nM}$ is determined by $\bar f_n$. Furthermore, whether $\bar f_{n}=1$, this is, all lower energy levels are occupied, then the system will not have inhomogenities because of the exclusion principle and as consequence of this,  $g_{nM}=0$. This result corresponds to the system in the zero temperature condition. We can observe that in this condition, (\ref{fermionrestriction}) is violated. Due to this, the zero temperature condition is excluded.\\
+\\
+We can observe in the case of bosons, if $\bar{f}_n \gg \bar{f}_n |g_{nM}|$ then $1+\bar{f}_n \gg \bar{f}_n |g_{nM}|$. In fermions, in the case of a non-extremely degenerated condition, it is true that $1-\bar{f}_n \gg \bar{f}_n |g_{nM}|$. With those relations, we can approximate the logarithm functions in (\ref{cambioH1}) to their first-order Taylor series around $\bar f_n g_{nM}=0$ 
+\begin{equation}
+    \ln [\bar{f}_n+\bar{f}_n g_{nM}] \approx \ln [\bar{f}_n]+ g_{nM}; \ \ \ \ \ln[1\mp\bar{f}_n\mp\bar{f}_n g_{nM}] \approx \ln[1\mp\bar{f}_n]\mp\frac{\bar{f}_n}{1\mp\bar{f}_{n}} g_{nM}. \label{lnapproximation}
+\end{equation}{}
+With the previous approximation, (\ref{cambioH1}) will be
+\begin{eqnarray}
+    \frac{dH}{dt}&=&\sum_n \sum_M \int_V\bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\}\mathrm{d}V \nonumber \\
+    &&-\sum_{n}\sum_{M}\int_V\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\mathrm{d}V.\label{cambioH2}
+\end{eqnarray}{}
+Making use of the expression (\ref{relation}),
+(\ref{cambioH2}) casts into
+\begin{eqnarray}
+    \frac{dH}{dt}&=&\sum_n \sum_M \int_V\bar{f}_n\left \{ (\bar{\alpha}+\bar{\beta}{\epsilon}_n)\dot{g}_{nM}+ g_{nM}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\dot{g}_{nM} \right \}\mathrm{d}V. \nonumber \\
+    \label{cambioH3}
+\end{eqnarray}{}
+On the other hand, one can obtain from the restrictions the following expressions
+\begin{eqnarray}
+    &&\int_V\sum_n \bar{f}_n g_{nM}\mathrm{d}V=\Delta_M(t) \ \  \Rightarrow \ \ \int_V \sum_n \bar{f}_n \dot{g}_{nM}\mathrm{d}V=\dot{\Delta}_M(t), \nonumber \\
+    &&\sum_n \int_V \bar{f}_n g_{nM}\epsilon_n\mathrm{d}V=\delta_M(t) \ \  \Rightarrow \ \ \int_V \sum_n \bar{f}_n \dot{g}_{nM}\epsilon_n\mathrm{d}V=\dot{\delta}_M(t)
+\end{eqnarray}{}
+and as a consequence of $\sum_M \Delta_M(t)=\sum_M \delta_M(t)=0$, one finds
+\begin{equation}
+    \sum_M \dot{\Delta}_M(t)=\sum_M \dot{\delta}_{M}(t)=0.
+\end{equation}{}
+Substituting the previous expression to (\ref{cambioH3}) one obtains
+\begin{eqnarray}
+   \frac{dH}{dt}&=&  \sum_n e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\sum_M \int_V g_{nM}\dot{g}_{nM}\mathrm{d}V. \nonumber \\ \label{cambioH4}
+\end{eqnarray}{}
+Now, the summation over M will be expressed in two summations
+\begin{equation}
+    \frac{dH}{dt}=\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L}\int_V g^{+}_{nJ}\dot{g}^{+}_{nJ}\mathrm{d}V+\sum^{N}_J \int_V g^{-}_{nJ}\dot{g}^{-}_{nJ}\mathrm{d}V \right), \label{cambioH5}
+\end{equation}{}
+where $L+N=M$. Besides, $\dot{g}^{+}_{nJ}$ and $\dot{g}^{-}_{nJ}$  represent the change on the deviations on cells that have excess or missing of particles or energy respectively while $g^{+}_{nJ}$ and $g^{-}_{nJ}$ represent the deviation on cells that have excess or missing of particles or energy respectively.\\
+On the one hand, $\dot{g}^{+}_{nJ}<0$ describes the lost of particles and/or energy and so , $g^{+}_{nJ}>0$. On the other hand, $\dot{g}^{-}_{nJ}>0$ describes the gain of particles and/or energy and therefore $g^{-}_{nJ}<0$. \\
+We sort the previous ideas in the following form
+\begin{eqnarray}
+   &&g^{+}_{nJ}=+|g^{+}_{nJ}|; \ \ \  \dot{g}^{+}_{nJ}=-|\dot{g}^{+}_{nJ}| \nonumber \\
+   &&g^{-}_{nJ}=-|g^{-}_{nJ}|; \ \ \ \dot{g}^{-}_{nJ}=+|\dot{g}^{-}_{nJ}| \label{separacion},
+\end{eqnarray}{}
+\\
+and consequently, (\ref{cambioH5}) obtains the following form
+\begin{equation}
+    \frac{dH}{dt}=-\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L}\int_V |g^{+}_{nJ}||\dot{g}^{+}_{nJ}|\mathrm{d}V+\sum^{N}_J \int_V |g^{-}_{nJ}||\dot{g}^{-}_{nJ}|\mathrm{d}V \right), \label{cambioH6}
+\end{equation}{}
+and due to $e^{\bar{\alpha}+\bar{\beta}\epsilon_n}$ is always positive, then $\frac{dH}{dt}<0$.\\
+When the system is in equilibrium, $g_{nM}=0$ and in consequence of that, $\dot g_{nM}=0$ and finally from (\ref{cambioH1}) $\frac{dH}{dt}=0$. 
+\\
+The next step in this model is to obtain the analogous transport equation through variation methods. In order to verify that transport equation can be obtained by applying the variation method, in the next section, the Boltzmann transport equation will be obtained applying the mentioned method to a modified Boltzmann $H$ functional.
+
+
+
+
+
+\subsection{Clasical scheme}
 Now one uses the restrictions (\ref{restrictionoutside}) but in the continuous case
 \begin{equation}
     \int_{}^{}f(r,v,t)\mathrm{d}^3v=\mathcal{N}+\Delta(r,t); \ \ \ \int_{}^{}f(r,v,t)\epsilon(v)\mathrm{d}^3v=\mathcal{E}+\Omega(r,t)\label{restriccionescambio},
 \end{equation}{}
-where $\Delta(r,t)$ y $\Omega(r,t)$ could be seen as a deviation from the mean number of particles and mean energy by differential element $d^3r$.
-Performing the derivative of the functional $H$ (\ref{CH2})with respect to time
+where $\Delta(r,t)$ and $\Omega(r,t)$ could be seen as a deviation from the mean number of particles and mean energy by differential element $d^3r$.
+Performing the derivative of the functional $H$ (\ref{CH2}) with respect to time
 \begin{equation}
     \frac{dH}{dt}=\int_{}^{}\int_{}^{}\left[ 1+\ln f(r,v,t) \right]\dot f(r,v,t) \mathrm{d}^3v \mathrm{d}^3r \label{dH1}.
 \end{equation}{}
@@ -228,31 +284,112 @@ If one uses the same procedure shown in the previous section to the restrictions
 \end{eqnarray}{}
 Using the same consideration in the previous section to $g$ and $\dot g$, one proves that $\frac{dH}{dt}<0$. If the system is in equilibrium, $g(r,v,t)=\dot g(r,v,t)=0$, therefore $\frac{dH}{dt}=0$. 
 
+\section{The Boltzmann transport equation}
+\textcolor{red}{The Boltzmann $H$ functional is defined as
+\begin{equation}
+    H=\int_{}^{}f(\vec{v},t)\ln f(\vec{v},t)\mathrm{d}^{3}v,
+\end{equation}
+where $f$ is the homogeneous distribution function of the system and $v$ is the velocity of the particles defined in the $\mu$-space. In order to obtain the Boltzmann transport equation, is necessary to consider that the distribution function is not homogeneous, that is, $f=f(\vec{r},\vec{v},t)$, where $r$ is the position of the particles defined in the $\mu$-space. Because of that, we defined a modified Boltzmann $H$ functional as
+\begin{equation}
+    H'=\int_{}^{}\int_{}^{}f(\vec{r},\vec{v},t)\ln f(\vec{r},\vec{v},t)\mathrm{d}^{3}v \mathrm{d}^{3}r.
+\end{equation}
+This equation involves the position dependence. This dependence is necessary to obtain the complete Boltzmann transport equation.\\
+Due to $H$ functional in equilibrium corresponds to a density of entropy and also, according to the second law of thermodynamics, the entropy is maximum, then the following relation must be hold in equilibrium
+\begin{equation}
+    \delta H'=0.\label{variation1}
+\end{equation}
+Assuming that $\vec{r}=\vec{r}(t)$ and $\vec{v}=\vec{v}(t)$, (\ref{variation1}) casts into
+\begin{equation}
+    0=\left( 1+\ln f \right)\left( \frac{\partial f}{\partial t}+\dot{\vec{r}}\cdot \nabla f+\dot{\vec{v}}\cdot \nabla_{\vec{v}} f \right).
+\end{equation}
+The previous relation holds if $(1+\ln f)=0$ or $(\frac{\partial f}{\partial t}+\dot{\vec{r}}\cdot \nabla f+\dot{\vec{v}}\cdot \nabla_{\vec{v}} f)=0$.\\
+Assuming that $(1+\ln f)=0$, we find that $f$ is a constant and consequently, $(\frac{\partial f}{\partial t}+\dot{\vec{r}}\cdot \nabla f+\dot{\vec{v}}\cdot \nabla_{\vec{v}} f)=0$. In other hand, if $f$ is not a constant, the Boltzmann transport equation will be
+\begin{equation}
+    \frac{\partial f}{\partial t}+\dot{\vec{r}}\cdot \nabla f+\dot{\vec{v}}\cdot \nabla_{\vec{v}} f=0.\label{transport}
+\end{equation}
+The equation (\ref{transport}) is hold only in equilibrium. If the system is out of equilibrium, the variation is not equal to zero. As a consequence of the $H$ theorem, the variation is less to zero. In conclusion, is necessary to include in (\ref{transport}) a term that described this behavior, this term, as in \cite{huang}, will be the collision term and will be expressed in such form as
+\begin{equation}
+    \frac{\partial f}{\partial t}+\vec{v}\cdot \nabla f+\frac{\vec{F}}{m}\cdot \nabla_{\vec{v}} f=\left( \frac{df}{dt} \right)\biggm |_{coll},\label{classictransport}
+\end{equation}
+where $\vec{F}$ is a external force and $m$ is the mass of the particles.\\
+\\
+The equation (\ref{classictransport}) correspond to the Boltzmann transport equation. With this conclusion, in the next section, the analogous transport equation will be obtained applying the variation method to (\ref{entropy2}).}
 
+\section{Analogous transport equation for ideal quantum gases}
+\textcolor{red}{Consider that the distribution function $f_{nM}$ is a function of the local number of particles $\mathcal{N}_M$, the local number of particles in a quantum energy state $\mathcal{N}_{M}^{n}$ and the time $t$.
+\begin{equation}
+    f=f(\mathcal{N}_M,\mathcal{N}_M^{n},t),
+\end{equation}
+where $\mathcal{N}_{M}^{n}$ is defined as
+\begin{equation}
+    \mathcal{N}_{M}^{n}=\int f_{nM}\mathrm{d}V.
+\end{equation}
+Besides, the local number of particles is a function of time $\mathcal{N}_J=\mathcal{N}_J(t)$ and the local number of particles in a quantum energy state is a function of time and the local number of particles $\mathcal{N}_J^{j}=\mathcal{N}_J^{j}(\mathcal{N}_M,t)$. This is due to when a cell transfer particles to another cell, the particles in some defined state energy levels must change.\\
+\\
+In orden to obtain the analogous transport equation to this system, we apply the variation method to the functional $H$. Due to $H$ is considered in equilibrium as a density of entropy, and therefore a maximum, the variation must be zero.\\
+Appliying the variation to the functional $H$, we obtain the following equation of motion
+\begin{equation}
+    0=\int_{}^{}\sum_M \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \left[ \frac{\partial f_{nM}}{\partial t}+\frac{\partial f_{nM}}{\partial \mathcal{N}_J}\dot{\mathcal{N}}_J+\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}}\left( \frac{\partial \mathcal{N}_J^{j}}{\partial t}+\frac{\partial \mathcal{N}_J^{j}}{\partial \mathcal{N}_L}\dot{\mathcal{N}}_L \right) \right]\mathrm{d}V. \label{transportequation1}
+\end{equation}
+This equation is valid in equilibrium. When the system is out of equilibrium, the variation is different from zero. Due to this, an expression has to be added to (\ref{transportequation1}). This term, in analogy to the Boltzmann transport equation, will be the collision term and will be expressed as $\left( \frac{df_{nM}}{dt} \right)\Bigm|_{coll}$. Moreover, this term contributes to the equation of motion per each cell and cell. Therefore, (\ref{transportequation1}) casts into
+\begin{eqnarray}
+    \sum_n \sum_M\left( \frac{df_{nM}}{dt} \right)\Bigm|_{coll}&=&\int_{}^{}\sum_M \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \nonumber \\
+    &&\times \left[ \frac{\partial f_{nM}}{\partial t}+\frac{\partial f_{nM}}{\partial \mathcal{N}_J}\dot{\mathcal{N}}_J+\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}}\left( \frac{\partial \mathcal{N}_J^{j}}{\partial t}+\frac{\partial \mathcal{N}_J^{j}}{\partial \mathcal{N}_L}\dot{\mathcal{N}}_L \right) \right]\mathrm{d}V.  \nonumber \\ \label{transportequation2}
+\end{eqnarray}}
 \section{Discussion}
 For quantum ideal gases, the H-theorem has been proved performing the variational method. In the classical scheme, the $H$-theorem is proved using the Boltzmann transport equation for a homogeneous distribution function. Classical $H$-theorem don't show the idea of particles transport in a system. That assumption in quantum mechanics presented by Tolman \cite{tolman} remains. This work eliminates that assumption defining the $H$ functional (\ref{entropy}) including a non-homogeneous distribution function. The prove of the quantum $H$-theorem in this work includes the idea of particles transport in relaxation processes using the first order approximation. This idea has not found in the literature. As consequence of this, all ideal gases placed in non-equilibrium state with inhomogeneities, when time tends to infinity, the system tends to the equilibrium state. This result complements the classical $H$-theorem due to the lack of the non-homogeneous distribution function. In addition, the classical $H$ theorem was analysed to include the particles transport and complete the classical $H$-theorem modifying the classical $H$ functional proposed by Boltzmann. Those proves only are applied to relaxation processes but the fact of including a non-homogeneous distribution function is a new way to complete the $H$ theorem for non-equilibrium systems. 
 In other hand, the equation (\ref{H-entropy}) lets us calculate the entropy for a quantum system and describe the evolution of that system using the $H$ functional as a thermodynamic variable for a non-equilibrium system. Furthermore, thermodynamic variables to describe non-equilibrium systems is a problem in discussion. The previous idea adds new knowledge to this problem. 
 
-
-
 \begin{thebibliography}{}
-\bibitem{goldstein}
-H. Goldstein, {\it Mec\'anica Cl\'asica}, Ed. 1987, Espa\~na: Editorial Revert\'e (2002).
+%\bibitem{goldstein}
+%H. Goldstein, {\it Mec\'anica Cl\'asica}, Ed. 1987, Espa\~na: Editorial Revert\'e (2002).
 
-\bibitem{sakurai}
-J. J. Sakurai, J. Napolitano {\it Modern Quantum Mechanics}, Second Edition, Addison-Wesley, 1994.
+%\bibitem{sakurai}
+%J. J. Sakurai, J. Napolitano {\it Modern Quantum Mechanics}, Second Edition, Addison-Wesley, 1994.
 
 \bibitem{huang}
 K. Huang, \emph{Statistical mechanics}, John Wiley \& Sons, Inc., (1963).
 
+\bibitem{reif}
+F. Reif {\it Fundamentals of Statistical and Thermal Physics.},Waveland Press Inc, 2009.
+
+\bibitem{patrick}
+R. Fitzpatrick, {\it Thermodynamics and Statistical Mechanics: An intermediate level.},University Reprints 2012 (2012).
+
+\bibitem{kei}
+Keizer J., \emph{Statistical thermodynamics of nonequilibrium processes}, Springer-Verlag, New York, 1987.
+
+\bibitem{onsager}
+Onsager, L. (1931), Physical Review 37 (4): 405-426.
+
 \bibitem{paradox1}
-Harvey R. Brown and Wayne Myrvold, {\it Boltzmann’s H-theorem, its limitations, and thebirth of (fully) statistical mechanics}, physics.hist-ph,0809.1304,2008.
+Harvey R. Brown and Wayne Myrvold, {\it Boltzmannâs H-theorem, its limitations, and thebirth of (fully) statistical mechanics}, physics.hist-ph,0809.1304,2008.
 
 \bibitem{paradox2}
 Dragoljub A. Cucic, {\it Paradoxes of Thermodynamics and Statistical Physics}, physics.gen-ph,0912.1756,2009.
 
-\bibitem{patrick}
-R. Fitzpatrick, {\it Thermodynamics and Statistical Mechanics: An intermediate level.},University Reprints 2012 (2012).
+\bibitem{quantum1}
+J. Math. Phys. 47, 073303 (2006).
+
+\bibitem{quantum2}
+Z. Physik 268, 139-143 (1974).
+
+\bibitem{quantum3}
+Gring, M. and Kuhnert, M. and Langen, T. and Kitagawa, T. and Rauer, B. and Schreitl, M. and Mazets, I. and Smith, D. Adu and Demler, E. and Schmiedmayer, J.; {\it Relaxation and Prethermalization in an Isolated Quantum System}; 337; 6100; 1318-1322 (2012).
+
+\bibitem{quantum4}
+Physical Review E 91, 062106 (2015).
+
+\bibitem{relaxationphenomena}
+Journal of Statistical Physics, 30; 2 (1983).
+
+\bibitem{htheorem}
+Reveiw of Modern Physics; 74 (2002).
+
+\bibitem{htheorem2}
+R. Silva {\it et al} EPL 89 10004 (2010).
+
+
 
 \bibitem{tolman} Richard C. Tolman, \emph{The principles of statistical mechanics}, Oxford, 1938.
 
@@ -262,8 +399,7 @@ Das, Bandita and Biswas, Shyamal; Journal of Statistical Mechanics: Theory and E
 \bibitem{contradictions}
 Lesovik, G. B. and Lebedev, A. V. and Sadovskyy, I. A. and Suslov, M. V. and Vinokur, V. M., Scientific Reports, Vol. 6, \# 1, 2016.
 
-\bibitem{reif}
-F. Reif {\it Fundamentals of Statistical and Thermal Physics.},Waveland Press Inc, 2009.
+
 
 
 \end{thebibliography}{}
