@@ -1,18 +1,9 @@
 #Extensions
-*.aim
-*.o
 *.log
 *.pdf
 *.eps
 *.png
-*.gnp
-*.pov
 *.dat
-*.cpx
-*.cub
-*.cube
-*.tsv
-cachegrind.*
 *.gz
 *.aux
 *.bbl
@@ -21,8 +12,6 @@ cachegrind.*
 *.out
 *.bkp
 *.user
-*.x
-*.a
 
 #binaries
 
@@ -31,17 +20,7 @@ cachegrind.*
 .DS_Store
 
 #Directories
-bin/*
 bib/*
-pres/*
-taring/*
-mathematica/*
 discuss/*
-proc/*
-outputs/*
-src/test/*
-src/bin/*
-tex/*.*
-arts/*
 #specific files
 

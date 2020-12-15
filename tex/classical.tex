@@ -1,0 +1,404 @@
+%\section{Classical}
+%\subsection{Boltzmann transport equation}
+%\subsection{H theorem and the Maxwell-Boltzmann distribution}
+%Todo esto de arriba en la forma tradicional y muy resumido. Solo remarcando lo fundamental.
+%\subsection{Out of equilibrium, non-homogeneous distributions}.
+%Entrar a la generalizacion, ahi si de manera muy detallada y con amplitud discutida
+%fisicamente, del tratamiento con las celdas. Es decir, la demostracion del teorema H
+%clasico pero con el enfoque de funciones de distribucion no homogeneas y por tanto
+%con el tratamiento de celdas.
+
+%----------------------------------
+
+\section{Classical scheme}
+
+\subsection{The Boltzmann transport equation}
+
+In the classical version, the Boltzmann transport equation is required to show
+the $H$-theorem. That equation is
+%
+\begin{equation}\label{eq:transport}
+  \left(
+    \frac{\partial}{\partial t}+\vec{v}_1 \cdot\nabla_r
+    +\frac{\vec{F}}{m}\cdot\nabla_{v_1}
+  \right)f_1=\int\mathrm{d}\Omega\int
+    \mathrm{d}^{3}v_2\sigma(\Omega)|\vec{v}_1-\vec{v}_2|(f_2'f_1'-f_2f_1),
+\end{equation}
+%
+where $\Omega$ is the solid angle, $\sigma$ is the scattering section, $F$ the
+external force applied to the system, $f_1$, $f_2$ are the distribution
+functions of the particles 1 and 2 respectively before the collision,
+and $f'_1$, $f'_2$ are the distribution function of the particles 1 and 2
+respectively after the collision.
+
+On the one hand, dynamics, inhomogeneities, and external forces are described
+by the left-hand side of the equation (\ref{eq:transport}). On the other hand, the
+binary collisions among particles are involved in the right-hand side of the
+previous equation. However, the \textit{molecular chaos hypothesis} was applied
+to obtain the right-hand side of (\ref{eq:transport}). The \textit{molecular chaos
+hypothesis} establishes that spatial and velocity coordinates of the particles
+are not correlated.
+
+%-------------------------
+\subsection{H-theorem and the Maxwell-Boltzmann distribution}
+The $H$ theorem can be proved using the $H$ functional defined by Boltzmann 
+%
+\begin{equation}\label{eq:hfunctional}
+   H=\int f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v,
+\end{equation} 
+%
+where $f(\vec{v},t)$ is a homogeneous distribution function.
+This $H$ functional describes a system with a global energy $E$, a global
+number of free classical particles $N$, global volume $V$, and a temperature $T$.
+Besides, the Boltzmann's $H$ functional correspond to a density of entropy
+when the system arrives at the equilibrium state.
+
+The $H$ theorem establishes that if $f(\vec{v},t)$ satisfies the Boltzmann
+transport equation and the molecular chaos hypothesis, then
+$dH/dt\leq0$ and the system arrives to the equilibrium state when
+$dH/dt=0$.
+The theorem can be proved by applying the time derivative
+to Eq. (\ref{eq:hfunctional}) and using the Boltzmann transport equation
+(\ref{eq:transport}). As a consequence of this theorem, the distribution function
+that describes the system in equilibrium corresponds to the Maxwell-Boltzmann
+distribution. This distribution can be obtained by solving a sufficient
+condition for $f$ to obtain the equilibrium distribution function $f_0$:
+%
+\begin{equation}
+    f_0(\vec{v}'_2)f_0(\vec{v}'_1)- f_0(\vec{v}_2)f_0(\vec{v}_1)=0.
+\end{equation}
+%
+
+This condition can be obtained from the binary collision term of the Boltzmann
+transport equation (\ref{eq:transport}).
+
+The $H$-theorem fixes the time evolution direction of systems in nature, such
+as the second law of thermodynamics does. {\color{blue}footnote: }The molecular hypothesis is %
+fundamental to determine the physical meaning of the $H$ theorem. For more %
+information, see \cite{bib:huang}.
+
+%---------------------------
+\subsection{Out of equilibrium, non-homogeneous distributions}
+
+The Boltzmann $H$-functional (\ref{eq:hfunctional}) is defined with a spatially
+homogeneous distribution $f(\vec{v},t)$. However, we want to consider a $H$
+functional with a non-homogeneous distribution function in order to generalize
+the Boltzmann $H$ theorem. Because of this, we introduce a modified $H$
+functional (denoted as $H'$) defined as
+%
+\begin{equation}\label{eq:CH2}
+   H'(t)=\sum_{M=1}^{K}\int f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v.
+\end{equation}
+%
+This $H'$ describes a system with a global energy $E$, a global number of free
+classical particles $N$, global volume $V$, and a temperature $T$. Nevertheless,
+the global system, in turn, consists of a set of $K$ small cells with a constant
+volume $\delta V_M$, whose local homogeneous distribution functions is
+$f_{M}(\vec{v},t)$.
+
+The distribution function will depend on the position of the cells, the velocity
+$\vec{v}$, and time $t$. Without loss of generality, we choose these cells to
+have local identical volumes (\textit{i.e.} $\delta V_M = V/K, \forall M$).
+Each cell has its local chemical potential, $\mu_M$, local
+$H$ functional, $H'_M$, local number of particles, $\mathcal{N}'_M$, and local
+energy, $\mathcal{E}'_M$. In terms of the local distribution 
+function and the energy $\epsilon(\vec{v})$, the last three properties are
+given by:
+%
+\begin{eqnarray}
+    H_M' & = &  \int f_M(\vec{v},t) \ln f_{M}(\vec{v},t)
+      \mathrm{d}^{3}v \label{Hcell},\nonumber\\
+    \mathcal{N}_M' & = & \int f_{M}(\vec{v} ,t) \mathrm{d}^{3}v, \nonumber\\
+    \mathcal{E}_M' & = & \int f_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v.
+\end{eqnarray}
+%
+
+When the system is in equilibrium, the local number of particles and the local
+energy do not depend on the cell number, this is
+%
+\begin{equation}
+   \mathcal{N}'_M=\mathcal{N}'\equiv \bar{\mathcal{N}}';
+   \quad\mathcal{E}'_M=\mathcal{E}'\equiv\bar{\mathcal{E}}'.
+\end{equation}
+%
+The particles in the system are considered to be free, \textit{i.e.} the
+particles do not interact with each other. Besides, the local distribution
+function must satisfy the following microcanonical restrictions 
+%
+\begin{equation}\label{micro}
+    \sum_{M=1}^{K}\int f_M(\vec{v},t)\mathrm{d}^3v =N,
+    \quad\sum_{M=1}^{K}\int f_M(\vec{v},t)\epsilon(\vec{v})\mathrm{d}^3v=E.
+\end{equation}
+%
+
+We can see that the functional (\ref{eq:CH2}) contains a non-homogeneous
+distribution function but keeps the same form of the Boltzmann's $H$ functional.
+
+Inspired by the Hamilton principle, $H'$ will be maximized with those
+restrictions to obtain the equilibrium distribution function for a classical gas
+using the Lagrange multipliers method obtaining
+%
+\begin{eqnarray}
+    \frac{\delta H'}{\delta f_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
+      \frac{\delta}{\delta f_J(\vec{v}')}\left[
+        f_M(\vec{v})\ln f_M(\vec{v})
+        \right]
+       \mathrm{d}^3v -\sum_{M=1}^{K}\alpha_M\int
+       	\frac{\delta f_M(\vec{v})}{\delta f_J(\vec{v}')}
+      \mathrm{d}^3v\nonumber\\
+    & & -\sum_{M=1}^{K}\beta_M\int\epsilon(\vec{v})
+    	\frac{\delta f_M(\vec{v})}{\delta f_J(\vec{v}')}
+      \mathrm{d}^3v \nonumber\\
+    & = & \ln f_J(\vec{v}')+1-\alpha_J-\beta_J \epsilon(\vec{v}')=0.
+\end{eqnarray}
+%
+Isolating the distribution function 
+%
+\begin{eqnarray}
+    \ln f_J(\vec{v}') & = & \alpha_J+\beta_J \epsilon(\vec{v}')
+       -1\quad\Rightarrow\quad f_J(\vec{v}')\\
+    & = & e^{\alpha_J +\beta_J \epsilon(\vec{v}')-1}\nonumber\\
+    & = & Ce^{\alpha_J+\beta_J \epsilon(\vec{v}') } \label{relacion1},
+\end{eqnarray}
+%
+where $C$ is a constant. It is trivial that using the variational procedures we
+obtain the form of the Maxwell-Boltzmann distribution. 
+
+As $H'$ in equilibrium is proportional to entropy, it is trivial to think that
+Lagrange multipliers do not depend on the position because of the system is in
+equilibrium and consequently, the distribution function is homogeneous, that is
+%
+\begin{equation}
+    f(\vec{v})=Ce^{\alpha+\beta \epsilon(\vec{v})}\equiv \bar{f}(\vec{v}).
+\end{equation} 
+%
+The constant $C$ can be omitted defining the following $H$ functional
+%
+\begin{equation}
+   H''(t)=\sum_{M=1}^{K}\int \left[f_M(\vec{v},t)
+    \ln f_M(\vec{v},t)-f_M(\vec{v},t)\right]\mathrm{d}^3v  \label{CH3},
+\end{equation}
+%
+but $\sum_{M=1}^{K} \int f_M(\vec{v},t)\mathrm{d}^3v =N$ where $N$ is the
+total particle number. As $N$ is a constant and any $H$ functional has sense
+when we calculate its time derivative, this constant can be omitted. 
+
+On the other hand, if the distribution function is spatial-homogeneous, $f_M$ does not depend on the cell number $M$, then we rewrite (\ref{eq:CH2}) as
+%
+\begin{equation}
+    H'(t)=\int \sum_{M=1}^{K} [f(\vec{v},t)\ln f(\vec{v},t)] \mathrm{d}^{3}v
+         = K\int  f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v= K H_{boltz}(t), 
+\end{equation}
+%
+where
+%
+\begin{equation}
+    H_{boltz}(t)=\int f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v.
+\end{equation}
+%
+Besides, if we analyze the following expression
+%
+\begin{equation}
+    \int Kf(\vec{v},t) \ln [Kf(\vec{v},t)] \mathrm{d}^{3}v = \int [(K\ln K)f(\vec{v},t) + Kf(\vec{v},t) \ln f(\vec{v},t)]\mathrm{d}^{3}v, \label{sum-h}
+\end{equation}
+%
+we can observe if the number of particles in the $\mu$-space $f(\vec{v},t)$ is to big compare with the number of cells $P$, then the first term in (\ref{sum-h}) is negligible, and consequently, we conclude that
+%
+\begin{equation}
+    \int f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v = K\int f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v; \ \ \ f'(\vec{v},t)= Kf(\vec{v},t). \label{aditive-property} 
+\end{equation}
+%
+We obtained the additive property when we supposed the distribution function is
+spatial-homogeneous.
+
+
+To prove the Boltzmann's $H$ theorem (using (\ref{eq:CH2}) as functional), we need
+to assume that the distribution function $f_M(\vec{v},t)$ must satisfy the
+following assumptions:
+%
+\begin{itemize}
+  \item The local equilibrium hypothesis in each cell ($f_{M}$ must be
+    spatial-homogeneous for each $M$).
+  \item The non-homogeneous distribution function assumption in the total
+    volume ($f_{M}$ must be different among all cells).
+  \item The following restrictions
+    %
+    \begin{equation}\label{restrictionoutsideclassical}
+      \int f_{M}(\vec{v},t) \mathrm{d}^{3}v=
+      \bar{\mathcal{N}}+\Delta_M(t); \ \ \ \ 
+      \int f_{M}(\vec{v},t) \epsilon(\vec{v}) \mathrm{d}^{3}v=
+      \bar{\mathcal{E}}+ \delta_M(t),
+    \end{equation}
+    %
+    where $\bar {\mathcal{N}}$ and $\bar{\mathcal{E}}$ are
+    the local particle number and the local energy in equilibrium
+    %
+    \begin{equation}
+      \bar{\mathcal{N}}=
+      \int \bar{f}(\vec{v}) \mathrm{d}^{3}v ; \quad
+      \bar{\mathcal{E}}=
+      \int \bar{f}(\vec{v})\epsilon(\vec{v}) \mathrm{d}^{3}v,
+    \end{equation}
+    %
+    and $\Delta_M$, $\delta_M$ could be seen as a deviation from
+    $\bar{\mathcal{N}}$ and $\bar{\mathcal{E}}$ respectively,
+    with $\Delta_M(t)\ll\bar{\mathcal{N}}$ and
+    $\delta_M(t)\ll\bar{\mathcal{E}}$.
+\end{itemize} 
+%
+Those conditions described a system out of equilibrium but no so far from it,
+that is a perturbed system and will suffer a \textit{relaxation process, i.e.}
+The time evolution of a perturbated system to the equilibrium state.
+
+It is important to remark that the quantities $\Delta_M$, $\delta_M$ are
+sufficiently big to be different from fluctuations in the system but too small
+such that the system is not far from the equilibrium state.  
+
+Performing the derivative of (\ref{eq:CH2}) with respect to time, we obtain
+%
+\begin{equation}\label{dH1}
+    \frac{dH'}{dt}=\sum_{M=1}^{K}\int\left[
+      1+\ln f_M(\vec{v},t)
+    \right]\dot f_M(\vec{v},t)\mathrm{d}^3v.
+\end{equation}
+%
+Using the first-order approximation
+%
+\begin{equation}\label{firstorder}
+   f_{Mn}(\vec{v},t)=\bar{f}_{n}(\vec{v})(1+g_{Mn}(\vec{v},t)): \ \ \ 
+   \bar{f}_{n}(\vec{v})\gg \bar{f}_{n}(\vec{v})|g_{Mn}(\vec{v},t)|,
+\end{equation}
+%
+(\ref{dH1}) yields
+%
+\begin{equation}\label{dH1-1}
+    \frac{dH'}{dt}=\sum_{M=1}^{K}\int\bar f(\vec{v}) \left[
+      1+\ln \left\{
+        \bar f(\vec{v})+\bar f(\vec{v})g_M(\vec{v},t)
+      \right\}
+    \right]\dot g_M(\vec{v},t)\mathrm{d}^3v.
+\end{equation}
+%
+
+We can approximate the logarithm function in (\ref{dH1-1}) to its first-order
+Taylor series around $\bar f_n(\vec{v}) g_{nM}(\vec{v},t)=0$ 
+%
+\begin{equation}\label{lnapproximationclassical}
+    \ln [\bar{f}(\vec{v})+\bar{f}(\vec{v}) g_{M}(\vec{v},t)] \approx
+    \ln [\bar{f}(\vec{v})]+ g_{M}(\vec{v},t).
+\end{equation}
+%
+With the previous approximation, (\ref{dH1-1}) obtains the following form 
+%
+\begin{eqnarray}
+    \frac{dH'}{dt}&=&\sum_{M=1}^{K} \int \bar f(\vec{v})\left[
+      1+\ln \bar f(\vec{v})+g_M(\vec{v},t)
+    \right]\dot g_M(\vec{v},t)\mathrm{d}^3v,
+\end{eqnarray}
+%
+using (\ref{relacion1}) with homogeneous multipliers
+%
+\begin{equation}\label{dH1-2}
+    \frac{dH'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
+      \alpha+\beta \epsilon(\vec{v})
+    \right]\dot g_M(\vec{v},t)\mathrm{d}^3v +\sum_{M=1}^{K}
+    \int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v . \nonumber 
+\end{equation}
+%
+On the other hand, we obtain from the restrictions the following expressions
+%
+\begin{eqnarray}
+    \int \bar{f}(\vec{v}) g_{M}(\vec{v},t) \mathrm{d}^{3}v=\Delta_M(t) \ \  &\Rightarrow&
+    \ \  \int \bar{f}(\vec{v}) \dot{g}_{M}(\vec{v},t)\mathrm{d}^{3}v=\dot{\Delta}_M(t), \nonumber \\
+    \int  \bar{f}(\vec{v}) g_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v=\delta_M(t) \ \  &\Rightarrow&
+    \ \  \int \bar{f}(\vec{v}) \dot{g}_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v=\dot{\delta}_M(t), \nonumber 
+\end{eqnarray}
+%
+and as a consequence of $\sum_{M=1}^{K} \Delta_M(t) =\sum_{M=1}^{K} \delta_M(t) =0$,
+we find
+%
+\begin{equation}
+    \sum_{M=1}^{K} \dot{\Delta}_M(t)  =\sum_{M=1}^{K} \dot{\delta}_{M}(t) =0.
+\end{equation}
+%
+Then using the previous result to (\ref{dH1-2}), we find
+%
+\begin{equation}
+  \frac{dH'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v.
+\end{equation}
+%
+Now, the summation over $M$ will be expressed in two summations
+%
+\begin{equation}\label{classicalH3}
+    \frac{dH'}{dt}=\sum_J^{L}\int
+      \bar f(\vec{v})g_J^{+}(\vec{v},t)\dot g_J^{+}(\vec{v},t)\mathrm{d}^3v
+      +\sum_J^{P}\int
+        \bar f(\vec{v})g_J^{-}(\vec{v},t)\dot g_J^{-}(\vec{v},t)\mathrm{d}^3v.
+\end{equation}
+%
+where $L+P=K$. The group of $L$ cells is such that cells have an excess of
+particles or/and energy (from the mean value in equilibrium). In contrast,
+the group of $P$ cells is such that cells have to miss particles or/and energy
+(from the mean value in equilibrium). Besides, $\dot{g}^{+}_{J}$ represents the
+change on the deviation on cells that have an excess of particles or energy
+while $\dot{g}^{-}_{J}$  represents the change on the deviations on cells that
+have missing particles or energy. 
+On the other hand, $g^{+}_{J}$  represents the value of the deviation on cells
+that have an excess of particles or energy. In contrast, $g^{-}_{J}$ represents
+the value of the deviation on cells that have missing particles or energy.
+
+Also, on the one hand, $\dot{g}^{+}_{J}<0$ describes the loss of particles
+and/or energy and so, $g^{+}_{J}>0$. On the other hand, $\dot{g}^{-}_{J}>0$
+describes the gain of particles and/or energy and therefore $g^{-}_{J}<0$. 
+
+We sort the previous ideas in the following form
+%
+\begin{equation}\label{separacionclassical}
+\begin{array}{rl}
+  g^{+}_{J}=+|g^{+}_{J}|; & \dot{g}^{+}_{J}=-|\dot{g}^{+}_{J}|,\\
+  g^{-}_{J}=-|g^{-}_{J}|; & \dot{g}^{-}_{J}=+|\dot{g}^{-}_{J}|,
+ \end{array}
+\end{equation}
+%
+and consequently, (\ref{classicalH3}) obtains the following form
+%
+\begin{equation}
+    \frac{dH'}{dt}=-\left[
+      \sum_J^{L}\int\bar f(\vec{v})|g_J^{+}(\vec{v},t)|
+        |\dot g_J^{+}(\vec{v},t)|\mathrm{d}^3v
+      +\sum_J^{P}\int\bar f(\vec{v})|g_J^{-}(\vec{v},t)|
+      |\dot g_J^{-}(\vec{v},t)|\mathrm{d}^3v 
+    \right]. \label{classicalH4}
+\end{equation}
+%
+We can observe that $\bar{f}(\vec{v})$ in (\ref{classicalH4}) is always
+positive. Also the deviation and its derivative are positive, then all the
+expression is positive. However, the global sign makes the derivative of the
+$H'$ with respect to time is always less to zero. With this we proved that
+$\frac{dH'}{dt}<0$. If the system is in equilibrium,
+$g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{dH'}{dt}=0$.
+
+Joining both results, we can say the following statement:
+Consider a classical gas in a total volume $V$ (divided in $K$ cells of equal
+volume elements), total energy $E$ and total number of free particles $N$.
+Consider also the system has inhomogeneities and suffers a relaxation process.
+If we define the following functional
+%
+\begin{equation}\label{CH3}
+   H'(t)=\sum_{M=1}^{K}\int f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v,
+\end{equation}
+%
+where $f_M(\vec{v},t)$ is the local distribution function of each cell in the
+system, then in the first-order approximation
+%
+\begin{equation}
+    \frac{dH'}{dt} \leq 0.
+\end{equation}
+%
+This statement will be the classical $H$ theorem with inhomogeneities.
+
+In the next section, we present a proposal quantum version of the
+$H$ theorem defined by Tolman and our proposal quantum version of the $H$
+theorem applying the method of the volume divided into cells.
+
+
