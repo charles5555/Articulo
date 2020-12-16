@@ -10,38 +10,47 @@
 
 %----------------------------------
 
-\section{Classical scheme}
+\section{Classical scheme}\label{sec:classical}
+
+Classical statistical mechanics is theoretically founded on the Boltzmann transport
+equation and the hypo of molecular chaos. The fundamental connection
+between the microscopic nature of matter and the phenomenological laws of thermodynamics
+is the $H$-theorem.
 
 \subsection{The Boltzmann transport equation}
 
-In the classical version, the Boltzmann transport equation is required to show
-the $H$-theorem. That equation is
+From the Boltzmann kinetic theory of gases, the probability for a particle to be in a given
+state of position and velocity (\textit{aka} the distribution function) must satify
+the transport equation (Eq.~(\ref{eq:transport}), below).
+This equation is traditionally obtained by exploiting the volume-invariance of the $\mu$-space
+(\textit{i.e.} the space formed by the direct product of position and velocity)
+and considering that elastic collisions constitute the predominant mechanism
+for exchanging energy among particles \cite{bib:huang}.
 %
 \begin{equation}\label{eq:transport}
+	%\left(\frac{\partial f_1}{\partial t}\right)_{\mathrm{coll}}=
   \left(
-    \frac{\partial}{\partial t}+\vec{v}_1 \cdot\nabla_r
-    +\frac{\vec{F}}{m}\cdot\nabla_{v_1}
+    \frac{\partial}{\partial t}+\vec{v}_1 \cdot\nabla_{\vec r}
+    +\frac{\vec{F}}{m}\cdot\nabla_{\vec v_1}
   \right)f_1=\int\mathrm{d}\Omega\int
-    \mathrm{d}^{3}v_2\sigma(\Omega)|\vec{v}_1-\vec{v}_2|(f_2'f_1'-f_2f_1),
+    \mathrm{d}^{3}v_2\sigma(\Omega)|\vec{v}_1-\vec{v}_2|(f_2'f_1'-f_2f_1).
 \end{equation}
 %
-where $\Omega$ is the solid angle, $\sigma$ is the scattering section, $F$ the
-external force applied to the system, $f_1$, $f_2$ are the distribution
-functions of the particles 1 and 2 respectively before the collision,
-and $f'_1$, $f'_2$ are the distribution function of the particles 1 and 2
-respectively after the collision.
+In Eq. (\ref{eq:transport}), $\Omega$ is the solid angle, $\sigma$ is the
+scattering cross section, $\vec F$ the
+external force applied to the system, and $f_1$ and $f_2$ ($f'_1$ and $f'_2$) are the distribution
+functions of particles 1 and 2, respectively, before (after) the collision.
 
-On the one hand, dynamics, inhomogeneities, and external forces are described
-by the left-hand side of the equation (\ref{eq:transport}). On the other hand, the
-binary collisions among particles are involved in the right-hand side of the
-previous equation. However, the \textit{molecular chaos hypothesis} was applied
-to obtain the right-hand side of (\ref{eq:transport}). The \textit{molecular chaos
-hypothesis} establishes that spatial and velocity coordinates of the particles
-are not correlated.
+Particle dynamics and external forces are described
+by the left-hand side of Eq.~(\ref{eq:transport}), and the right-hand side
+is derived considering binary collisions between particles and
+the \textit{molecular chaos hypothesis}, \textit{i.e.} it is assumed that
+the coordinates and velocities of the particles are not time-correlated.
+
 
 %-------------------------
 \subsection{H-theorem and the Maxwell-Boltzmann distribution}
-The $H$ theorem can be proved using the $H$ functional defined by Boltzmann 
+The $H$-theorem can be proved using the $H$ functional defined by Boltzmann 
 %
 \begin{equation}\label{eq:hfunctional}
    H=\int f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v,
@@ -53,7 +62,7 @@ number of free classical particles $N$, global volume $V$, and a temperature $T$
 Besides, the Boltzmann's $H$ functional correspond to a density of entropy
 when the system arrives at the equilibrium state.
 
-The $H$ theorem establishes that if $f(\vec{v},t)$ satisfies the Boltzmann
+The $H$-theorem establishes that if $f(\vec{v},t)$ satisfies the Boltzmann
 transport equation and the molecular chaos hypothesis, then
 $dH/dt\leq0$ and the system arrives to the equilibrium state when
 $dH/dt=0$.
@@ -74,7 +83,7 @@ transport equation (\ref{eq:transport}).
 
 The $H$-theorem fixes the time evolution direction of systems in nature, such
 as the second law of thermodynamics does.\footnote{The molecular hypothesis is %
-fundamental to determine the physical meaning of the $H$ theorem. For more %
+fundamental to determine the physical meaning of the $H$-theorem. For more %
 information, see \cite{bib:huang}.}
 
 %---------------------------
@@ -83,7 +92,7 @@ information, see \cite{bib:huang}.}
 The Boltzmann $H$-functional (\ref{eq:hfunctional}) is defined with a spatially
 homogeneous distribution $f(\vec{v},t)$. However, we want to consider a $H$
 functional with a non-homogeneous distribution function in order to generalize
-the Boltzmann $H$ theorem. Because of this, we introduce a modified $H$
+the Boltzmann $H$-theorem. Because of this, we introduce a modified $H$
 functional (denoted as $H'$) defined as
 %
 \begin{equation}\label{eq:CH2}
@@ -212,7 +221,7 @@ We obtained the additive property when we supposed the distribution function is
 spatial-homogeneous.
 
 
-To prove the Boltzmann's $H$ theorem (using (\ref{eq:CH2}) as functional), we need
+To prove the Boltzmann's $H$-theorem (using (\ref{eq:CH2}) as functional), we need
 to assume that the distribution function $f_M(\vec{v},t)$ must satisfy the
 following assumptions:
 %
@@ -395,10 +404,10 @@ system, then in the first-order approximation
     \frac{dH'}{dt} \leq 0.
 \end{equation}
 %
-This statement will be the classical $H$ theorem with inhomogeneities.
+This statement will be the classical $H$-theorem with inhomogeneities.
 
 In the next section, we present a proposal quantum version of the
-$H$ theorem defined by Tolman and our proposal quantum version of the $H$
+$H$-theorem defined by Tolman and our proposal quantum version of the $H$
 theorem applying the method of the volume divided into cells.
 
 
