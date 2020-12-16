@@ -1,190 +1,355 @@
-
 \section{Quantum scheme}
+
 \subsection{H theorem and the Fermi-Dirac and Bose-Einstein distribution}
-The $H$ functional in quantum mechanics presented by Tolman \cite{tolman} is defined as 
+
+The $H$ functional in quantum mechanics presented by Tolman \cite{bib:tolman}
+is defined as
+%
 \begin{equation}
     H=\sum_i n_i \ln n_i -(n_i\pm g_i)\ln (g_i \pm n_i)\pm g_i\ln g_i, \label{quantumh}
 \end{equation}
-where $n_i$ is the occupation number and $g_i$ is an energy cell. Also, an equation for the rate of change in the number of particles in group $\kappa$ is
+%
+where $n_i$ is the occupation number and $g_i$ is an energy cell. Also, an
+equation for the rate of change in the number of particles in group $\kappa$ is
+%
 \begin{eqnarray}
     \frac{d n_{\kappa}}{dt}&=&-\sum_{\lambda,(\mu \nu)}A_{\kappa\lambda,\mu\nu} n_{\kappa}n_{\lambda}(g_{\mu}\pm n_{\mu})(g_{\nu}\pm n_{\nu})\nonumber \\
     &&+\sum_{\lambda,(\mu \nu)}A_{\mu\nu,\kappa\lambda} n_{\mu}n_{\nu}(g_{\kappa}\pm n_{\kappa})(g_{\lambda}\pm n_{\lambda}),\label{changen}
 \end{eqnarray}
+%
 where $A_{\kappa\lambda,\mu\nu}$ is a tensor expressed as
+%
 \begin{equation}
   A_{\kappa\lambda,\mu\nu}=\frac{4\pi^{2}}{h}\frac{|I_1\pm I_2|^2}{\Delta \epsilon},
 \end{equation}
-where $\epsilon$ is the energy and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where $V_{mn,kl}$ is the perturbation matrix of binary particles. Those expressions are obtained by the perturbation theory.\\
-\textcolor{red}{Tolman's proposal for the quantum $H$-theorem establishes that if we have a quantum gas that satisfies the rate of change equation (\ref{changen})\footnote{It is important to remark that the equal a priori probabilities and random a priori phases hypothesis are implicit in the rate of change equation (\ref{changen}) and the random a priori phases hypothesis is considered as the quantum analogous to the molecular chaos hypothesis \cite{binary}}, then the $H$ functional (\ref{quantumh}) satisfies that
+%
+where $\epsilon$ is the energy and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where
+$V_{mn,kl}$ is the perturbation matrix of binary particles. Those expressions
+are obtained by the perturbation theory.
+
+\textcolor{red}{Tolman's proposal for the quantum $H$-theorem establishes that
+if we have a quantum gas that satisfies the rate of change equation
+(\ref{changen})\footnote{It is important to remark that the equal a priori
+probabilities and random a priori phases hypothesis are implicit in the rate of
+change equation (\ref{changen}) and the random a priori phases hypothesis is
+considered as the quantum analogous to the molecular chaos hypothesis
+\cite{bib:das2018}}, then the $H$ functional (\ref{quantumh}) satisfies that
+%
 \begin{equation}
     \frac{dH}{dt}\leq 0,
 \end{equation}
-and as a consequence of this theorem, when the system is in equilibrium, $\frac{dH}{dt}=0$.\\
-The proof of this theorem is in the same way as in the classical version. Also, when the system is in equilibrium, the distribution functions that correspond to the equilibrium state are the Fermi-Dirac and the Bose-Einstein distribution. Those distributions can be obtained from a sufficient condition for the equilibrium state
+%
+and as a consequence of this theorem, when the system is in equilibrium,
+$\frac{dH}{dt}=0$.\\
+The proof of this theorem is in the same way as in the classical version. Also,
+when the system is in equilibrium, the distribution functions that correspond
+to the equilibrium state are the Fermi-Dirac and the Bose-Einstein
+distribution. Those distributions can be obtained from a sufficient condition
+for the equilibrium state
+%
 \begin{equation}
     \ln \frac{n_{\kappa}}{g_{\kappa}\pm n_{\kappa}}+\ln \frac{n_{\lambda}}{g_{\lambda}\pm n_{\lambda}}=\ln \frac{n_{\mu}}{g_{\mu}\pm n_{\nu}}+\ln \frac{n_{\nu}}{g_{\nu}\pm n_{\nu}},
 \end{equation}
-where the upper sign refers to the Bose-Einstein distribution and the lower sign refers to the Fermi-Dirac distribution.}\\
-In addition to this, Tolman showed that (\ref{quantumh}) can be reduced in the limit of high-energy levels to
+%
+where the upper sign refers to the Bose-Einstein distribution and the lower
+sign refers to the Fermi-Dirac distribution.}
+
+In addition to this, Tolman showed that (\ref{quantumh}) can be reduced in the
+limit of high-energy levels to
+%
 \begin{equation}
     H = \sum_{\kappa} (n_{\kappa} \ln n_{\kappa} - n_{\kappa} \ln g_{\kappa}). \label{reduce-h}
 \end{equation}
-This expression also can be obtained also from the Boltzmann $H$ functional through defining 
+%
+This expression also can be obtained also from the Boltzmann $H$ functional through defining
+%
 \begin{equation}
     f=\frac{n_{\kappa}}{ g_{\kappa}}.
 \end{equation}
+%
 %--------------------------
+
 \subsection{Out of equilibrium, non-homogeneous distributions for degenerated systems}
 
-We begin by defining the form of the functional 
+We begin by defining the form of the functional
+%
 \begin{eqnarray}
     \Ss (t)&=&\sum_{M=1}^{K} \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
     &&\pm (1 \mp f_{Mn}(\epsilon_{n},t)) \ln (1 \mp f_{Mn}(\epsilon_{n},t)) ]   \delta V_M \delta \epsilon_n \label{entropy}.
 \end{eqnarray}
+%
 This functional will be named \textit{variational entropy}.
-This functional describes, as in the classical case, a system with a global energy $E$, a global number of free
-quantum particles (which may be fermions for upper sing or bosons for lower sing) $N$, global volume $V$, and a temperature $T$. 
-Besides, the variational entropy should correspond to a density of entropy when the system arrives at the equilibrium state. The
-global system, in turn, consists of a set of $K$ small cells with a constant volume $\delta V_M$, whose local homogeneous distribution functions is $f_{Mn}(\epsilon_{n},t)$. The distribution function will depend on the position of the cells, the energy per cell $\epsilon_{n}$, and time $t$. Also, the energy spectra will be divided into $\delta \epsilon_n$ volumes. We will use the uppercase Latin index to denote cell numbers, and unless stated otherwise, $M = 1, 2 . . . , K$. Without loss of generality, we choose these cells to have
-local identical volumes (\textit{i.e.} $\delta V_M = V/K, \forall M$). Each cell has its local chemical potential, $\mu_M$, local
-variational functional, $\Sm$, local number of particles, $\mathcal{N}_M$, and local energy, $\mathcal{E}_M$. In terms of the local distribution 
-function and local energy spectra, $\{\epsilon_{n}\}$, the last three properties are given by:
+This functional describes, as in the classical case, a system with a global
+energy $E$, a global number of free
+quantum particles (which may be fermions for upper sing or bosons for lower
+sing) $N$, global volume $V$, and a temperature $T$.
+Besides, the variational entropy should correspond to a density of entropy when
+the system arrives at the equilibrium state. The
+global system, in turn, consists of a set of $K$ small cells with a constant
+volume $\delta V_M$, whose local homogeneous distribution functions is
+$f_{Mn}(\epsilon_{n},t)$. The distribution function will depend on the position
+of the cells, the energy per cell $\epsilon_{n}$, and time $t$. Also, the
+energy spectra will be divided into $\delta \epsilon_n$ volumes. We will use
+the uppercase Latin index to denote cell numbers, and unless stated otherwise,
+$M = 1, 2 . . . , K$. Without loss of generality, we choose these cells to have
+local identical volumes (\textit{i.e.} $\delta V_M = V/K, \forall M$). Each
+cell has its local chemical potential, $\mu_M$, local
+variational functional, $\Sm$, local number of particles, $\mathcal{N}_M$, and
+local energy, $\mathcal{E}_M$. In terms of the local distribution
+function and local energy spectra, $\{\epsilon_{n}\}$, the last three
+properties are given by:
+%
 \begin{eqnarray}
     \Sm &=&  \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
     &&\pm (1 \mp f_{Mn}(\epsilon_{n},t)) \ln (1 \mp f_{Mn}(\epsilon_{n},t)) ] \de V_M \delta \epsilon_n \label{entropycell},\\
     {\mathcal{N}}_M&=& \sum_{n}f_{Mn}(\epsilon_{n} ,t) \de V_M \delta \epsilon_n, \nonumber \\
 {\mathcal{E}}_M&=& \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{n} \de V_M \delta \epsilon_n.
 \end{eqnarray}
-When the system is in equilibrium, the local number of particles and the local energy don't depend on the cell number, this is
+%
+When the system is in equilibrium, the local number of particles and the local
+energy don't depend on the cell number, this is
+%
 \begin{equation}
    {\mathcal{N}}_M=\mathcal{N}\equiv \bar{\mathcal{N}}; \ \ \ \  {\mathcal{E}}_M=\mathcal{E}\equiv \bar{\mathcal{E}}.
 \end{equation}
-The particles in the system are considered to be free, \textit{i.e.} the particles do not interact with each other.
-Consequently, we can assume that the available quantum states do not depend on the cell features,
-therefore the energy spectrum, denoted by $\epsilon_n$, is the same for all cells, \textit{i.e.} $\epsilon_{Mn} = \epsilon_n, \forall M$. Besides, the system is subjected to the microcanonical restrictions
+%
+The particles in the system are considered to be free, \textit{i.e.} the
+particles do not interact with each other.
+Consequently, we can assume that the available quantum states do not depend on
+the cell features,
+therefore the energy spectrum, denoted by $\epsilon_n$, is the same for all
+cells, \textit{i.e.} $\epsilon_{Mn} = \epsilon_n, \forall M$. Besides, the
+system is subjected to the microcanonical restrictions
+%
 \begin{eqnarray}
     &&\sum_{M=1}^{K} \left[ \sum_{n}f_{Mn}(\epsilon_{n} ,t)\de \epsilon_n\right] \de V_M=\sum_{M=1}^{K} {\mathcal{N}}_{M} \de V_M=N; \nonumber \\
     &&\sum_{M=1}^{K}\left[ \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{n}\delta \epsilon_n\right] \de V_M=\sum_{M=1}^{K} {\mathcal{E}}_M \delta V_M=E, \label{restriccions1}
 \end{eqnarray}
-where $N$ and $E$ are the total particle number and the total energy of the system respectively.\\ 
-Maximizing the variational entropy $\Ss$ using the Lagrange multipliers method, we obtain
+%
+where $N$ and $E$ are the total particle number and the total energy of the
+system respectively.
+
+Maximizing the variational entropy $\Ss$ using the Lagrange multipliers method,
+we obtain
+%
 \begin{eqnarray}
 &&\ln \left(\frac{1\mp f_{Mn}(\epsilon_{n},t)}{f_{Mn}(\epsilon_{n},t)} \right)=-\alpha_M(t)-\beta_M(t) \epsilon_{n}, \label{relation}\\ &&\Rightarrow \ \ f_{Mn}(\epsilon_{n},t)=\frac{1}{e^{-\alpha_M(t)-\beta_M(t) \epsilon_{n}}\pm 1} \equiv \bar{f}_{Mn}(\epsilon_{n},t) \label{distributionequilibrium}.
 \end{eqnarray}
-where $\alpha_M(t), \beta_M(t)$ are the Lagrange multipliers. We can obtain from the variational procedure that 
+%
+where $\alpha_M(t), \beta_M(t)$ are the Lagrange multipliers. We can obtain
+from the variational procedure that
+%
 \begin{equation}
     \alpha_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{N}_M}, \ \ \ \beta_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{E}_M},\label{multipliers}
 \end{equation}
-where we used that the $H$ functional in equilibrium is proportional to the entropy of the system.
-In other hand, in the expression (\ref{multipliers}), we expect that the variation of the logarithm with the number of particles by cells is indifferent from a particular cell. With this, we conclude  
+%
+where we used that the $H$ functional in equilibrium is proportional to the
+entropy of the system.
+In other hand, in the expression (\ref{multipliers}), we expect that the
+variation of the logarithm with the number of particles by cells is indifferent
+from a particular cell. With this, we conclude 
+%
 \begin{equation}
     \alpha_M=\alpha; \ \ \ \ \beta_M=\beta.
 \end{equation}
-In equilibrium, the energy and the Lagrange multiplier do not depend on the cell number and time, therefore
+%
+In equilibrium, the energy and the Lagrange multiplier do not depend on the
+cell number and time, therefore
+%
 \begin{equation}
     \bar f_{Mn}(\epsilon_{n},t)=\bar f_n(\epsilon_{n}) =\frac{1}{e^{-\alpha-\beta \epsilon_n}\pm 1}.
-\end{equation}{}
-If one compares those multipliers with the mean energy and the mean particle number from the statistical mechanic's results, we obtain
+\end{equation}
+%
+If one compares those multipliers with the mean energy and the mean particle
+number from the statistical mechanic's results, we obtain
+%
 \begin{equation}
     \alpha=\frac{\mu}{kT}\equiv \bar{\alpha}; \ \ \ \ \beta=-\frac{1}{kT}\equiv \bar{\beta},
-\end{equation}{}
+\end{equation}
+%
 and finally
+%
 \begin{eqnarray}
     \bar{f}_{n}(\epsilon_{n})&=&\frac{1}{e^{(\frac{{\epsilon_n}-\bar{\mu}}{kT})}\pm 1}\equiv \bar{f}_{n}.
-\end{eqnarray}{}
-We proved, when the system is in equilibrium, the Lagrange multipliers don't depend on the cell number. In other words, Lagrange multipliers are homogeneous in the system.\\
-We can calculate the entropy from an ideal system, in other words, if one substitute (\ref{distributionequilibrium}) to (\ref{entropy}) we obtain
+\end{eqnarray}
+%
+We proved, when the system is in equilibrium, the Lagrange multipliers don't
+depend on the cell number. In other words, Lagrange multipliers are homogeneous
+in the system.
+
+We can calculate the entropy from an ideal system, in other words, if one
+substitute (\ref{distributionequilibrium}) to (\ref{entropy}) we obtain
+%
 \begin{eqnarray}
       \Ss(t)&=&\sum_{M=1}^{K} \sum_n  \left[\left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right)\ln \left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}} \right) \right]\nonumber \\
       &&\pm  \ln \left[\prod_{M=1}^{K} \prod_{n}\left(1 \mp \frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right) \right] \de V_M \delta \epsilon_n\label{H-entropy}.
   \end{eqnarray}
-  This result allows us to calculate the entropy of a quantum ideal gases. This entropy could be used as a thermodynamic variable to describe those systems.
-  
-  
+%
+This result allows us to calculate the entropy of a quantum ideal gases. This
+entropy could be used as a thermodynamic variable to describe those systems.
+ 
+ 
 %\subsection{The quantum analogous of the Boltzmann's $H$ theorem}
 We rewrite the \textit{variational entropy} (\ref{entropy}) as
+%
 \begin{equation}
     \Ss(t)=\sum_{M=1}^{K} \sum_{n} \left[ f_{Mn} \ln f_{Mn} \pm (1 \mp f_{Mn}) \ln (1 \mp f_{Mn}) \right] \de V_M \delta \epsilon_n \label{entropy2},
 \end{equation}
+%
 where, for simplicity, we have defined $f(\epsilon_{n},t)\equiv f_{Mn}$.
 
-This distribution function must satisfy the local equilibrium hypothesis in each cell ($f_{nM}$ must be spatial-homogeneous for each $M$), the non-homogeneous distribution function assumption in the total volume ($f_{nM}$ must be different among all cells), and the following restrictions
+This distribution function must satisfy the local equilibrium hypothesis in
+each cell ($f_{nM}$ must be spatial-homogeneous for each $M$), the
+non-homogeneous distribution function assumption in the total volume ($f_{nM}$
+must be different among all cells), and the following restrictions
+%
 \begin{eqnarray}
         \sum_{n}f_{Mn} \delta \epsilon_n=\bar{\mathcal{N}}+\Delta_M(t); \ \ \ \ \sum_{n}\epsilon_{n}f_{Mn} \delta \epsilon_n=\bar{\mathcal{E}}+ \delta_M(t), \label{restrictionoutside}
   \end{eqnarray}
-  where $\bar {\mathcal{N}}$ and $\bar{\mathcal{E}}$ are the local particle number and the local energy in equilibrium
-  \begin{equation}
+%
+where $\bar {\mathcal{N}}$ and $\bar{\mathcal{E}}$ are the local particle
+number and the local energy in equilibrium
+%
+\begin{equation}
       \bar{\mathcal{N}}= \sum_n \bar{f}_n \delta \epsilon_n; \ \ \ \ \bar{\mathcal{E}}= \sum_n \epsilon_n\bar{f}_n \delta \epsilon_n,
   \end{equation}
-  and $\Delta_M,\delta_M$ could be seen as a deviation from $\bar{\mathcal{N}}$ and $\bar{\mathcal{E}}$ respectively, with $\Delta_M(t)\ll \bar{\mathcal{N}}$ and $\delta_M(t) \ll \bar{\mathcal{E}}$. The previous conditions and restrictions are the quantum analogous case of the classical case. Also, this system will suffer, as in the classical case, a \textit{relaxation process}.\\
-  The quantities $\Delta_M,\delta_M$ are sufficiently big to be different from fluctuations in the system but sufficiently small to consider the system not far from the equilibrium state, as in the classical case.  \\
-If we perform the derivative of the variational entropy with respect to time, we obtain
+%
+and $\Delta_M,\delta_M$ could be seen as a deviation from $\bar{\mathcal{N}}$
+and $\bar{\mathcal{E}}$ respectively, with $\Delta_M(t)\ll \bar{\mathcal{N}}$
+and $\delta_M(t) \ll \bar{\mathcal{E}}$. The previous conditions and
+restrictions are the quantum analogous case of the classical case. Also, this
+system will suffer, as in the classical case, a \textit{relaxation process}.
+
+  The quantities $\Delta_M,\delta_M$ are sufficiently big to be different from
+fluctuations in the system but sufficiently small to consider the system not
+far from the equilibrium state, as in the classical case. 
+
+If we perform the derivative of the variational entropy with respect to time,
+we obtain
+%
 \begin{equation}
    \frac{d \Ss (t)}{dt}= \sum_n \sum_{M=1}^{K} \dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right] \de V_M \delta \epsilon_n.\label{deltaH}
-\end{equation}{}
+\end{equation}
+%
 Using the first-order approximation (\ref{firstorder}), we get
+%
 \begin{eqnarray}
     \frac{d\Ss (t)}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_{n}\ln \left[ \frac{\bar{f}_{n}(1+g_{nM})}{1\mp \bar{f}_{n} (1+ g_{nM})} \right]\dot{g}_{nM} \de V_M\delta \epsilon_n \nonumber \\
     &=&\sum_n \sum_{M=1}^{K} \bar{f}_n \left \{ \ln [\bar{f}_n+\bar{f}_n g_{nM}]\dot{g}_{nM}-\ln [1\mp\bar{f}_n\mp\bar{f}_n g_{nM}]\dot{g}_{nM}  \right \}\de V_M \delta \epsilon_n.\nonumber \\
     \label{cambioH1}
-\end{eqnarray}{}
+\end{eqnarray}
+%
 It's necessary to remark that, in the case of fermions
+%
 \begin{eqnarray}
    1-\bar f_n -\bar f_n g_{nM}>0 \ \ \Rightarrow \ \ \frac{1}{\bar f_n}>1+g_{nM}. \label{fermionrestriction}
-\end{eqnarray}{}
-The previous expression establishes that the value of $g_{nM}$ is determined by $\bar f_n$. Furthermore, whether $\bar f_{n}=1$, this is, all lower energy levels are occupied, then the system will not have inhomogeneities because of the exclusion principle, and as a consequence of this,  $g_{nM}=0$. This result corresponds to the system in the zero temperature condition. We can observe that in this condition, (\ref{fermionrestriction}) is violated. Due to this, the zero temperature condition is excluded.\\
-\\
-We can observe in the case of bosons, if $\bar{f}_n \gg \bar{f}_n |g_{nM}|$ then $1+\bar{f}_n \gg \bar{f}_n |g_{nM}|$. In fermions, in the case of a non-extremely degenerated condition, it is true that $1-\bar{f}_n \gg \bar{f}_n |g_{nM}|$. With those relations, we can approximate the logarithm functions in (\ref{cambioH1}) to their first-order Taylor series around $\bar f_n g_{nM}=0$ 
+\end{eqnarray}
+%
+The previous expression establishes that the value of $g_{nM}$ is determined by
+$\bar f_n$. Furthermore, whether $\bar f_{n}=1$, this is, all lower energy
+levels are occupied, then the system will not have inhomogeneities because of
+the exclusion principle, and as a consequence of this,  $g_{nM}=0$. This result
+corresponds to the system in the zero temperature condition. We can observe
+that in this condition, (\ref{fermionrestriction}) is violated. Due to this,
+the zero temperature condition is excluded.
+
+
+We can observe in the case of bosons, if $\bar{f}_n \gg \bar{f}_n |g_{nM}|$
+then $1+\bar{f}_n \gg \bar{f}_n |g_{nM}|$. In fermions, in the case of a
+non-extremely degenerated condition, it is true that $1-\bar{f}_n \gg \bar{f}_n
+|g_{nM}|$. With those relations, we can approximate the logarithm functions in
+(\ref{cambioH1}) to their first-order Taylor series around $\bar f_n g_{nM}=0$
+%
 \begin{equation}
     \ln [\bar{f}_n+\bar{f}_n g_{nM}] \approx \ln [\bar{f}_n]+ g_{nM}; \ \ \ \ \ln[1\mp\bar{f}_n\mp\bar{f}_n g_{nM}] \approx \ln[1\mp\bar{f}_n]\mp\frac{\bar{f}_n}{1\mp\bar{f}_{n}} g_{nM}. \label{lnapproximation}
-\end{equation}{}
+\end{equation}
+%
 With the previous approximation, (\ref{cambioH1}) will be
+%
 \begin{eqnarray}
     \frac{d\Ss}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\} \de V_M \delta \epsilon_n \nonumber \\
     &&-\sum_{n}\sum_{M=1}^{K}\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\de V_M \delta \epsilon_n.\label{cambioH2}
-\end{eqnarray}{}
+\end{eqnarray}
+%
 Making use of the expression (\ref{relation}),
 (\ref{cambioH2}) casts into
+%
 \begin{eqnarray}
     \frac{d\Ss}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\bar{\alpha}+\bar{\beta}{\epsilon}_n)\dot{g}_{nM}+ g_{nM}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\dot{g}_{nM} \right \} \de V_M \delta \epsilon_n. \nonumber \\
     \label{cambioH3}
-\end{eqnarray}{}
+\end{eqnarray}
+%
 On the other hand, we obtain from the restrictions the following expressions
+%
 \begin{eqnarray}
     &&\sum_n \bar{f}_n g_{nM} \delta \epsilon_n=\Delta_M(t) \ \  \Rightarrow \ \  \sum_n \bar{f}_n \dot{g}_{nM} \delta \epsilon_n=\dot{\Delta}_M(t), \nonumber \\
     &&\sum_n  \bar{f}_n g_{nM}\epsilon_n \delta \epsilon_n=\delta_M(t) \ \  \Rightarrow \ \  \sum_n \bar{f}_n \dot{g}_{nM}\epsilon_n \delta \epsilon_n=\dot{\delta}_M(t)
-\end{eqnarray}{}
+\end{eqnarray}
+%
 and as a consequence of $\sum_{M=1}^{K} \Delta_M(t) \de V_M  =\sum_{M=1}^{K} \delta_M(t) \de V_M =0$, we find
+%
 \begin{equation}
     \sum_{M=1}^{K} \dot{\Delta}_M(t) \de V_M =\sum_{M=1}^{K} \dot{\delta}_{M}(t) \de V_M=0.
-\end{equation}{}
+\end{equation}
+%
 Substituting the previous expression to (\ref{cambioH3}) we obtain
+%
 \begin{eqnarray}
    \frac{d\Ss}{dt}&=&  \sum_n e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\sum_M  g_{nM}\dot{g}_{nM} \de V_M\delta \epsilon_n. \nonumber \\ \label{cambioH4}
-\end{eqnarray}{}
-Now, the summation over $M$ will be expressed in two summations, such as in the classical case
+\end{eqnarray}
+%
+Now, the summation over $M$ will be expressed in two summations, such as in the
+classical case
+%
 \begin{equation}
     \frac{d\Ss}{dt}=\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} g^{+}_{nJ}\dot{g}^{+}_{nJ}\de V_J \delta \epsilon_n+\sum^{P}_J  g^{-}_{nJ}\dot{g}^{-}_{nJ} \de V_J\delta \epsilon_n \right), \label{cambioH5}
 \end{equation}
-where $L+P=K$. Besides, $\dot{g}^{+}_{J}$ represents the change on the deviation on cells that have an excess of particles or energy while $\dot{g}^{-}_{J}$  represents the change on the deviations on cells that have missing particles or energy. 
-On the other hand, $g^{+}_{J}$  represents the value of the deviation on cells that have an excess of particles or energy. In contrast, $g^{-}_{J}$ represents the value of the deviation on cells that have missing particles or energy.\\
-Also, on the one hand, $\dot{g}^{+}_{nJ}<0$ describes the loss of particles and/or energy and so, $g^{+}_{nJ}>0$. On the other hand, $\dot{g}^{-}_{nJ}>0$ describes the gain of particles and/or energy and therefore $g^{-}_{nJ}<0$. \\
+%
+where $L+P=K$. Besides, $\dot{g}^{+}_{J}$ represents the change on the
+deviation on cells that have an excess of particles or energy while
+$\dot{g}^{-}_{J}$  represents the change on the deviations on cells that have
+missing particles or energy.
+On the other hand, $g^{+}_{J}$  represents the value of the deviation on cells
+that have an excess of particles or energy. In contrast, $g^{-}_{J}$ represents
+the value of the deviation on cells that have missing particles or energy.
+
+Also, on the one hand, $\dot{g}^{+}_{nJ}<0$ describes the loss of particles
+and/or energy and so, $g^{+}_{nJ}>0$. On the other hand, $\dot{g}^{-}_{nJ}>0$
+describes the gain of particles and/or energy and therefore $g^{-}_{nJ}<0$.
+
 We sort the previous ideas in the following form
+%
 \begin{eqnarray}
    &&g^{+}_{nJ}=+|g^{+}_{nJ}|; \ \ \  \dot{g}^{+}_{nJ}=-|\dot{g}^{+}_{nJ}| \nonumber \\
    &&g^{-}_{nJ}=-|g^{-}_{nJ}|; \ \ \ \dot{g}^{-}_{nJ}=+|\dot{g}^{-}_{nJ}| \label{separacion},
-\end{eqnarray}{}
-\\
+\end{eqnarray}
+%
+
+
 and consequently, (\ref{cambioH5}) obtains the following form
+%
 \begin{equation}
     \frac{d\Ss}{dt}=-\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} |g^{+}_{nJ}||\dot{g}^{+}_{nJ}|\de V_J \delta \epsilon_n+\sum^{P}_J  |g^{-}_{nJ}||\dot{g}^{-}_{nJ}| \de V_J \delta \epsilon_n \right), \label{cambioH6}
-\end{equation}{}
-and due to $e^{\bar{\alpha}+\bar{\beta}\epsilon_n}$ is always positive, then $\frac{d\Ss}{dt}<0$. With this, we proved that any quantum ideal gas perturbed (out of equilibrium but not so far from it), evolves such that $\frac{d\Ss}{dt}<0$.\\
-When the system is in equilibrium, $g_{nM}=0$ and in consequence of that, $\dot g_{nM}=0$ and finally from (\ref{cambioH1}) $\frac{d\Ss}{dt}=0$. Then, we can say that any ideal quantum gas perturbed always evolves to the equilibrium state, such as the classical $H$ theorem. Then, we obtained the quantum version of the Boltzmann's $H$ theorem including inhomogeneities in the system.\\
-We obtained some results from the Statistical Mechanic in Quantum Mechanics scheme. However, the correspondence principle is important to recover all results from Classical Mechanics. This correspondence principle will be discussed in the next section.
+\end{equation}
+%
+and due to $e^{\bar{\alpha}+\bar{\beta}\epsilon_n}$ is always positive, then
+$\frac{d\Ss}{dt}<0$. With this, we proved that any quantum ideal gas perturbed
+(out of equilibrium but not so far from it), evolves such that
+$\frac{d\Ss}{dt}<0$.
+
+When the system is in equilibrium, $g_{nM}=0$ and in consequence of that, $\dot
+g_{nM}=0$ and finally from (\ref{cambioH1}) $\frac{d\Ss}{dt}=0$. Then, we can
+say that any ideal quantum gas perturbed always evolves to the equilibrium
+state, such as the classical $H$ theorem. Then, we obtained the quantum version
+of the Boltzmann's $H$ theorem including inhomogeneities in the system.
+
+We obtained some results from the Statistical Mechanic in Quantum Mechanics
+scheme. However, the correspondence principle is important to recover all
+results from Classical Mechanics. This correspondence principle will be
+discussed in the next section.
 
   %-----------------------------------------
-  
+ 
 
 %---------------------------------------------
 
