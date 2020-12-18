@@ -92,63 +92,78 @@ Subsequently, the Maxwell-Boltzmann distrubution function can be obtained by
 taking the logarithm to Eq.~(\ref{eq:neccondf0}), and exploiting mechanical
 conserved quantities (see \cite[ch. 4.2]{bib:huang}).
 
-We emphasize that the validity of the $H$-theorem relies significantly on assuming
-that the distribution function is homogeneous and that the hypothesis of
-molecular chaos is surmised.
-
 %---------------------------
 \subsection{Out of equilibrium, non-homogeneous distributions}
 
-The Boltzmann $H$-functional (\ref{eq:hfunctional}) is defined with a spatially
-homogeneous distribution $f(\vec{v},t)$. However, we want to consider a $H$
-functional with a non-homogeneous distribution function in order to generalize
-the Boltzmann $H$-theorem. Because of this, we introduce a modified $H$
-functional (denoted as $H'$) defined as
+As we saw in the previous section,
+the validity of the $H$-theorem relies significantly on assuming
+that the distribution function is homogeneous and that the hypothesis of
+molecular chaos is surmised. However, in order to consider systems whose
+distribution functions are not necessarily homogeneous, which
+allows for studying systems out of equilibrium,
+we introduce a modified $H$ functional as follows.
+
+The proposed functional, denoted as $H'$, describes a diluted gas occupying a volume, $V$,
+divided into $K$ cells, which, without loss of generality,
+have local identical volumes (\textit{i.e.} $\delta V_M = V/K,\ M=1,\,\dots\,,K$).
+Each cell has its own local
+$H$ functional, $H'_M$, and local homogeneous distribution function,
+$f_{M}(\vec{v},t)$; local number of particles, $\mathcal{N}'_M$;
+local temperature, $T_M$; and a local energy, $\mathcal{E}'_M$. As a whole, the system has a
+global energy $E$, and a global number of free
+classical particles $N$. The functional takes the form
 %
 \begin{equation}\label{eq:CH2}
    H'(t)=\sum_{M=1}^{K}\int f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
-This $H'$ describes a system with a global energy $E$, a global number of free
-classical particles $N$, global volume $V$, and a temperature $T$. Nevertheless,
-the global system, in turn, consists of a set of $K$ small cells with a constant
-volume $\delta V_M$, whose local homogeneous distribution functions is
-$f_{M}(\vec{v},t)$.
 
-The distribution function will depend on the position of the cells, the velocity
-$\vec{v}$, and time $t$. Without loss of generality, we choose these cells to
-have local identical volumes (\textit{i.e.} $\delta V_M = V/K, \forall M$).
-Each cell has its local chemical potential, $\mu_M$, local
-$H$ functional, $H'_M$, local number of particles, $\mathcal{N}'_M$, and local
-energy, $\mathcal{E}'_M$. In terms of the local distribution 
-function and the energy $\epsilon(\vec{v})$, the last three properties are
-given by:
+
+The distribution functions, $\{f_M(\vec{v},t)\}$, depend implicitly on the position of the cells,
+relative to the global system, and on the velocity
+$\vec{v}$ and time $t$. In terms of $f_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
 %
+\begin{subequations}
 \begin{eqnarray}
     H_M' & = &  \int f_M(\vec{v},t) \ln f_{M}(\vec{v},t)
-      \mathrm{d}^{3}v \label{Hcell},\nonumber\\
-    \mathcal{N}_M' & = & \int f_{M}(\vec{v} ,t) \mathrm{d}^{3}v, \nonumber\\
+      \mathrm{d}^{3}v \label{Hcell},\\
+    \mathcal{N}_M' & = & \int f_{M}(\vec{v} ,t) \mathrm{d}^{3}v,\\
     \mathcal{E}_M' & = & \int f_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v.
 \end{eqnarray}
+\end{subequations}
+%
+Notice that assuming local homogeneous distribution functions means that we are surmising the 
+local equilibrium hypothesis. In addition, $f_{M}(\vec{v},t)$ must satisfy the following
+microcanonical restrictions:
+%
+\begin{subequations}\label{eq:micro}
+\begin{equation}\label{eq:micron}
+    \sum_{M=1}^{K}\int f_M(\vec{v},t)\mathrm{d}^3v =N
+\end{equation}
+and
+\begin{equation}\label{eq:microe}
+    \sum_{M=1}^{K}\int f_M(\vec{v},t)\epsilon(\vec{v})\mathrm{d}^3v=E.
+\end{equation}
+\end{subequations}
 %
 
-When the system is in equilibrium, the local number of particles and the local
+If the complete system is in equilibrium, then the local number
+of particles and the local
 energy do not depend on the cell number, this is
 %
+\begin{subequations}\label{eq:eqNandE}
 \begin{equation}
-   \mathcal{N}'_M=\mathcal{N}'\equiv \bar{\mathcal{N}}';
+   \mathcal{N}'_M=\mathcal{N}'\equiv \bar{\mathcal{N}}'
+\end{equation}
+%
+and
+%
+\begin{equation}
    \quad\mathcal{E}'_M=\mathcal{E}'\equiv\bar{\mathcal{E}}'.
 \end{equation}
+\end{subequations}
 %
-The particles in the system are considered to be free, \textit{i.e.} the
-particles do not interact with each other. Besides, the local distribution
-function must satisfy the following microcanonical restrictions 
-%
-\begin{equation}\label{micro}
-    \sum_{M=1}^{K}\int f_M(\vec{v},t)\mathrm{d}^3v =N,
-    \quad\sum_{M=1}^{K}\int f_M(\vec{v},t)\epsilon(\vec{v})\mathrm{d}^3v=E.
-\end{equation}
-%
+In Eqs. (\ref{eq:eqNandE}) the bar implies averaged properties over the complete system.
 
 We can see that the functional (\ref{eq:CH2}) contains a non-homogeneous
 distribution function but keeps the same form of the Boltzmann's $H$ functional.
