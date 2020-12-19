@@ -63,7 +63,7 @@ Here, $f(\vec{v},t)$ is a homogeneous distribution function, \textit{i.e.}
 $f$ is assumed to be independent of $\vec r$.
 The functional $H$, originally introduced by Boltzmann in 1872,
 describes a diluted gas, at temperature $T$, with a total energy $E$, a total
-number of free classical particles $N$, and total volume $V$.
+number of free classical particles $N$, and occupying a volume $V$.
 
 Subsequently, the time-evolution of the gas towards equilibrium is obtained through the
 $H$-theorem. This theorem establishes that if $f(\vec{v},t)$ satisfies the Boltzmann
@@ -123,7 +123,7 @@ The distribution functions, $\{f_M(\vec{v},t)\}$, depend implicitly on the posit
 relative to the global system, and on the velocity
 $\vec{v}$ and time $t$. In terms of $f_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
 %
-\begin{subequations}
+\begin{subequations}\label{eq:cellrestrictions}
 \begin{eqnarray}
     H_M' & = &  \int f_M(\vec{v},t) \ln f_{M}(\vec{v},t)
       \mathrm{d}^{3}v \label{Hcell},\\
@@ -165,12 +165,10 @@ and
 %
 In Eqs. (\ref{eq:eqNandE}) the bar implies averaged properties over the complete system.
 
-We can see that the functional (\ref{eq:CH2}) contains a non-homogeneous
-distribution function but keeps the same form of the Boltzmann's $H$ functional.
 
-Inspired by the Hamilton principle, $H'$ will be maximized with those
-restrictions to obtain the equilibrium distribution function for a classical gas
-using the Lagrange multipliers method obtaining
+We now use the variational method in order to maximize $H'$, applying the restrictions
+given in Eqs.~(\ref{eq:cellrestrictions}) and (\ref{eq:micro}) through Lagrange
+multipliers ($\{\alpha_M\}$ and $\{\beta_M\}$). This yields
 %
 \begin{eqnarray}
     \frac{\delta H'}{\delta f_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
@@ -186,17 +184,24 @@ using the Lagrange multipliers method obtaining
     & = & \ln f_J(\vec{v}')+1-\alpha_J-\beta_J \epsilon(\vec{v}')=0.
 \end{eqnarray}
 %
-Isolating the distribution function 
+Solving the last line for $f_J(\vec{v}')$ renders
 %
+\begin{comment}
 \begin{eqnarray}
     \ln f_J(\vec{v}') & = & \alpha_J+\beta_J \epsilon(\vec{v}')
        -1\quad\Rightarrow\quad f_J(\vec{v}')\\
     & = & e^{\alpha_J +\beta_J \epsilon(\vec{v}')-1}\nonumber\\
-    & = & Ce^{\alpha_J+\beta_J \epsilon(\vec{v}') } \label{relacion1},
+    & = & Ce^{\alpha_J+\beta_J \epsilon(\vec{v}') } \label{eq:relacion1},
 \end{eqnarray}
+\end{comment}
+\begin{equation}\label{eq:relacion1}
+	f_J(\vec{v}') = Ce^{\alpha_J+\beta_J \epsilon(\vec{v}') }
+\end{equation}
 %
-where $C$ is a constant. It is trivial that using the variational procedures we
-obtain the form of the Maxwell-Boltzmann distribution. 
+where $C$ is a constant. We notice that using the variational procedure on
+$H'$ predicts that the
+distribution function of each cell has the form of the Maxwell-Boltzmann
+distribution function.
 
 As $H'$ in equilibrium is proportional to entropy, it is trivial to think that
 Lagrange multipliers do not depend on the position because of the system is in
@@ -330,7 +335,7 @@ With the previous approximation, (\ref{dH1-1}) obtains the following form
     \right]\dot g_M(\vec{v},t)\mathrm{d}^3v,
 \end{eqnarray}
 %
-using (\ref{relacion1}) with homogeneous multipliers
+using (\ref{eq:relacion1}) with homogeneous multipliers
 %
 \begin{equation}\label{dH1-2}
     \frac{dH'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
