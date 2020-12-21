@@ -140,7 +140,8 @@ of $\{f_M(\vec v,t)\}$:
    f(\vec r,\vec v,t)=\sum_{M=1}^Kf(\vec r_M,\vec v,t)=\sum_{M=1}^Kf_M(\vec v,t).
 \end{equation}
 %
-Here $\vec r_M$ is the center of the cell of index $M$. This extended definition
+Here $\vec r_M$ is the center of the cell of index $M$, and $f_M(\vec v,t)\neq f_N(\vec v,t)$
+for $M\neq N$. This extended definition
 allows us to omit the symbol $\delta V_M$ on all integrals performed over the cell volume.
 In terms of $f_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
 %
@@ -257,14 +258,14 @@ the number of cells $K$, then the first term of Eq.~(\ref{eq:sum-h}) is negligib
 \end{equation}
 %
 \textit{i.e.} $H_M'$ is extensive, and the sum $\sum_MH'_M$ is the $H$-functional of the complete
-system and reduces to the Boltzmann $H$-functional. Hence, $H'$ can also be identified with the
+system, which reduces to the Boltzmann $H$-functional. Hence, $H'$ can also be identified with the
 system's entropy.
 
 Furthermore, in equilibrium the Lagrange multipliers are position- and time-independent,
 thus $f_M(\vec{v})$
 reduces to
 %
-\begin{equation}
+\begin{equation}\label{eq:fbardef}
     f_M(\vec{v})=C\exp\left(\alpha+\beta \epsilon(\vec{v})\right)
     \equiv \bar{f}(\vec{v}),\quad M=1,\,\dots\,,K.
 \end{equation} 
@@ -282,50 +283,50 @@ Since $N$ is a constant and we are mainly intersted in the time-derivative of $H
 $C$ can be conveniently omitted. In other words, $H'$ renders the Maxwell-Boltzmann
 distribution function for systems in equilibrium.
 
-\subsubsection{Alternative $H$-theorem}
+\subsubsection{Alternative proof of the classical $H$-theorem}
 
-To prove the Boltzmann's $H$-theorem (using (\ref{eq:CH2}) as functional), we need
-to assume that the distribution function $f_M(\vec{v},t)$ must satisfy the
-following assumptions:
+Throughout this section, we will consider that the classical gas
+starts at some time as an out-of-equilibrium system,
+but in such a manner that it is inteuitively not too far from equilibrium,
+which ensures that the local equilibrium hypothesis remains valid during
+the time evolution of the system.
+Also we will use the following definitions:
+\begin{subequations}\label{eq:restrictionoutsideclassical}
 %
-\begin{itemize}
-  \item The local equilibrium hypothesis in each cell ($f_{M}$ must be
-    spatial-homogeneous for each $M$).
-  \item The non-homogeneous distribution function assumption in the total
-    volume ($f_{M}$ must be different among all cells).
-  \item The following restrictions
-    %
-    \begin{equation}\label{restrictionoutsideclassical}
-      \int f_{M}(\vec{v},t) \mathrm{d}^{3}v=
-      \bar{\mathcal{N}}+\Delta_M(t); \ \ \ \ 
-      \int f_{M}(\vec{v},t) \epsilon(\vec{v}) \mathrm{d}^{3}v=
-      \bar{\mathcal{E}}+ \delta_M(t),
-    \end{equation}
-    %
-    where $\bar {\mathcal{N}}$ and $\bar{\mathcal{E}}$ are
-    the local particle number and the local energy in equilibrium
-    %
+\begin{equation}
+      \mathcal{N}'_M(t)=\int f'_{M}(\vec{v},t) \mathrm{d}^{3}v=
+      \bar{\mathcal{N}}'+\Delta'_M(t)
+\end{equation}
+%
+and
+%
+\begin{equation}
+      \mathcal{E}'_M(t)=\int f'_{M}(\vec{v},t) \epsilon(\vec{v}) \mathrm{d}^{3}v=
+      \bar{\mathcal{E}}'+ \delta'_M(t).
+\end{equation}
+\end{subequations}
+%
+Here $\bar {\mathcal{N}}'\ (=N/K)$ and $\bar{\mathcal{E}}'\ (=E/K)$ are
+the local particle number and the local energy in equilibrium, respectively, which are given by:
+%
     \begin{equation}
-      \bar{\mathcal{N}}=
-      \int \bar{f}(\vec{v}) \mathrm{d}^{3}v ; \quad
-      \bar{\mathcal{E}}=
-      \int \bar{f}(\vec{v})\epsilon(\vec{v}) \mathrm{d}^{3}v,
+      \bar{\mathcal{N}}'=
+      \int \bar{f}(\vec{v}) \mathrm{d}^{3}v\quad\textrm{and} \quad
+      \bar{\mathcal{E}}'=
+      \int \bar{f}(\vec{v})\epsilon(\vec{v}) \mathrm{d}^{3}v.
     \end{equation}
     %
-    and $\Delta_M$, $\delta_M$ could be seen as a deviation from
-    $\bar{\mathcal{N}}$ and $\bar{\mathcal{E}}$ respectively,
-    with $\Delta_M(t)\ll\bar{\mathcal{N}}$ and
-    $\delta_M(t)\ll\bar{\mathcal{E}}$.
-\end{itemize} 
-%
-Those conditions described a system out of equilibrium but no so far from it,
-that is a perturbed system and will suffer a \textit{relaxation process, i.e.}
-The time evolution of a perturbated system to the equilibrium state.
+Here, we have used $\bar{f}(\vec{v})$ as defined in Eq.~(\ref{eq:fbardef}).
+In Eqs.~(\ref{eq:restrictionoutsideclassical}), $\Delta'_M$ and $\delta'_M$
+are considered deviations relative to
+$\bar{\mathcal{N}}$ and $\bar{\mathcal{E}}$, respectively, and for systems that are not
+too far away from equilbrium, it is reasonable to expect on the one hand that
+$\Delta'_M(t)\ll\bar{\mathcal{N}}'$ and
+$\delta'_M(t)\ll\bar{\mathcal{E}}'$, and on the other hand that $\Delta'_M$ and
+$\delta'_M$ are sufficiently large compared with fluctuations of $\bar{\mathcal{N}}'$
+and $\bar{\mathcal{E}}'$.
 
-It is important to remark that the quantities $\Delta_M$, $\delta_M$ are
-sufficiently big to be different from fluctuations in the system but too small
-such that the system is not far from the equilibrium state.  
-
+\commr{CHECKPOINT}\\
 Performing the derivative of (\ref{eq:CH2}) with respect to time, we obtain
 %
 \begin{equation}\label{dH1}
