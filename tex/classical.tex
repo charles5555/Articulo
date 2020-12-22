@@ -34,12 +34,12 @@ for exchanging energy among particles \cite{bib:huang}.
     \frac{\partial}{\partial t}+\vec{v}_1 \cdot\nabla_{\vec r}
     +\frac{\vec{F}}{m}\cdot\nabla_{\vec v_1}
   \right)f_1=\int\mathrm{d}\Omega\int
-    \mathrm{d}^{3}v_2\sigma(\Omega)|\vec{v}_1-\vec{v}_2|(f_2'f_1'-f_2f_1).
+    \mathrm{d}^{3}v_2\sigma(\Omega)|\vec{v}_1-\vec{v}_2|(\tilde f_2\tilde f_1-f_2f_1).
 \end{equation}
 %
 In Eq. (\ref{eq:transport}), $\Omega$ is the solid angle, $\sigma$ is the
 scattering cross section, $\vec F$ the
-external force applied to the system, and $f_1$ and $f_2$ ($f'_1$ and $f'_2$) are the distribution
+external force applied to the system, and $f_1$ and $f_2$ ($\tilde f_1$ and $\tilde f_2$) are the distribution
 functions of particles 1 and 2, respectively, before (after) the collision.
 
 Particle dynamics and external forces are described
@@ -107,16 +107,18 @@ distribution functions are not necessarily homogeneous, which
 allows for studying systems out of equilibrium,
 we introduce a modified $H$-functional as follows. Hereafter, we will
 use the term homogeneous distribution function to refer to a distribution
-function thad does not depend on the coordinates.
+function thad does not depend on the coordinates, and will use primed functions
+and quantities to differentiate the classical case (this Section) \textit{vs} the quantum
+case (below, Section \ref{sec:quantum}).
 
-The proposed functional, denoted as $H'$, describes a diluted classical
+Our proposed functional, denoted as $\mathcal{H}'$, describes a diluted classical
 gas occupying a volume, $V$,
 divided into $K$ cells, which, without loss of generality,
 have local identical volumes (\textit{i.e.} $\delta V_M = V/K,\ M=1,\,\dots\,,K$).
 Each cell has its own local
-$H$-functional, $H'_M$, and local homogeneous distribution function,
-$f_{M}(\vec{v},t)$; local number of particles, $\mathcal{N}'_M$;
-local temperature, $T_M$; and a local energy, $\mathcal{E}'_M$. As a whole, the system has a
+$H$-functional, $\mathcal{H}'_M$, and local homogeneous distribution function,
+$f'_{M}(\vec{v},t)$; local number of particles, $\mathcal{N}'_M$;
+local temperature, $T'_M$; and a local energy, $\mathcal{E}'_M$. As a whole, the system has a
 global energy $E$, and a global number of free
 classical particles $N$, and it is considered to be perfectly isolated (\textit{i.e.} the
 global system is a microcanonical ensemble). We also assume that the number of particles
@@ -124,47 +126,47 @@ in each cell is sufficiently large, so as to obtain accurate averages.
 The functional takes the form
 %
 \begin{equation}\label{eq:CH2}
-   H'(t)=\sum_{M=1}^{K}\int_{\delta V_M} f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v.
+   \mathcal{H}'(t)=\sum_{M=1}^{K}\int_{\delta V_M} f'_M(\vec{v},t) \ln f'_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
 
 
-The distribution functions, $\{f_M(\vec{v},t)\}$, depend implicitly on the position of the cells,
+The distribution functions, $\{f'_M(\vec{v},t)\}$, depend implicitly on the position of the cells,
 relative to the global system, and on the velocity
-$\vec{v}$ and time $t$. Each $f_M$ can be formally extended to the complete coordinate space
-by defining each $f_M$ to be zero outside the $M$-th cell, in such a manner that
+$\vec{v}$ and time $t$. Each $f'_M$ can be formally extended to the complete coordinate space
+by defining each $f'_M$ to be zero outside the $M$-th cell, in such a manner that
 the distribution function of the complete system is a piece-wise sum
-of $\{f_M(\vec v,t)\}$:
+of $\{f'_M(\vec v,t)\}$:
 %
 \begin{equation}
-   f(\vec r,\vec v,t)=\sum_{M=1}^Kf(\vec r_M,\vec v,t)=\sum_{M=1}^Kf_M(\vec v,t).
+   f'(\vec r,\vec v,t)=\sum_{M=1}^Kf'(\vec r_M,\vec v,t)=\sum_{M=1}^Kf'_M(\vec v,t).
 \end{equation}
 %
-Here $\vec r_M$ is the center of the cell of index $M$, and $f_M(\vec v,t)\neq f_N(\vec v,t)$
+Here $\vec r_M$ is the center of the cell of index $M$, and $f'_M(\vec v,t)\neq f'_N(\vec v,t)$
 for $M\neq N$. This extended definition
 allows us to omit the symbol $\delta V_M$ on all integrals performed over the cell volume.
-In terms of $f_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
+In terms of $f'_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
 %
 \begin{subequations}\label{eq:cellrestrictions}
 \begin{eqnarray}
-    H_M' & = &  \int f_M(\vec{v},t) \ln f_{M}(\vec{v},t)
+    H_M' & = &  \int f'_M(\vec{v},t) \ln f'_{M}(\vec{v},t)
       \mathrm{d}^{3}v \label{eq:Hcell},\\
-    \mathcal{N}_M' & = & \int f_{M}(\vec{v} ,t) \mathrm{d}^{3}v,\label{eq:Ncell}\\
-    \mathcal{E}_M' & = & \int f_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v\label{eq:Ecell}.
+    \mathcal{N}_M' & = & \int f'_{M}(\vec{v} ,t) \mathrm{d}^{3}v,\label{eq:Ncell}\\
+    \mathcal{E}_M' & = & \int f'_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v\label{eq:Ecell}.
 \end{eqnarray}
 \end{subequations}
 %
 Notice that assuming homogeneous distribution functions per cell means that we are surmising the 
-local equilibrium hypothesis. In addition, the set $\{f_{M}(\vec{v},t)\}$ must satisfy the following
+local equilibrium hypothesis. In addition, the set $\{f'_{M}(\vec{v},t)\}$ must satisfy the following
 microcanonical restrictions:
 %
 \begin{subequations}\label{eq:micro}
 \begin{equation}\label{eq:micron}
-    \sum_{M=1}^{K}\int f_M(\vec{v},t)\mathrm{d}^3v =N
+    \sum_{M=1}^{K}\int f'_M(\vec{v},t)\mathrm{d}^3v =N
 \end{equation}
 and
 \begin{equation}\label{eq:microe}
-    \sum_{M=1}^{K}\int f_M(\vec{v},t)\epsilon(\vec{v})\mathrm{d}^3v=E.
+    \sum_{M=1}^{K}\int f'_M(\vec{v},t)\epsilon(\vec{v})\mathrm{d}^3v=E.
 \end{equation}
 \end{subequations}
 %
@@ -174,31 +176,31 @@ given in Eqs.~(\ref{eq:cellrestrictions}) and (\ref{eq:micro}) through Lagrange
 multipliers ($\{\alpha_M\}$ and $\{\beta_M\}$). This yields
 %
 \begin{eqnarray}
-    \frac{\delta H'}{\delta f_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
-      \frac{\delta}{\delta f_J(\vec{v}')}\left[
-        f_M(\vec{v})\ln f_M(\vec{v})
+    \frac{\delta H'}{\delta f'_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
+      \frac{\delta}{\delta f'_J(\vec{v}')}\left[
+        f'_M(\vec{v})\ln f'_M(\vec{v})
         \right]
        \mathrm{d}^3v -\sum_{M=1}^{K}\alpha_M\int
-       	\frac{\delta f_M(\vec{v})}{\delta f_J(\vec{v}')}
+       	\frac{\delta f'_M(\vec{v})}{\delta f'_J(\vec{v}')}
       \mathrm{d}^3v\nonumber\\
     & & -\sum_{M=1}^{K}\beta_M\int\epsilon(\vec{v})
-    	\frac{\delta f_M(\vec{v})}{\delta f_J(\vec{v}')}
+    	\frac{\delta f'_M(\vec{v})}{\delta f'_J(\vec{v}')}
       \mathrm{d}^3v \nonumber\\
-    & = & \ln f_J(\vec{v}')+1-\alpha_J-\beta_J \epsilon(\vec{v}')=0.
+    & = & \ln f'_J(\vec{v}')+1-\alpha_J-\beta_J \epsilon(\vec{v}')=0.
 \end{eqnarray}
 %
-Solving the last line for $f_J(\vec{v}')$ renders
+Solving the last line for $f'_J(\vec{v}')$ renders
 %
 \begin{comment}
 \begin{eqnarray}
-    \ln f_J(\vec{v}') & = & \alpha_J+\beta_J \epsilon(\vec{v}')
+    \ln f'_J(\vec{v}') & = & \alpha_J+\beta_J \epsilon(\vec{v}')
        -1\quad\Rightarrow\quad f_J(\vec{v}')\\
     & = & e^{\alpha_J +\beta_J \epsilon(\vec{v}')-1}\nonumber\\
     & = & Ce^{\alpha_J+\beta_J \epsilon(\vec{v}') } \label{eq:relacion1},
 \end{eqnarray}
 \end{comment}
 \begin{equation}\label{eq:relacion1}
-	f_J(\vec{v}') = C\exp\left({\alpha_J+\beta_J \epsilon(\vec{v}') }\right),
+	f'_J(\vec{v}') = C\exp\left({\alpha_J+\beta_J \epsilon(\vec{v}') }\right),
 \end{equation}
 %
 where $C$ is a constant. We notice that using the variational procedure on
@@ -227,34 +229,34 @@ and
 \end{subequations}
 %
 In Eqs. (\ref{eq:eqNandE}) the bar implies averaged properties over the complete system.
-Moreover, the distribution function is homogeneous, hence $f_M$
-does not depend on the cell number $M$ (\textit{i.e.} $f_M(\vec v,t)=f(\vec v,t)$,
+Moreover, the distribution function is homogeneous, hence $f'_M$
+does not depend on the cell number $M$ (\textit{i.e.} $f'_M(\vec v,t)=f'(\vec v,t)$,
 $\forall M$). Several properties follow directly from this, \textit{e.g.}
 from Eqs.~(\ref{eq:eqNandE}) $E=\sum_M\mathcal{E}'_M=K\bar{\mathcal{E}}'$, $N=\sum_M\mathcal{N}'_M=K\bar{\mathcal{N}}'$ (here we have used Eqs. (\ref{eq:Ecell})
 and (\ref{eq:Ncell})),
 and Eq.~(\ref{eq:CH2}), in terms of Eq.~(\ref{eq:hbfunctional}), reduces to
 %
 \begin{equation}
-    H'(t)=\int \sum_{M=1}^{K} [f(\vec{v},t)\ln f(\vec{v},t)] \mathrm{d}^{3}v
-         = K\int  f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v= K H_{B}(t).
+    H'(t)=\int \sum_{M=1}^{K} [f'(\vec{v},t)\ln f'(\vec{v},t)] \mathrm{d}^{3}v
+         = K\int  f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v= K H_{B}(t).
 \end{equation}
 %
 In order to identify $H'$ with the entropy, it remains to show that $H'(t)$ is extensive,
-with respect to $f'(\vec v,t)\big(\equiv Kf_(\vec v,t)\big)$.
+with respect to $Kf'_(\vec v,t)$.
 This is shown by analyzing the following expression
 %
 \begin{eqnarray}\label{eq:sum-h}
-    \int Kf(\vec{v},t) \ln \big[Kf(\vec{v},t)\big] \mathrm{d}^{3}v & = & 
-        \int \big[(K\ln K)f(\vec{v},t) + Kf(\vec{v},t) \ln f(\vec{v},t)\big]\mathrm{d}^{3}v\nonumber\\
-        & = & K\int\Big\{ f(\vec{v},t)\big[\ln K + \ln f(\vec{v},t)\big] \Big\}\mathrm{d}^{3}v.
+    \int \big[Kf'(\vec{v},t)\big] \ln \big[Kf'(\vec{v},t)\big] \mathrm{d}^{3}v & = & 
+        \int \big[(K\ln K)f'(\vec{v},t) + Kf'(\vec{v},t) \ln f'(\vec{v},t)\big]\mathrm{d}^{3}v\nonumber\\
+        & = & K\int\Big\{ f'(\vec{v},t)\big[\ln K + \ln f'(\vec{v},t)\big] \Big\}\mathrm{d}^{3}v.
 \end{eqnarray}
 %
-We observe that if the number of particles in the $\mu$-space, $f(\vec{v},t)$, is much greater than
+We observe that if the number of particles in the $\mu$-space, $f'(\vec{v},t)$, is much greater than
 the number of cells $K$, then the first term of Eq.~(\ref{eq:sum-h}) is negligible, and consequently:
 %
 \begin{equation}\label{aditive-property}
-    \int f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v \simeq
-    K\int f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v,
+    \int \big[Kf'(\vec{v},t)\big] \ln \big[Kf'(\vec{v},t)\big] \mathrm{d}^{3}v \simeq
+    K\int f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v,
 \end{equation}
 %
 \textit{i.e.} $H_M'$ is extensive, and the sum $\sum_MH'_M$ is the $H$-functional of the complete
@@ -262,23 +264,23 @@ system, which reduces to the Boltzmann $H$-functional. Hence, $H'$ can also be i
 system's entropy.
 
 Furthermore, in equilibrium the Lagrange multipliers are position- and time-independent,
-thus $f_M(\vec{v})$
+thus $f'_M(\vec{v})$
 reduces to
 %
 \begin{equation}\label{eq:fbardef}
-    f_M(\vec{v})=C\exp\left(\alpha+\beta \epsilon(\vec{v})\right)
-    \equiv \bar{f}(\vec{v}),\quad M=1,\,\dots\,,K.
+    f'_M(\vec{v})=C\exp\left(\alpha+\beta \epsilon(\vec{v})\right)
+    \equiv \bar{f}'(\vec{v}),\quad M=1,\,\dots\,,K.
 \end{equation} 
 %
 The constant $C$ can be omitted, which is shown by defining the following $H''$
 functional:
 %
 \begin{equation}
-   H''(t)=\sum_{M=1}^{K}\int \left[f_M(\vec{v},t)
-    \ln f_M(\vec{v},t)-f_M(\vec{v},t)\right]\mathrm{d}^3v  \label{CH3},
+   H''(t)=\sum_{M=1}^{K}\int \left[f'_M(\vec{v},t)
+    \ln f'_M(\vec{v},t)-f'_M(\vec{v},t)\right]\mathrm{d}^3v  \label{CH3},
 \end{equation}
 %
-however $\sum_{M=1}^{K} \int f_M(\vec{v},t)\mathrm{d}^3v =N$.
+however $\sum_{M=1}^{K} \int f'_M(\vec{v},t)\mathrm{d}^3v =N$.
 Since $N$ is a constant and we are mainly intersted in the time-derivative of $H''$,
 $C$ can be conveniently omitted. In other words, $H'$ renders the Maxwell-Boltzmann
 distribution function for systems in equilibrium.
@@ -287,7 +289,7 @@ distribution function for systems in equilibrium.
 
 Throughout this section, we will consider that the classical gas
 starts at some time as an out-of-equilibrium system,
-but in such a manner that it is inteuitively not too far from equilibrium,
+but in such a manner that it is intuitively not too far from equilibrium,
 which ensures that the local equilibrium hypothesis remains valid during
 the time evolution of the system.
 Also we will use the following definitions:
@@ -311,64 +313,69 @@ the local particle number and the local energy in equilibrium, respectively, whi
 %
     \begin{equation}
       \bar{\mathcal{N}}'=
-      \int \bar{f}(\vec{v}) \mathrm{d}^{3}v\quad\textrm{and} \quad
+      \int \bar{f}'(\vec{v}) \mathrm{d}^{3}v\quad\textrm{and} \quad
       \bar{\mathcal{E}}'=
-      \int \bar{f}(\vec{v})\epsilon(\vec{v}) \mathrm{d}^{3}v.
+      \int \bar{f}'(\vec{v})\epsilon(\vec{v}) \mathrm{d}^{3}v,
     \end{equation}
     %
-Here, we have used $\bar{f}(\vec{v})$ as defined in Eq.~(\ref{eq:fbardef}).
+where we have used $\bar{f}'(\vec{v})$ as defined in Eq.~(\ref{eq:fbardef}).
 In Eqs.~(\ref{eq:restrictionoutsideclassical}), $\Delta'_M$ and $\delta'_M$
 are considered deviations relative to
-$\bar{\mathcal{N}}$ and $\bar{\mathcal{E}}$, respectively, and for systems that are not
-too far away from equilbrium, it is reasonable to expect on the one hand that
+$\bar{\mathcal{N}}'$ and $\bar{\mathcal{E}}'$, respectively, and for systems that are not
+too far away from equilibrium, it is reasonable to expect on the one hand that
 $\Delta'_M(t)\ll\bar{\mathcal{N}}'$ and
 $\delta'_M(t)\ll\bar{\mathcal{E}}'$, and on the other hand that $\Delta'_M$ and
 $\delta'_M$ are sufficiently large compared with fluctuations of $\bar{\mathcal{N}}'$
-and $\bar{\mathcal{E}}'$.
-
-\commr{CHECKPOINT}\\
-Performing the derivative of (\ref{eq:CH2}) with respect to time, we obtain
+and $\bar{\mathcal{E}}'$. Under the same perspective, we can assume that every local
+distribution function can be written as
+\begin{equation}\label{eq:firstorder}
+   f'_{Mn}(\vec{v},t)=\bar{f}'_{n}(\vec{v})(1+g'_{Mn}(\vec{v},t)),\quad
+   1\gg|g'_{Mn}(\vec{v},t)|.
+\end{equation}
 %
-\begin{equation}\label{dH1}
+
+With the previous considerations, in the following we provide an alternative demonstration
+of the $H$-theorem, considering the $H$-functional defined by Eq.~(\ref{eq:CH2}).
+
+We commence by differentiating Eq.~(\ref{eq:CH2}) with respect to time,
+%
+\begin{equation}\label{eq:dH1}
     \frac{dH'}{dt}=\sum_{M=1}^{K}\int\left[
-      1+\ln f_M(\vec{v},t)
-    \right]\dot f_M(\vec{v},t)\mathrm{d}^3v.
+      1+\ln f'_M(\vec{v},t)
+    \right]\dot f'_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
-Using the first-order approximation
+(Here and in what follows we use the standard notation $(d/dt)h\equiv\dot h$
+for an arbitrary function $h$.) Substituting Eq.~(\ref{eq:firstorder}) into Eq.~(\ref{eq:dH1}) yields
 %
-\begin{equation}\label{firstorder}
-   f_{Mn}(\vec{v},t)=\bar{f}_{n}(\vec{v})(1+g_{Mn}(\vec{v},t)): \ \ \ 
-   \bar{f}_{n}(\vec{v})\gg \bar{f}_{n}(\vec{v})|g_{Mn}(\vec{v},t)|,
-\end{equation}
-%
-(\ref{dH1}) yields
-%
-\begin{equation}\label{dH1-1}
-    \frac{dH'}{dt}=\sum_{M=1}^{K}\int\bar f(\vec{v}) \left[
+\begin{equation}\label{eq:dH1-1}
+    \frac{dH'}{dt}=\sum_{M=1}^{K}\int\bar f'(\vec{v}) \left[
       1+\ln \left\{
-        \bar f(\vec{v})+\bar f(\vec{v})g_M(\vec{v},t)
+        \bar f'(\vec{v})+\bar f'(\vec{v})g'_M(\vec{v},t)
       \right\}
-    \right]\dot g_M(\vec{v},t)\mathrm{d}^3v.
+    \right]\dot g'_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
-
-We can approximate the logarithm function in (\ref{dH1-1}) to its first-order
-Taylor series around $\bar f_n(\vec{v}) g_{nM}(\vec{v},t)=0$ 
+The logarithmic term of Eq.~(\ref{eq:dH1-1}) expanded up to the first-order term
+of its Taylor series, around $g'_{nM}(\vec{v},t)=0$, is
 %
 \begin{equation}\label{lnapproximationclassical}
-    \ln [\bar{f}(\vec{v})+\bar{f}(\vec{v}) g_{M}(\vec{v},t)] \approx
-    \ln [\bar{f}(\vec{v})]+ g_{M}(\vec{v},t).
+    \ln [\bar{f}'(\vec{v})+\bar{f}'(\vec{v}) g'_{M}(\vec{v},t)] \approx
+    \ln [\bar{f}'(\vec{v})]+ g'_{M}(\vec{v},t),
 \end{equation}
 %
-With the previous approximation, (\ref{dH1-1}) obtains the following form 
+and and substituting this into Eq.~(\ref{eq:dH1-1}) gives
 %
 \begin{eqnarray}
-    \frac{dH'}{dt}&=&\sum_{M=1}^{K} \int \bar f(\vec{v})\left[
-      1+\ln \bar f(\vec{v})+g_M(\vec{v},t)
-    \right]\dot g_M(\vec{v},t)\mathrm{d}^3v,
+    \frac{dH'}{dt}&=&\sum_{M=1}^{K} \int \bar f'(\vec{v})\left[
+      1+\ln \bar f'(\vec{v})+g'_M(\vec{v},t)
+    \right]\dot g'_M(\vec{v},t)\mathrm{d}^3v.
 \end{eqnarray}
 %
+
+\commr{ CHECKPOINT So far, we have not restricted the initial condition of the system to be
+of any particular form.}
+
 using (\ref{eq:relacion1}) with homogeneous multipliers
 %
 \begin{equation}\label{dH1-2}
