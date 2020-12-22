@@ -287,11 +287,10 @@ distribution function for systems in equilibrium.
 
 \subsubsection{Alternative proof of the classical $H$-theorem}
 
-Throughout this section, we will consider that the classical gas
-starts at some time as an out-of-equilibrium system,
-but in such a manner that it is intuitively not too far from equilibrium,
+Throughout this section, we will consider a classical gas
+whose initial condition is a state close to equilibrium,
 which ensures that the local equilibrium hypothesis remains valid during
-the time evolution of the system.
+the time-evolution of the system.
 Also we will use the following definitions:
 \begin{subequations}\label{eq:restrictionoutsideclassical}
 %
@@ -321,16 +320,16 @@ the local particle number and the local energy in equilibrium, respectively, whi
 where we have used $\bar{f}'(\vec{v})$ as defined in Eq.~(\ref{eq:fbardef}).
 In Eqs.~(\ref{eq:restrictionoutsideclassical}), $\Delta'_M$ and $\delta'_M$
 are considered deviations relative to
-$\bar{\mathcal{N}}'$ and $\bar{\mathcal{E}}'$, respectively, and for systems that are not
-too far away from equilibrium, it is reasonable to expect on the one hand that
+$\bar{\mathcal{N}}'$ and $\bar{\mathcal{E}}'$, respectively, and for systems that are
+sufficiently close to equilibrium, it is reasonable to expect on the one hand that
 $\Delta'_M(t)\ll\bar{\mathcal{N}}'$ and
 $\delta'_M(t)\ll\bar{\mathcal{E}}'$, and on the other hand that $\Delta'_M$ and
 $\delta'_M$ are sufficiently large compared with fluctuations of $\bar{\mathcal{N}}'$
 and $\bar{\mathcal{E}}'$. Under the same perspective, we can assume that every local
 distribution function can be written as
 \begin{equation}\label{eq:firstorder}
-   f'_{Mn}(\vec{v},t)=\bar{f}'_{n}(\vec{v})(1+g'_{Mn}(\vec{v},t)),\quad
-   1\gg|g'_{Mn}(\vec{v},t)|.
+   f'_{M}(\vec{v},t)=\bar{f}'(\vec{v})(1+g'_{M}(\vec{v},t)),\quad
+   1\gg|g'_{M}(\vec{v},t)|.
 \end{equation}
 %
 
@@ -357,7 +356,7 @@ Substituting Eq.~(\ref{eq:firstorder}) into Eq.~(\ref{eq:dH1}) yields
 \end{equation}
 %
 The logarithmic term of Eq.~(\ref{eq:dH1-1}) expanded up to the first-order term
-of its Taylor series, around $g'_{nM}(\vec{v},t)=0$, is
+of its Taylor series, around $g'_{M}(\vec{v},t)=0$, is
 %
 \begin{equation}\label{lnapproximationclassical}
     \ln [\bar{f}'(\vec{v})+\bar{f}'(\vec{v}) g'_{M}(\vec{v},t)] \approx
@@ -373,63 +372,86 @@ and substituting this into Eq.~(\ref{eq:dH1-1}) gives
 \end{eqnarray}
 %
 
-\commr{ CHECKPOINT So far, we have not restricted the initial condition of the system to be
-of any particular form.}
-
-using (\ref{eq:relacion1}) with homogeneous multipliers
+So far, we have not restricted the initial condition of the system to be
+of any particular form, other than being close to equilibrium. Assuming
+that the initial state of the system is also such that the Lagrange multipliers
+are homogeneous (\textit{i.e.} $\alpha_M=\alpha$ and $\beta_M=\beta$, for all $M$),
+we have from Eq.~(\ref{eq:relacion1}):
+\commr{[Prof. Carrillo: A esto no le encuentro razón física, salvo que es lo que
+hace Huang\dots]}
 %
-\begin{equation}\label{dH1-2}
+\begin{equation}\label{eq:dH1-2}
     \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
       \alpha+\beta \epsilon(\vec{v})
     \right]\dot g_M(\vec{v},t)\mathrm{d}^3v +\sum_{M=1}^{K}
-    \int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v . \nonumber 
+    \int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v .
 \end{equation}
 %
-On the other hand, we obtain from the restrictions the following expressions
+In the first term of Eq.~(\ref{eq:dH1-2}), we have used Eq.~(\ref{eq:fbardef}).
+From the definitions of $\mathcal{N}'_M$ and $\mathcal{E}'_M$ 
+---Eqs.~(\ref{eq:restrictionoutsideclassical})---, and $f'_{M}(\vec{v},t)$
+---Eq.~(\ref{eq:firstorder})---, it is straightforward to show that
 %
+\begin{subequations}\label{eq:classsumdotdeltaseq0}
 \begin{eqnarray}
     \int \bar{f}(\vec{v}) g_{M}(\vec{v},t) \mathrm{d}^{3}v=\Delta_M(t) \ \  &\Rightarrow&
-    \ \  \int \bar{f}(\vec{v}) \dot{g}_{M}(\vec{v},t)\mathrm{d}^{3}v=\dot{\Delta}_M(t), \nonumber \\
+    \ \  \int \bar{f}(\vec{v}) \dot{g}_{M}(\vec{v},t)\mathrm{d}^{3}v=\dot{\Delta}_M(t), \\
     \int  \bar{f}(\vec{v}) g_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v=\delta_M(t) \ \  &\Rightarrow&
-    \ \  \int \bar{f}(\vec{v}) \dot{g}_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v=\dot{\delta}_M(t), \nonumber 
+    \ \  \int \bar{f}(\vec{v}) \dot{g}_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v=\dot{\delta}_M(t),
 \end{eqnarray}
+\end{subequations}
 %
 and as a consequence of $\sum_{M=1}^{K} \Delta_M(t) =\sum_{M=1}^{K} \delta_M(t) =0$,
 we find
 %
-\begin{equation}
+\begin{equation}\label{eq:sumderdeltaseq0}
     \sum_{M=1}^{K} \dot{\Delta}_M(t)  =\sum_{M=1}^{K} \dot{\delta}_{M}(t) =0.
 \end{equation}
 %
-Then using the previous result to (\ref{dH1-2}), we find
+Therefore the first term of Eq.~(\ref{eq:dH1-2}) is null because of
+Eqs.~(\ref{eq:classsumdotdeltaseq0}) and (\ref{eq:sumderdeltaseq0}), which renders
 %
-\begin{equation}
+\begin{equation}\label{eq:dHpdtbefgdecclass}
   \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
-Now, the summation over $M$ will be expressed in two summations
+In order to clearly determine the time-evolution of Eq.~(\ref{eq:dHpdtbefgdecclass}),
+we split the summation over $M$ into two terms:
 %
-\begin{equation}\label{classicalH3}
+\begin{equation}\label{eq:classicalH3}
     \frac{d\mathcal{H}'}{dt}=\sum_J^{L}\int
-      \bar f(\vec{v})g_J^{+}(\vec{v},t)\dot g_J^{+}(\vec{v},t)\mathrm{d}^3v
-      +\sum_J^{P}\int
-        \bar f(\vec{v})g_J^{-}(\vec{v},t)\dot g_J^{-}(\vec{v},t)\mathrm{d}^3v.
+      \bar f'(\vec{v}){g'_I}^{+}(\vec{v},t){{\dot{g}}'}_I\phantom{.}\!^{+}(\vec{v},t)\mathrm{d}^3v
+        +\sum_J^{P}\int
+      \bar f'(\vec{v}){g'_J}^{-}(\vec{v},t){{\dot{g}}'}_J\phantom{.}\!^{-}(\vec{v},t)\mathrm{d}^3v,
 \end{equation}
 %
-where $L+P=K$. The group of $L$ cells is such that cells have an excess of
-particles or/and energy (from the mean value in equilibrium). In contrast,
-the group of $P$ cells is such that cells have to miss particles or/and energy
-(from the mean value in equilibrium). Besides, $\dot{g}^{+}_{J}$ represents the
+where $L+P=K$. The above split is made based on the assumption that for any given initial
+state of the system, at $t_0$, some cells will have either a $g'_I(\vec{v},t_0)\geq0$
+or a $g'_J(\vec{v},t_0)<0$,
+which we denote as ${{\dot{g}}'}_I\phantom{.}\!^{+}(\vec{v},t)$
+or ${{\dot{g}}'}_J\phantom{.}\!^{-}(\vec{v},t)$, respectively.
+%
+%---------------------------------------
+%The text below is not needed, also it may be wrong. $g(t_0)>0$ indicates $f(t_0)>\bar f$, but this does
+%not necessarily imply excess of particles and/or energy. E.g., a particular combination of a
+%few missing particles and a considerable energy excess might render the corresponding
+% $g(t_0)$ to be greater than zero.
+\begin{comment}
+Cells with ${{\dot{g}}'}_I\phantom{.}\!^{+}(\vec{v},t)$, $I=1,\,\dots\,,L$, 
+have an excess of particles and/or energy (relative to the mean value in equilibrium).
+In contrast, cells with ${{\dot{g}}'}_J\phantom{.}\!^{-}(\vec{v},t)$, $J=1,\,\dots\,,P$,
+have a scarcity of particles and/or energy
+(relative to the mean value in equilibrium).
+In addition, $\dot{g}^{+}_{J}$ represents the
 change on the deviation on cells that have an excess of particles or energy
 while $\dot{g}^{-}_{J}$  represents the change on the deviations on cells that
-have missing particles or energy. 
+have missing particles or energy.
 On the other hand, $g^{+}_{J}$  represents the value of the deviation on cells
 that have an excess of particles or energy. In contrast, $g^{-}_{J}$ represents
 the value of the deviation on cells that have missing particles or energy.
-
 Also, on the one hand, $\dot{g}^{+}_{J}<0$ describes the loss of particles
 and/or energy and so, $g^{+}_{J}>0$. On the other hand, $\dot{g}^{-}_{J}>0$
-describes the gain of particles and/or energy and therefore $g^{-}_{J}<0$. 
+describes the gain of particles and/or energy and therefore $g^{-}_{J}<0$.
 
 We sort the previous ideas in the following form
 %
@@ -441,22 +463,42 @@ We sort the previous ideas in the following form
 \end{equation}
 %
 and consequently, (\ref{classicalH3}) obtains the following form
+\end{comment}
+%-----------------------------
 %
-\begin{equation}
+If the system's initial state is sufficiently close to equilibrium, it is
+physically suitable
+to assume that $\left|g'_M(\vec{v},t_0)\right|\to 0$ as $t\to\infty$ in a monotonous manner,
+thus ${{\dot{g}}'}_I\phantom{.}\!^{+}(\vec{v},t)\leq0$ and
+${{\dot{g}}'}_J\phantom{.}\!^{-}(\vec{v},t)>0$, for $t\geq t_0$. Consequently,
+Eq.~(\ref{eq:classicalH3}) can be re-written as
+%
+\begin{equation}\label{eq:classicalH4}
     \frac{d\mathcal{H}'}{dt}=-\left[
       \sum_J^{L}\int\bar f(\vec{v})|g_J^{+}(\vec{v},t)|
         |\dot g_J^{+}(\vec{v},t)|\mathrm{d}^3v
       +\sum_J^{P}\int\bar f(\vec{v})|g_J^{-}(\vec{v},t)|
       |\dot g_J^{-}(\vec{v},t)|\mathrm{d}^3v 
-    \right]. \label{classicalH4}
+    \right].
 \end{equation}
 %
-We can observe that $\bar{f}(\vec{v})$ in (\ref{classicalH4}) is always
+Since every integrand in Eq.~(\ref{eq:classicalH4}) is positive,
+for all $t$ and $\vec v$, and
+$\left|g'_M(\vec{v},t_0)\right|\to 0$ as $t\to\infty$, it follows that
+%
+\begin{equation}\label{eq:dHpdtleq0}
+ \frac{d\mathcal{H}'}{dt}\leq0.
+\end{equation}
+%
+
+We can observe that $\bar{f}(\vec{v})$ in (\ref{eq:classicalH4}) is always
 positive. Also the deviation and its derivative are positive, then all the
 expression is positive. However, the global sign makes the derivative of the
 $\mathcal{H}'$ with respect to time is always less to zero. With this we proved that
 $\frac{d\mathcal{H}'}{dt}<0$. If the system is in equilibrium,
 $g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{d\mathcal{H}'}{dt}=0$.
+
+\commr{CHECKPOINT}
 
 Joining both results, we can say the following statement:
 Consider a classical gas in a total volume $V$ (divided in $K$ cells of equal
