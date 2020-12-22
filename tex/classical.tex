@@ -149,7 +149,7 @@ In terms of $f'_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
 %
 \begin{subequations}\label{eq:cellrestrictions}
 \begin{eqnarray}
-    H_M' & = &  \int f'_M(\vec{v},t) \ln f'_{M}(\vec{v},t)
+    \mathcal{H}_M' & = &  \int f'_M(\vec{v},t) \ln f'_{M}(\vec{v},t)
       \mathrm{d}^{3}v \label{eq:Hcell},\\
     \mathcal{N}_M' & = & \int f'_{M}(\vec{v} ,t) \mathrm{d}^{3}v,\label{eq:Ncell}\\
     \mathcal{E}_M' & = & \int f'_{M}(\vec{v},t)\epsilon(\vec{v}) \mathrm{d}^{3}v\label{eq:Ecell}.
@@ -171,12 +171,12 @@ and
 \end{subequations}
 %
 
-We now use the variational method in order to maximize $H'$, applying the restrictions
+We now use the variational method in order to maximize $\mathcal{H}'$, applying the restrictions
 given in Eqs.~(\ref{eq:cellrestrictions}) and (\ref{eq:micro}) through Lagrange
 multipliers ($\{\alpha_M\}$ and $\{\beta_M\}$). This yields
 %
 \begin{eqnarray}
-    \frac{\delta H'}{\delta f'_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
+    \frac{\delta \mathcal{H}'}{\delta f'_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
       \frac{\delta}{\delta f'_J(\vec{v}')}\left[
         f'_M(\vec{v})\ln f'_M(\vec{v})
         \right]
@@ -204,11 +204,11 @@ Solving the last line for $f'_J(\vec{v}')$ renders
 \end{equation}
 %
 where $C$ is a constant. We notice that using the variational procedure on
-$H'$ predicts that the
+$\mathcal{H}'$ predicts that the
 distribution function of each cell has the form of the Maxwell-Boltzmann
 distribution function, which is consistent with the local equilibrium assumption.
 
-\subsubsection{Properties of $H'$ for systems in equilibrium}
+\subsubsection{Properties of $\mathcal{H}'$ for systems in equilibrium}
 
 If the complete system is in equilibrium without external forces applied to
 the gas, from classical thermodynamics of
@@ -237,11 +237,11 @@ and (\ref{eq:Ncell})),
 and Eq.~(\ref{eq:CH2}), in terms of Eq.~(\ref{eq:hbfunctional}), reduces to
 %
 \begin{equation}
-    H'(t)=\int \sum_{M=1}^{K} [f'(\vec{v},t)\ln f'(\vec{v},t)] \mathrm{d}^{3}v
+    \mathcal{H}'(t)=\int \sum_{M=1}^{K} [f'(\vec{v},t)\ln f'(\vec{v},t)] \mathrm{d}^{3}v
          = K\int  f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v= K H_{B}(t).
 \end{equation}
 %
-In order to identify $H'$ with the entropy, it remains to show that $H'(t)$ is extensive,
+In order to identify $\mathcal{H}'$ with the entropy, it remains to show that $\mathcal{H}'(t)$ is extensive,
 with respect to $Kf'_(\vec v,t)$.
 This is shown by analyzing the following expression
 %
@@ -259,8 +259,8 @@ the number of cells $K$, then the first term of Eq.~(\ref{eq:sum-h}) is negligib
     K\int f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v,
 \end{equation}
 %
-\textit{i.e.} $H_M'$ is extensive, and the sum $\sum_MH'_M$ is the $H$-functional of the complete
-system, which reduces to the Boltzmann $H$-functional. Hence, $H'$ can also be identified with the
+\textit{i.e.} $\mathcal{H}'_M$ is extensive, and the sum $\sum_M\mathcal{H}'_M$ is the $H$-functional of the complete
+system, which reduces to the Boltzmann $H$-functional. Hence, $\mathcal{H}'$ can also be identified with the
 system's entropy.
 
 Furthermore, in equilibrium the Lagrange multipliers are position- and time-independent,
@@ -272,17 +272,17 @@ reduces to
     \equiv \bar{f}'(\vec{v}),\quad M=1,\,\dots\,,K.
 \end{equation} 
 %
-The constant $C$ can be omitted, which is shown by defining the following $H''$
+The constant $C$ can be omitted, which is shown by defining the following $\mathcal{H}''$
 functional:
 %
 \begin{equation}
-   H''(t)=\sum_{M=1}^{K}\int \left[f'_M(\vec{v},t)
+   \mathcal{H}''(t)=\sum_{M=1}^{K}\int \left[f'_M(\vec{v},t)
     \ln f'_M(\vec{v},t)-f'_M(\vec{v},t)\right]\mathrm{d}^3v  \label{CH3},
 \end{equation}
 %
 however $\sum_{M=1}^{K} \int f'_M(\vec{v},t)\mathrm{d}^3v =N$.
-Since $N$ is a constant and we are mainly intersted in the time-derivative of $H''$,
-$C$ can be conveniently omitted. In other words, $H'$ renders the Maxwell-Boltzmann
+Since $N$ is a constant and we are mainly intersted in the time-derivative of $\mathcal{H}''$,
+$C$ can be conveniently omitted. In other words, $\mathcal{H}'$ renders the Maxwell-Boltzmann
 distribution function for systems in equilibrium.
 
 \subsubsection{Alternative proof of the classical $H$-theorem}
@@ -335,21 +335,21 @@ distribution function can be written as
 %
 
 With the previous considerations, in the following we provide an alternative demonstration
-of the $H$-theorem, considering the $H$-functional defined by Eq.~(\ref{eq:CH2}).
+of the $H$-theorem, considering the $H$-functional, $\mathcal{H}'$, defined by Eq.~(\ref{eq:CH2}).
 
 We commence by differentiating Eq.~(\ref{eq:CH2}) with respect to time,
 %
 \begin{equation}\label{eq:dH1}
-    \frac{dH'}{dt}=\sum_{M=1}^{K}\int\left[
+    \frac{d\mathcal{H}'}{dt}=\sum_{M=1}^{K}\int\left[
       1+\ln f'_M(\vec{v},t)
     \right]\dot f'_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
-(Here and in what follows we use the standard notation $(d/dt)h\equiv\dot h$
-for an arbitrary function $h$.) Substituting Eq.~(\ref{eq:firstorder}) into Eq.~(\ref{eq:dH1}) yields
+(Here and throughout the article, we use the standard notation $\dot h\equiv(dh/dt)$.)
+Substituting Eq.~(\ref{eq:firstorder}) into Eq.~(\ref{eq:dH1}) yields
 %
 \begin{equation}\label{eq:dH1-1}
-    \frac{dH'}{dt}=\sum_{M=1}^{K}\int\bar f'(\vec{v}) \left[
+    \frac{d\mathcal{H}'}{dt}=\sum_{M=1}^{K}\int\bar f'(\vec{v}) \left[
       1+\ln \left\{
         \bar f'(\vec{v})+\bar f'(\vec{v})g'_M(\vec{v},t)
       \right\}
@@ -364,10 +364,10 @@ of its Taylor series, around $g'_{nM}(\vec{v},t)=0$, is
     \ln [\bar{f}'(\vec{v})]+ g'_{M}(\vec{v},t),
 \end{equation}
 %
-and and substituting this into Eq.~(\ref{eq:dH1-1}) gives
+and substituting this into Eq.~(\ref{eq:dH1-1}) gives
 %
 \begin{eqnarray}
-    \frac{dH'}{dt}&=&\sum_{M=1}^{K} \int \bar f'(\vec{v})\left[
+    \frac{d\mathcal{H}'}{dt}&=&\sum_{M=1}^{K} \int \bar f'(\vec{v})\left[
       1+\ln \bar f'(\vec{v})+g'_M(\vec{v},t)
     \right]\dot g'_M(\vec{v},t)\mathrm{d}^3v.
 \end{eqnarray}
@@ -379,7 +379,7 @@ of any particular form.}
 using (\ref{eq:relacion1}) with homogeneous multipliers
 %
 \begin{equation}\label{dH1-2}
-    \frac{dH'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
+    \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
       \alpha+\beta \epsilon(\vec{v})
     \right]\dot g_M(\vec{v},t)\mathrm{d}^3v +\sum_{M=1}^{K}
     \int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v . \nonumber 
@@ -404,13 +404,13 @@ we find
 Then using the previous result to (\ref{dH1-2}), we find
 %
 \begin{equation}
-  \frac{dH'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v.
+  \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v.
 \end{equation}
 %
 Now, the summation over $M$ will be expressed in two summations
 %
 \begin{equation}\label{classicalH3}
-    \frac{dH'}{dt}=\sum_J^{L}\int
+    \frac{d\mathcal{H}'}{dt}=\sum_J^{L}\int
       \bar f(\vec{v})g_J^{+}(\vec{v},t)\dot g_J^{+}(\vec{v},t)\mathrm{d}^3v
       +\sum_J^{P}\int
         \bar f(\vec{v})g_J^{-}(\vec{v},t)\dot g_J^{-}(\vec{v},t)\mathrm{d}^3v.
@@ -443,7 +443,7 @@ We sort the previous ideas in the following form
 and consequently, (\ref{classicalH3}) obtains the following form
 %
 \begin{equation}
-    \frac{dH'}{dt}=-\left[
+    \frac{d\mathcal{H}'}{dt}=-\left[
       \sum_J^{L}\int\bar f(\vec{v})|g_J^{+}(\vec{v},t)|
         |\dot g_J^{+}(\vec{v},t)|\mathrm{d}^3v
       +\sum_J^{P}\int\bar f(\vec{v})|g_J^{-}(\vec{v},t)|
@@ -454,9 +454,9 @@ and consequently, (\ref{classicalH3}) obtains the following form
 We can observe that $\bar{f}(\vec{v})$ in (\ref{classicalH4}) is always
 positive. Also the deviation and its derivative are positive, then all the
 expression is positive. However, the global sign makes the derivative of the
-$H'$ with respect to time is always less to zero. With this we proved that
-$\frac{dH'}{dt}<0$. If the system is in equilibrium,
-$g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{dH'}{dt}=0$.
+$\mathcal{H}'$ with respect to time is always less to zero. With this we proved that
+$\frac{d\mathcal{H}'}{dt}<0$. If the system is in equilibrium,
+$g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{d\mathcal{H}'}{dt}=0$.
 
 Joining both results, we can say the following statement:
 Consider a classical gas in a total volume $V$ (divided in $K$ cells of equal
@@ -465,14 +465,14 @@ Consider also the system has inhomogeneities and suffers a relaxation process.
 If we define the following functional
 %
 \begin{equation}\label{CH3}
-   H'(t)=\sum_{M=1}^{K}\int f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v,
+   \mathcal{H}'(t)=\sum_{M=1}^{K}\int f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v,
 \end{equation}
 %
 where $f_M(\vec{v},t)$ is the local distribution function of each cell in the
 system, then in the first-order approximation
 %
 \begin{equation}
-    \frac{dH'}{dt} \leq 0.
+    \frac{d\mathcal{H}'}{dt} \leq 0.
 \end{equation}
 %
 This statement will be the classical $H$-theorem with inhomogeneities.
