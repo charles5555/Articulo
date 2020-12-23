@@ -12,10 +12,18 @@
 
 \section{Classical scheme}\label{sec:classical}
 
-Classical statistical mechanics is theoretically founded on the Boltzmann transport
-equation and the hypo of molecular chaos. The fundamental connection
+Classical statistical mechanics is theoretically built upon the Boltzmann transport
+equation and the hypothesis of molecular chaos. The fundamental connection
 between the microscopic nature of matter and the phenomenological laws of thermodynamics
-is the $H$-theorem.
+is the $H$-theorem. In this article we propose an alternative approach, which is 
+developed by means of the variational method, applied to a functional that may include
+systems out-of-equilibrium (or non-homogeneous). Our proposal is limited to systems
+whose initial state is physically close to the equilibrium, in such a manner that the
+local equilibrium hypothesis is satisfied.
+
+We begin this section by quite briefly stating the Boltzmann transport equation, followed
+by an also quite brief review of the $H$-theorem demonstration, as performed in
+standard textbooks.
 
 \subsection{The Boltzmann transport equation}
 
@@ -96,6 +104,12 @@ Subsequently, the Maxwell-Boltzmann distrubution function can be obtained by
 taking the logarithm to Eq.~(\ref{eq:neccondf0}), and exploiting mechanical
 conserved quantities (see \cite[ch. 4.2]{bib:huang}).
 
+Before introducing our proposal, we bring the reader's attention to the following. In defining
+Eq.~(\ref{eq:hbfunctional}), it is assumed that the distribution function does not
+depend on the coordinates, which implies that the initial state of the system may not in
+equilibrium, but the difference between the equilibrium and non-equilibrium is such
+that it does not cause inhomogeneities to the system.
+
 %---------------------------
 \subsection{Alternative classical $H$-functional}
 
@@ -107,7 +121,8 @@ distribution functions are not necessarily homogeneous, which
 allows for studying systems out of equilibrium,
 we introduce a modified $H$-functional as follows. Hereafter, we will
 use the term homogeneous distribution function to refer to a distribution
-function thad does not depend on the coordinates, and will use primed functions
+function thad does not depend on the coordinates. In addition,
+in this section we will use primed functions
 and quantities to differentiate the classical case (this Section) \textit{vs} the quantum
 case (below, Section \ref{sec:quantum}).
 
@@ -214,7 +229,7 @@ If the complete system is in equilibrium without external forces applied to
 the gas, from classical thermodynamics of
 systems in equilibrium, we ascertain that the local number
 of particles and the local
-energy do not depend on the cell number, this is
+energy do not depend on the cell number, on a statistical sense, this is
 %
 \begin{subequations}\label{eq:eqNandE}
 \begin{equation}
@@ -371,14 +386,8 @@ and substituting this into Eq.~(\ref{eq:dH1-1}) gives
     \right]\dot g'_M(\vec{v},t)\mathrm{d}^3v.
 \end{eqnarray}
 %
-
-So far, we have not restricted the initial condition of the system to be
-of any particular form, other than being close to equilibrium. Assuming
-that the initial state of the system is also such that the Lagrange multipliers
-are homogeneous (\textit{i.e.} $\alpha_M=\alpha$ and $\beta_M=\beta$, for all $M$),
-we have from Eq.~(\ref{eq:relacion1}):
-\commr{[Prof. Carrillo: A esto no le encuentro razón física, salvo que es lo que
-hace Huang\dots]}
+Substituting $\ln \bar f'(\vec{v})=\exp\left(\alpha+\beta \epsilon(\vec{v})\right)$,
+see Eq.~(\ref{eq:fbardef}) and text following it, and omitting $C$ yields
 %
 \begin{equation}\label{eq:dH1-2}
     \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
@@ -387,7 +396,6 @@ hace Huang\dots]}
     \int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v .
 \end{equation}
 %
-In the first term of Eq.~(\ref{eq:dH1-2}), we have used Eq.~(\ref{eq:fbardef}).
 From the definitions of $\mathcal{N}'_M$ and $\mathcal{E}'_M$ 
 ---Eqs.~(\ref{eq:restrictionoutsideclassical})---, and $f'_{M}(\vec{v},t)$
 ---Eq.~(\ref{eq:firstorder})---, it is straightforward to show that
@@ -408,8 +416,8 @@ we find
     \sum_{M=1}^{K} \dot{\Delta}_M(t)  =\sum_{M=1}^{K} \dot{\delta}_{M}(t) =0.
 \end{equation}
 %
-Therefore the first term of Eq.~(\ref{eq:dH1-2}) is null because of
-Eqs.~(\ref{eq:classsumdotdeltaseq0}) and (\ref{eq:sumderdeltaseq0}), which renders
+Therefore, because of
+Eqs.~(\ref{eq:classsumdotdeltaseq0}) and (\ref{eq:sumderdeltaseq0}), Eq.~(\ref{eq:dH1-2}) simplifies to
 %
 \begin{equation}\label{eq:dHpdtbefgdecclass}
   \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})g_M(\vec{v},t)\dot g_M(\vec{v},t)\mathrm{d}^3v.
@@ -463,6 +471,14 @@ We sort the previous ideas in the following form
 \end{equation}
 %
 and consequently, (\ref{classicalH3}) obtains the following form
+
+
+We can observe that $\bar{f}(\vec{v})$ in (\ref{eq:classicalH4}) is always
+positive. Also the deviation and its derivative are positive, then all the
+expression is positive. However, the global sign makes the derivative of the
+$\mathcal{H}'$ with respect to time is always less to zero. With this we proved that
+$\frac{d\mathcal{H}'}{dt}<0$. If the system is in equilibrium,
+$g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{d\mathcal{H}'}{dt}=0$.
 \end{comment}
 %-----------------------------
 %
@@ -491,15 +507,24 @@ $\left|g'_M(\vec{v},t_0)\right|\to 0$ as $t\to\infty$, it follows that
 \end{equation}
 %
 
-We can observe that $\bar{f}(\vec{v})$ in (\ref{eq:classicalH4}) is always
-positive. Also the deviation and its derivative are positive, then all the
-expression is positive. However, the global sign makes the derivative of the
-$\mathcal{H}'$ with respect to time is always less to zero. With this we proved that
-$\frac{d\mathcal{H}'}{dt}<0$. If the system is in equilibrium,
-$g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{d\mathcal{H}'}{dt}=0$.
+In summary, if a gas occupying a volume V (which is divided into $K$ small cells), with a
+total energy $E$ and $N$ classical free particles, whose initial state is not in equilibrium,
+but sufficiently close to equilibrium ---such that the local equilibrium hypothesis apply---, then the funcional
+%
+\begin{equation}\label{eq:CH3}
+   \mathcal{H}'(t)=\sum_{M=1}^{K}\int f'_M(\vec{v},t) \ln f'_M(\vec{v},t)\mathrm{d}^3v
+\end{equation}
+%
+---where $f'_M(\vec{v},t)$ is the cell distribution function---,
+satisfies $d\mathcal{H}'/dt\leq0$, and the equality relation is attained at $t\to\infty$.
+In Eq.~(\ref{eq:CH3}), $f'_M(\vec{v},t)$ is the Maxwell-Boltzmann distribution
+function, which in general is different for different cells (\textit{i.e.} the complete system
+can be non-homogeneous), and each $f'_M(\vec v,t)$ is compatible
+with the cell number of particles, $\mathcal{N}'_M$, energy, $\mathcal{E}'_M$, temperature,
+$T_M$, and Legendre multipliers $\alpha_M$ and $\beta_M$. 
 
-\commr{CHECKPOINT}
 
+\begin{comment}
 Joining both results, we can say the following statement:
 Consider a classical gas in a total volume $V$ (divided in $K$ cells of equal
 volume elements), total energy $E$ and total number of free particles $N$.
@@ -522,5 +547,6 @@ This statement will be the classical $H$-theorem with inhomogeneities.
 In the next section, we present a proposal quantum version of the
 $H$-theorem defined by Tolman and our proposal quantum version of the $H$
 theorem applying the method of the volume divided into cells.
+\end{comment}
 
 
