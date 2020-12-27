@@ -1,64 +1,100 @@
 \section{Quantum scheme}\label{sec:quantum}
 
-\subsection{H theorem and the Fermi-Dirac and Bose-Einstein distribution}
+The classical $H$-theorem is even to these days one of the pillars whereon the classical statistical
+mechanics is founded. Unfortunately, regardless of several attempts have been made
+\commr{[CITE Q. H-THEOREM EXAMPLES]}, 
+the generality of the classical $H$-theorem has no quantum match. In this section, we shall
+propose and analize an alternative quantum $H$-functional using the variational method.
+We start by briefly outline a typical textbook demonstration of the quantum $H$-theorem
+\cite{bib:tolman}, followed by the analysis of our proposed $H$-functional.
 
-The $H$-functional in quantum mechanics presented by Tolman \cite{bib:tolman}
-is defined as
+\subsection{$H$-theorem and the Fermi-Dirac and Bose-Einstein distribution functions}
+
+Consider a diluted gas of $N$ non-interacting quantum particles (either bosons or fermions),
+contained by a vessel of volume
+$V$, at some temperature $T$, and total energy E. Starting from the Boltzmann definition
+of entropy, the quantum $H$ functional is
 %
-\begin{equation}\label{quantumh}
-    H=\sum_i n_i \ln n_i -(n_i\pm g_i)\ln (g_i \pm n_i)\pm g_i\ln g_i, 
+\begin{equation}
+   H_T=-\ln G,
 \end{equation}
 %
-where $n_i$ is the occupation number and $g_i$ is an energy cell. Also, an
-equation for the rate of change in the number of particles in group $\kappa$ is
+where $G$ is the total number of possible quantum states of the gas that satisfy the
+above conditions \cite{bib:tolman}.
+The quantum $H$-theorem can be demostrated as follows.  $G$ can be divided into groups of neighboring states,
+$g_k$, and a certain occupation numbers, $n_k$, can be associated with each of these
+groups. Thus, the above functional takes the form:
 %
-\begin{eqnarray}
+\begin{equation}\label{eq:quantumh}
+    H_T=\sum_i n_i \ln n_i -(n_i\pm g_i)\ln (g_i \pm n_i)\pm g_i\ln g_i, 
+\end{equation}
+%
+where the upper and lower signs are for bosons and fermions, respectively.
+Thus the time derivative of Eq.~(\ref{eq:quantumh}) is
+%
+\begin{equation}\label{eq:quantumdHdt}
+\frac{dH}{dt}=\sum_{\kappa}\left[\ln n_{\kappa}-\ln\left(g_{\kappa}\pm n_{\kappa}\right)\right]
+\frac{dn_{\kappa}}{dt}.
+\end{equation}
+%
+
+Arguing that the energy exchange between particles is dominated by collisions between particles,
+and using perturbation theory, the rate of change in the number of particles in a group $\kappa$ is
+%
+\begin{eqnarray}\label{eq:changen}
     \frac{d n_{\kappa}}{dt}&=&-\sum_{\lambda,(\mu \nu)}A_{\kappa\lambda,\mu\nu} n_{\kappa}n_{\lambda}(g_{\mu}\pm n_{\mu})(g_{\nu}\pm n_{\nu})\nonumber \\
-    &&+\sum_{\lambda,(\mu \nu)}A_{\mu\nu,\kappa\lambda} n_{\mu}n_{\nu}(g_{\kappa}\pm n_{\kappa})(g_{\lambda}\pm n_{\lambda}),\label{changen}
+    &&+\sum_{\lambda,(\mu \nu)}A_{\mu\nu,\kappa\lambda} n_{\mu}n_{\nu}(g_{\kappa}\pm n_{\kappa})(g_{\lambda}\pm n_{\lambda}).
 \end{eqnarray}
 %
-where $A_{\kappa\lambda,\mu\nu}$ is a tensor expressed as
+Here $A_{\kappa\lambda,\mu\nu}n_{\kappa}n_{\lambda}(g_{\mu}\pm n_{\mu})(g_{\nu}\pm n_{\nu})$ is the
+expected number of collisions per unit time, in which two particles will be moved from groups
+$\kappa$, $\lambda$ to $\mu$, $\nu$, and the tensor $A_{\kappa\lambda,\mu\nu}n_{\kappa}$ is given by
 %
-\begin{equation}
-  A_{\kappa\lambda,\mu\nu}=\frac{4\pi^{2}}{h}\frac{|I_1\pm I_2|^2}{\Delta \epsilon},
+\begin{equation}\label{eq:amnkldef}
+  A_{\kappa\lambda,\mu\nu}=\frac{4\pi^{2}}{h}\frac{|I_1\pm I_2|^2}{\Delta \epsilon}.
 \end{equation}
 %
-where $\epsilon$ is the energy and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where
-$V_{mn,kl}$ is the perturbation matrix of binary particles. Those expressions
-are obtained by the perturbation theory.
+In Eq.~(\ref{eq:amnkldef}), $\Delta\epsilon$ is the net energy change occuring during the
+collision and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where
+$V_{mn,kl}$ is the element of the transition matrix of a binary collision.
+It is important to remark that in deriving Eq.~(\ref{eq:changen}), the equal a priori
+probabilities and the random a priori phases hypotheses were surmised, and that 
+the random a priori phases hypothesis can be
+considered an analogous to the molecular chaos hypothesis
+\cite{bib:das2018}.
 
-\textcolor{red}{Tolman's proposal for the quantum $H$-theorem establishes that
-if we have a quantum gas that satisfies the rate of change equation
-(\ref{changen})\footnote{It is important to remark that the equal a priori
-probabilities and random a priori phases hypothesis are implicit in the rate of
-change equation (\ref{changen}) and the random a priori phases hypothesis is
-considered as the quantum analogous to the molecular chaos hypothesis
-\cite{bib:das2018}}, then the $H$-functional (\ref{quantumh}) satisfies that
+Substituting Eq.~(\ref{eq:changen}) into Eq.~(\ref{eq:quantumdHdt}), and performing
+the algebra, it can be proven that
 %
 \begin{equation}
-    \frac{dH}{dt}\leq 0,
+    \frac{dH_T}{dt}\leq 0.
 \end{equation}
 %
-and as a consequence of this theorem, when the system is in equilibrium,
-$\frac{dH}{dt}=0$.\\
-The proof of this theorem is in the same way as in the classical version. Also,
-when the system is in equilibrium, the distribution functions that correspond
-to the equilibrium state are the Fermi-Dirac and the Bose-Einstein
-distribution. Those distributions can be obtained from a sufficient condition
-for the equilibrium state
-%
-\begin{equation}
-    \ln \frac{n_{\kappa}}{g_{\kappa}\pm n_{\kappa}}+\ln \frac{n_{\lambda}}{g_{\lambda}\pm n_{\lambda}}=\ln \frac{n_{\mu}}{g_{\mu}\pm n_{\nu}}+\ln \frac{n_{\nu}}{g_{\nu}\pm n_{\nu}},
-\end{equation}
-%
-where the upper sign refers to the Bose-Einstein distribution and the lower
-sign refers to the Fermi-Dirac distribution.}
 
-In addition to this, Tolman showed that (\ref{quantumh}) can be reduced in the
-limit of high-energy levels to
+In equilibrium (at $t\to\infty$), $dn_{\kappa}/dt=0$, hence from Eq.~(\ref{eq:changen})
+%
+\begin{equation}\label{eq:boseiferdirdistfnctsrc}
+    \ln \frac{n_{\kappa}}{g_{\kappa}\pm n_{\kappa}}+\ln \frac{n_{\lambda}}{g_{\lambda}\pm n_{\lambda}}=\ln \frac{n_{\mu}}{g_{\mu}\pm n_{\nu}}+\ln \frac{n_{\nu}}{g_{\nu}\pm n_{\nu}}.
+\end{equation}
+%
+Considering that the energy is not lost during the collsion, the Bose-Einstein or Fermi-Dirac distribution
+functions can be recovered from Eq.~(\ref{eq:boseiferdirdistfnctsrc}):
 %
 \begin{equation}
-    H = \sum_{\kappa} (n_{\kappa} \ln n_{\kappa} - n_{\kappa} \ln g_{\kappa}). \label{reduce-h}
+   n_{\kappa}=\frac{g_{\kappa}}{\exp(\alpha+\beta\epsilon_{\kappa}\mp1)}.
+\end{equation}
+%
+
+\textit{I.e.}, in equilibrium $dH_T/dt=0$ and the distribution function obtained from
+Eq.~(\ref{eq:quantumh}) is the expected distribution function.
+
+%----------------------------------------------
+\begin{comment}
+In addition, Tolman also showed that (\ref{eq:quantumh}) can be reduced, in the
+high-energy limit, to
+%
+\begin{equation}
+    H_T = \sum_{\kappa} (n_{\kappa} \ln n_{\kappa} - n_{\kappa} \ln g_{\kappa}). \label{reduce-h}
 \end{equation}
 %
 This expression also can be obtained also from the Boltzmann $H$-functional through defining
@@ -66,8 +102,10 @@ This expression also can be obtained also from the Boltzmann $H$-functional thro
 \begin{equation}
     f=\frac{n_{\kappa}}{ g_{\kappa}}.
 \end{equation}
+\end{comment}
 %
 %--------------------------
+
 
 \subsection{Out of equilibrium, non-homogeneous distributions for degenerated systems}
 
