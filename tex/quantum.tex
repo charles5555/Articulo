@@ -33,7 +33,7 @@ where the upper and lower signs are for bosons and fermions, respectively.
 Thus the time derivative of Eq.~(\ref{eq:quantumh}) is
 %
 \begin{equation}\label{eq:quantumdHdt}
-\frac{dH}{dt}=\sum_{\kappa}\left[\ln n_{\kappa}-\ln\left(g_{\kappa}\pm n_{\kappa}\right)\right]
+\frac{dH_T}{dt}=\sum_{\kappa}\left[\ln n_{\kappa}-\ln\left(g_{\kappa}\pm n_{\kappa}\right)\right]
 \frac{dn_{\kappa}}{dt}.
 \end{equation}
 %
@@ -107,38 +107,37 @@ This expression also can be obtained also from the Boltzmann $H$-functional thro
 %--------------------------
 
 
-\subsection{Out of equilibrium, non-homogeneous distributions for degenerated systems}
 
-We begin by defining the form of the functional
+\subsection{Out of equilibrium, non-homogeneous quantum systems}
+
+Consider a diluted gas enclosed by a perfectly isolated vessel of volume $V$, with
+total energy $E$, and total number of quantum particles $N$, which can be fermions or
+bosons. For our purposes, the volume $V$ is divided into $K$ small cells, each of which
+has a constant volume $\delta V_M=V/K$, a temperature $T_M$, a local energy $\epsilon_M$,
+a local number of particles $\mathcal{N}_M$, and a local set of distribution functions,
+$\{f_{Mn}(t)\}$. Each $f_{Mn}$ $\big(\equiv f(\vec r_M,\epsilon_{n},t)\big)$ represent the number
+of particles contained in the $M$-th cell that occupy the energy level $\epsilon_n$.
+We propose the following functional as an alternative $H$-functional
+for quantum non-homogeneous diluted gases:
 %
 \begin{eqnarray}
-    \Ss (t)&=&\sum_{M=1}^{K} \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
+    \mathcal{H} (t)&=&\sum_{M=1}^{K} \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
     &&\pm (1 \mp f_{Mn}(\epsilon_{n},t)) \ln (1 \mp f_{Mn}(\epsilon_{n},t)) ]   \delta V_M \delta \epsilon_n \label{entropy}.
 \end{eqnarray}
 %
-This functional will be named \textit{variational entropy}.
-This functional describes, as in the classical case, a system with a global
-energy $E$, a global number of free
-quantum particles (which may be fermions for upper sing or bosons for lower
-sing) $N$, global volume $V$, and a temperature $T$.
-Besides, the variational entropy should correspond to a density of entropy when
-the system arrives at the equilibrium state. The
-global system, in turn, consists of a set of $K$ small cells with a constant
-volume $\delta V_M$, whose local homogeneous distribution functions is
-$f_{Mn}(\epsilon_{n},t)$. The distribution function will depend on the position
-of the cells, the energy per cell $\epsilon_{n}$, and time $t$. Also, the
-energy spectra will be divided into $\delta \epsilon_n$ volumes. We will use
+Here, the upper and lower sign refer to bosons and fermions respectively.
+\color{blue}\commr{Also, the energy spectrum will be divided into $\delta \epsilon_n$ volumes}. We will use
 the uppercase Latin index to denote cell numbers, and unless stated otherwise,
 $M = 1, 2 . . . , K$. Without loss of generality, we choose these cells to have
 local identical volumes (\textit{i.e.} $\delta V_M = V/K, \forall M$). Each
 cell has its local chemical potential, $\mu_M$, local
-variational functional, $\Sm$, local number of particles, $\mathcal{N}_M$, and
+variational functional, $\mathcal{H}_M$, local number of particles, $\mathcal{N}_M$, and
 local energy, $\mathcal{E}_M$. In terms of the local distribution
 function and local energy spectra, $\{\epsilon_{n}\}$, the last three
 properties are given by:
 %
 \begin{eqnarray}
-    \Sm &=&  \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
+    \mathcal{H}_M &=&  \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
     &&\pm (1 \mp f_{Mn}(\epsilon_{n},t)) \ln (1 \mp f_{Mn}(\epsilon_{n},t)) ] \de V_M \delta \epsilon_n \label{entropycell},\\
     {\mathcal{N}}_M&=& \sum_{n}f_{Mn}(\epsilon_{n} ,t) \de V_M \delta \epsilon_n, \nonumber \\
 {\mathcal{E}}_M&=& \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{n} \de V_M \delta \epsilon_n.
@@ -167,7 +166,7 @@ system is subjected to the microcanonical restrictions
 where $N$ and $E$ are the total particle number and the total energy of the
 system respectively.
 
-Maximizing the variational entropy $\Ss$ using the Lagrange multipliers method,
+Maximizing the variational entropy $\mathcal{H}$ using the Lagrange multipliers method,
 we obtain
 %
 \begin{eqnarray}
@@ -219,7 +218,7 @@ We can calculate the entropy from an ideal system, in other words, if one
 substitute (\ref{distributionequilibrium}) to (\ref{entropy}) we obtain
 %
 \begin{eqnarray}
-      \Ss(t)&=&\sum_{M=1}^{K} \sum_n  \left[\left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right)\ln \left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}} \right) \right]\nonumber \\
+      \mathcal{H}(t)&=&\sum_{M=1}^{K} \sum_n  \left[\left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right)\ln \left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}} \right) \right]\nonumber \\
       &&\pm  \ln \left[\prod_{M=1}^{K} \prod_{n}\left(1 \mp \frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right) \right] \de V_M \delta \epsilon_n\label{H-entropy}.
   \end{eqnarray}
 %
@@ -231,7 +230,7 @@ entropy could be used as a thermodynamic variable to describe those systems.
 We rewrite the \textit{variational entropy} (\ref{entropy}) as
 %
 \begin{equation}
-    \Ss(t)=\sum_{M=1}^{K} \sum_{n} \left[ f_{Mn} \ln f_{Mn} \pm (1 \mp f_{Mn}) \ln (1 \mp f_{Mn}) \right] \de V_M \delta \epsilon_n \label{entropy2},
+    \mathcal{H}(t)=\sum_{M=1}^{K} \sum_{n} \left[ f_{Mn} \ln f_{Mn} \pm (1 \mp f_{Mn}) \ln (1 \mp f_{Mn}) \right] \de V_M \delta \epsilon_n \label{entropy2},
 \end{equation}
 %
 where, for simplicity, we have defined $f(\epsilon_{n},t)\equiv f_{Mn}$.
@@ -266,13 +265,13 @@ If we perform the derivative of the variational entropy with respect to time,
 we obtain
 %
 \begin{equation}
-   \frac{d \Ss (t)}{dt}= \sum_n \sum_{M=1}^{K} \dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right] \de V_M \delta \epsilon_n.\label{deltaH}
+   \frac{d \mathcal{H} (t)}{dt}= \sum_n \sum_{M=1}^{K} \dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right] \de V_M \delta \epsilon_n.\label{deltaH}
 \end{equation}
 %
 Using the first-order approximation (\ref{firstorder}), we get
 %
 \begin{eqnarray}
-    \frac{d\Ss (t)}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_{n}\ln \left[ \frac{\bar{f}_{n}(1+g_{nM})}{1\mp \bar{f}_{n} (1+ g_{nM})} \right]\dot{g}_{nM} \de V_M\delta \epsilon_n \nonumber \\
+    \frac{d\mathcal{H} (t)}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_{n}\ln \left[ \frac{\bar{f}_{n}(1+g_{nM})}{1\mp \bar{f}_{n} (1+ g_{nM})} \right]\dot{g}_{nM} \de V_M\delta \epsilon_n \nonumber \\
     &=&\sum_n \sum_{M=1}^{K} \bar{f}_n \left \{ \ln [\bar{f}_n+\bar{f}_n g_{nM}]\dot{g}_{nM}-\ln [1\mp\bar{f}_n\mp\bar{f}_n g_{nM}]\dot{g}_{nM}  \right \}\de V_M \delta \epsilon_n.\nonumber \\
     \label{cambioH1}
 \end{eqnarray}
@@ -305,7 +304,7 @@ non-extremely degenerated condition, it is true that $1-\bar{f}_n \gg \bar{f}_n
 With the previous approximation, (\ref{cambioH1}) will be
 %
 \begin{eqnarray}
-    \frac{d\Ss}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\} \de V_M \delta \epsilon_n \nonumber \\
+    \frac{d\mathcal{H}}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\} \de V_M \delta \epsilon_n \nonumber \\
     &&-\sum_{n}\sum_{M=1}^{K}\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\de V_M \delta \epsilon_n.\label{cambioH2}
 \end{eqnarray}
 %
@@ -313,7 +312,7 @@ Making use of the expression (\ref{relation}),
 (\ref{cambioH2}) casts into
 %
 \begin{eqnarray}
-    \frac{d\Ss}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\bar{\alpha}+\bar{\beta}{\epsilon}_n)\dot{g}_{nM}+ g_{nM}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\dot{g}_{nM} \right \} \de V_M \delta \epsilon_n. \nonumber \\
+    \frac{d\mathcal{H}}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\bar{\alpha}+\bar{\beta}{\epsilon}_n)\dot{g}_{nM}+ g_{nM}\left(1\pm e^{\bar{\alpha}+\bar{\beta}{\epsilon}_n}\right)\dot{g}_{nM} \right \} \de V_M \delta \epsilon_n. \nonumber \\
     \label{cambioH3}
 \end{eqnarray}
 %
@@ -333,14 +332,14 @@ and as a consequence of $\sum_{M=1}^{K} \Delta_M(t) \de V_M  =\sum_{M=1}^{K} \de
 Substituting the previous expression to (\ref{cambioH3}) we obtain
 %
 \begin{eqnarray}
-   \frac{d\Ss}{dt}&=&  \sum_n e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\sum_M  g_{nM}\dot{g}_{nM} \de V_M\delta \epsilon_n. \nonumber \\ \label{cambioH4}
+   \frac{d\mathcal{H}}{dt}&=&  \sum_n e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\sum_M  g_{nM}\dot{g}_{nM} \de V_M\delta \epsilon_n. \nonumber \\ \label{cambioH4}
 \end{eqnarray}
 %
 Now, the summation over $M$ will be expressed in two summations, such as in the
 classical case
 %
 \begin{equation}
-    \frac{d\Ss}{dt}=\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} g^{+}_{nJ}\dot{g}^{+}_{nJ}\de V_J \delta \epsilon_n+\sum^{P}_J  g^{-}_{nJ}\dot{g}^{-}_{nJ} \de V_J\delta \epsilon_n \right), \label{cambioH5}
+    \frac{d\mathcal{H}}{dt}=\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} g^{+}_{nJ}\dot{g}^{+}_{nJ}\de V_J \delta \epsilon_n+\sum^{P}_J  g^{-}_{nJ}\dot{g}^{-}_{nJ} \de V_J\delta \epsilon_n \right), \label{cambioH5}
 \end{equation}
 %
 where $L+P=K$. Besides, $\dot{g}^{+}_{J}$ represents the change on the
@@ -367,16 +366,16 @@ We sort the previous ideas in the following form
 and consequently, (\ref{cambioH5}) obtains the following form
 %
 \begin{equation}
-    \frac{d\Ss}{dt}=-\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} |g^{+}_{nJ}||\dot{g}^{+}_{nJ}|\de V_J \delta \epsilon_n+\sum^{P}_J  |g^{-}_{nJ}||\dot{g}^{-}_{nJ}| \de V_J \delta \epsilon_n \right), \label{cambioH6}
+    \frac{d\mathcal{H}}{dt}=-\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} |g^{+}_{nJ}||\dot{g}^{+}_{nJ}|\de V_J \delta \epsilon_n+\sum^{P}_J  |g^{-}_{nJ}||\dot{g}^{-}_{nJ}| \de V_J \delta \epsilon_n \right), \label{cambioH6}
 \end{equation}
 %
 and due to $e^{\bar{\alpha}+\bar{\beta}\epsilon_n}$ is always positive, then
-$\frac{d\Ss}{dt}<0$. With this, we proved that any quantum ideal gas perturbed
+$\frac{d\mathcal{H}}{dt}<0$. With this, we proved that any quantum ideal gas perturbed
 (out of equilibrium but not so far from it), evolves such that
-$\frac{d\Ss}{dt}<0$.
+$\frac{d\mathcal{H}}{dt}<0$.
 
 When the system is in equilibrium, $g_{nM}=0$ and in consequence of that, $\dot
-g_{nM}=0$ and finally from (\ref{cambioH1}) $\frac{d\Ss}{dt}=0$. Then, we can
+g_{nM}=0$ and finally from (\ref{cambioH1}) $\frac{d\mathcal{H}}{dt}=0$. Then, we can
 say that any ideal quantum gas perturbed always evolves to the equilibrium
 state, such as the classical $H$-theorem. Then, we obtained the quantum version
 of the Boltzmann's $H$-theorem including inhomogeneities in the system.
