@@ -77,7 +77,7 @@ In equilibrium (at $t\to\infty$), $dn_{\kappa}/dt=0$, hence from Eq.~(\ref{eq:ch
     \ln \frac{n_{\kappa}}{g_{\kappa}\pm n_{\kappa}}+\ln \frac{n_{\lambda}}{g_{\lambda}\pm n_{\lambda}}=\ln \frac{n_{\mu}}{g_{\mu}\pm n_{\nu}}+\ln \frac{n_{\nu}}{g_{\nu}\pm n_{\nu}}.
 \end{equation}
 %
-Considering that the energy is not lost during the collsion, the Bose-Einstein or Fermi-Dirac distribution
+Considering that the energy is conserved during the collsion, the Bose-Einstein or Fermi-Dirac distribution
 functions can be recovered from Eq.~(\ref{eq:boseiferdirdistfnctsrc}):
 %
 \begin{equation}
@@ -111,75 +111,120 @@ This expression also can be obtained also from the Boltzmann $H$-functional thro
 \subsection{Out of equilibrium, non-homogeneous quantum systems}
 
 Consider a diluted gas enclosed by a perfectly isolated vessel of volume $V$, with
-total energy $E$, and total number of quantum particles $N$, which can be fermions or
+total energy $E$, and total number of quantum particles $N$, which can be free fermions or
 bosons. For our purposes, the volume $V$ is divided into $K$ small cells, each of which
-has a constant volume $\delta V_M=V/K$, a temperature $T_M$, a local energy $\epsilon_M$,
+has a constant volume $\delta V_M=V/K$ ($M=1,\,\dots\,,K$), a
+local temperature $T_M$, a local energy $\epsilon_M$,
 a local number of particles $\mathcal{N}_M$, and a local set of distribution functions,
-$\{f_{Mn}(t)\}$. Each $f_{Mn}$ $\big(\equiv f(\vec r_M,\epsilon_{n},t)\big)$ represent the number
-of particles contained in the $M$-th cell that occupy the energy level $\epsilon_n$.
+$\{f_{Mn}(t)\}$. Hereafter we will use the short-hand notation:
+%
+\begin{equation}
+   f_{Mn}(t)\equiv f(\vec r_M,\epsilon_{n},t),
+\end{equation}
+%
+where $\vec r_M$ is the radius vector pointing at the center of the $M$-th cell.
+$f_{Mn}(t)$ represent the number
+of particles contained in the $M$-th cell that occupy the energy level $\epsilon_n$ at
+time $t$. Since the particles are considered to be free, the energy levels should not
+depend on the cell properties, \textit{i.e.} the energy spectrum, $\{\epsilon_n\}$, is the same for all
+cells; thus there is no need to label $\epsilon_n$ with an index $M$.
+
 We propose the following functional as an alternative $H$-functional
 for quantum non-homogeneous diluted gases:
 %
 \begin{eqnarray}
-    \mathcal{H} (t)&=&\sum_{M=1}^{K} \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
-    &&\pm (1 \mp f_{Mn}(\epsilon_{n},t)) \ln (1 \mp f_{Mn}(\epsilon_{n},t)) ]   \delta V_M \delta \epsilon_n \label{entropy}.
+    \mathcal{H} (t)&=&\sum_{M=1}^{K} \sum_{n} \bigg[ f_{Mn}(t) \ln f_{Mn}(t)\bigg.\nonumber \\
+    &&\bigg.\pm \Big(1 \mp f_{Mn}(t)) \ln (1 \mp f_{Mn}(t)\Big) \Big]   \delta V_M\label{entropy}.
 \end{eqnarray}
 %
 Here, the upper and lower sign refer to bosons and fermions respectively.
-\color{blue}\commr{Also, the energy spectrum will be divided into $\delta \epsilon_n$ volumes}. We will use
-the uppercase Latin index to denote cell numbers, and unless stated otherwise,
-$M = 1, 2 . . . , K$. Without loss of generality, we choose these cells to have
-local identical volumes (\textit{i.e.} $\delta V_M = V/K, \forall M$). Each
-cell has its local chemical potential, $\mu_M$, local
-variational functional, $\mathcal{H}_M$, local number of particles, $\mathcal{N}_M$, and
-local energy, $\mathcal{E}_M$. In terms of the local distribution
-function and local energy spectra, $\{\epsilon_{n}\}$, the last three
-properties are given by:
+In addition, when needed, each cell will have an associated local chemical potential,
+$\alpha_M$, and its local $H$-functional, which is defined by:
 %
-\begin{eqnarray}
-    \mathcal{H}_M &=&  \sum_{n} [ f_{Mn}(\epsilon_{n},t) \ln f_{Mn}(\epsilon_{n},t)\nonumber \\
-    &&\pm (1 \mp f_{Mn}(\epsilon_{n},t)) \ln (1 \mp f_{Mn}(\epsilon_{n},t)) ] \de V_M \delta \epsilon_n \label{entropycell},\\
-    {\mathcal{N}}_M&=& \sum_{n}f_{Mn}(\epsilon_{n} ,t) \de V_M \delta \epsilon_n, \nonumber \\
-{\mathcal{E}}_M&=& \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{n} \de V_M \delta \epsilon_n.
-\end{eqnarray}
-%
-When the system is in equilibrium, the local number of particles and the local
-energy don't depend on the cell number, this is
-%
-\begin{equation}
-   {\mathcal{N}}_M=\mathcal{N}\equiv \bar{\mathcal{N}}; \ \ \ \  {\mathcal{E}}_M=\mathcal{E}\equiv \bar{\mathcal{E}}.
+\begin{equation}\label{eq:qHMdef}
+   \mathcal{H}_M(t)=\sum_{n} \bigg[ f_{Mn}(t) \ln f_{Mn}(t)
+   \pm \Big(1 \mp f_{Mn}(t)\Big) \ln \Big(1 \mp f_{Mn}(t)\Big) \bigg] \de V_M.
 \end{equation}
 %
-The particles in the system are considered to be free, \textit{i.e.} the
-particles do not interact with each other.
-Consequently, we can assume that the available quantum states do not depend on
-the cell features,
-therefore the energy spectrum, denoted by $\epsilon_n$, is the same for all
-cells, \textit{i.e.} $\epsilon_{Mn} = \epsilon_n, \forall M$. Besides, the
-system is subjected to the microcanonical restrictions
+Therefore, $\mathcal{N}_M$ and $\mathcal{E}_M$ as functions of time are given by:
 %
-\begin{eqnarray}
-    &&\sum_{M=1}^{K} \left[ \sum_{n}f_{Mn}(\epsilon_{n} ,t)\de \epsilon_n\right] \de V_M=\sum_{M=1}^{K} {\mathcal{N}}_{M} \de V_M=N; \nonumber \\
-    &&\sum_{M=1}^{K}\left[ \sum_{n}f_{Mn}(\epsilon_{n},t)\epsilon_{n}\delta \epsilon_n\right] \de V_M=\sum_{M=1}^{K} {\mathcal{E}}_M \delta V_M=E, \label{restriccions1}
-\end{eqnarray}
+\begin{subequations}
+\begin{equation}
+    {\mathcal{N}}_M(t) = \sum_{n}f_{Mn}(t) \delta V_M
+\end{equation}
 %
-where $N$ and $E$ are the total particle number and the total energy of the
-system respectively.
+and
+%
+\begin{equation}
+\mathcal{E}_M(t) = \sum_{n}f_{Mn}(t)\epsilon_{n} \de V_M
+\end{equation}
+\end{subequations}
+%
+which are, in addtion, constrained by the global microcanonical restrictions
+%
+\begin{subequations}
+\begin{equation}\label{eq:qGlobRestN}
+    \sum_{M=1}^{K}\left[\sum_{n}f_{Mn}(t)\right]\delta  V_M
+    =\sum_{M=1}^{K}\mathcal{N}_{M}(t)\delta V_M=N
+\end{equation}
+%
+and
+%
+\begin{equation}\label{eq:qGlobRestE}
+    \sum_{M=1}^{K}\left[\sum_{n}f_{Mn}(t)\epsilon_{n}\right]\delta V_M
+    =\sum_{M=1}^{K}\mathcal{E}_M(t)\delta V_M=E. 
+\end{equation}
+\end{subequations}
+%
 
-Maximizing the variational entropy $\mathcal{H}$ using the Lagrange multipliers method,
-we obtain
+Applying the variational method to $\mathcal{H}$, and using the using the
+Lagrange multipliers
+$\{\alpha_M\}$ and $\{\beta_M\}$ it is straightforward to obtain
+(see also text around Eq.~(\ref{eq:deltaHpdeltafpj})):
 %
-\begin{eqnarray}
-&&\ln \left(\frac{1\mp f_{Mn}(\epsilon_{n},t)}{f_{Mn}(\epsilon_{n},t)} \right)=-\alpha_M(t)-\beta_M(t) \epsilon_{n}, \label{relation}\\ &&\Rightarrow \ \ f_{Mn}(\epsilon_{n},t)=\frac{1}{e^{-\alpha_M(t)-\beta_M(t) \epsilon_{n}}\pm 1} \equiv \bar{f}_{Mn}(\epsilon_{n},t) \label{distributionequilibrium}.
-\end{eqnarray}
+\begin{equation}\label{eq:relation}
+\ln \left(\frac{1\mp f_{Mn}(t)}{f_{Mn}(t)} \right)=-\alpha_M(t)-\beta_M(t) \epsilon_{n},
+\end{equation}
 %
-where $\alpha_M(t), \beta_M(t)$ are the Lagrange multipliers. We can obtain
+and solving for $f_{Mn}(t)$ yields
+%
+\begin{equation}\label{eq:qfMn}
+f_{Mn}(t)=\frac{1}{\exp\big(-\alpha_M(t)-\beta_M(t) \epsilon_{n}\big)\pm 1}.
+\end{equation}
+
+%============================================================
+\subsubsection{Properties of $\mathcal{H}$ in equilibrium}
+%============================================================
+If the system is in equilibrium (at $t\to\infty$), the local number of particles and the local
+energy do not depend on the cell number and they should be homogeneous, this is \commr{[This needs a rationale\dots]}
+%
+\begin{subequations}
+\begin{equation}
+   {\mathcal{N}}_M(t\to\infty)\equiv \bar{\mathcal{N}}=N/K
+\end{equation}
+%
+and
+%
+\begin{equation}
+	{\mathcal{E}}_M(t\to\infty)\equiv \bar{\mathcal{E}}=E/K.
+\end{equation}
+%
+\end{subequations}
+%
+
+\color{blue}
+
+%
+\commr{We can obtain
 from the variational procedure that
 %
 \begin{equation}
     \alpha_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{N}_M}, \ \ \ \beta_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{E}_M},\label{multipliers}
 \end{equation}
 %
+[What is $\Omega_M$?]
+}
+
 where we used that the $H$-functional in equilibrium is proportional to the
 entropy of the system.
 In other hand, in the expression (\ref{multipliers}), we expect that the
