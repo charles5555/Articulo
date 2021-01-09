@@ -81,7 +81,7 @@ Considering that the energy is conserved during the collsion, the Bose-Einstein 
 functions can be recovered from Eq.~(\ref{eq:boseiferdirdistfnctsrc}):
 %
 \begin{equation}
-   n_{\kappa}=\frac{g_{\kappa}}{\exp(\alpha+\beta\epsilon_{\kappa}\mp1)}.
+   n_{\kappa}=\frac{g_{\kappa}}{\exp(\alpha+\beta\epsilon_{\kappa})\mp1}.
 \end{equation}
 %
 
@@ -132,12 +132,12 @@ cells; thus there is no need to label $\epsilon_n$ with an index $M$.
 We propose the following functional as an alternative $H$-functional
 for quantum non-homogeneous diluted gases:
 %
-\begin{eqnarray}
+\begin{eqnarray}\label{eq:qHdef}
     \mathcal{H} (t)&=&\sum_{M=1}^{K} \sum_{n} \bigg[ f_{Mn}(t) \ln f_{Mn}(t)\bigg.\nonumber \\
-    &&\bigg.\pm \Big(1 \mp f_{Mn}(t)) \ln (1 \mp f_{Mn}(t)\Big) \Big]   \delta V_M\label{entropy}.
+    &&\bigg.\pm \Big(1 \mp f_{Mn}(t)) \ln (1 \mp f_{Mn}(t)\Big) \Big]   \delta V_M.
 \end{eqnarray}
 %
-Here, the upper and lower sign refer to bosons and fermions respectively.
+Here, the upper and lower sign refer to \commr{bosons and fermions respectively}.
 In addition, when needed, each cell will have an associated local chemical potential,
 $\alpha_M$, and its local $H$-functional, which is defined by:
 %
@@ -195,84 +195,75 @@ f_{Mn}(t)=\frac{1}{\exp\big(-\alpha_M(t)-\beta_M(t) \epsilon_{n}\big)\pm 1}.
 %============================================================
 \subsubsection{Properties of $\mathcal{H}$ in equilibrium}
 %============================================================
-If the system is in equilibrium (at $t\to\infty$), the local number of particles and the local
-energy do not depend on the cell number and they should be homogeneous, this is \commr{[This needs a rationale\dots]}
+If the system is in equilibrium (at $t\to\infty$), the temperature becomes homogeneous throughout
+the complete system. Also, the local number of particles, the local
+energy, and the Lagrange multipliers do not depend on the cell number and they should be homogeneous,
+this is \commr{[This needs a rationale\dots]}
 %
-\begin{subequations}
+\begin{subequations}\label{eq:qEqRestrictions}
 \begin{equation}
-   {\mathcal{N}}_M(t\to\infty)\equiv \bar{\mathcal{N}}=N/K
+   {\mathcal{N}}_M(t\to\infty)\equiv \bar{\mathcal{N}}=N/K,
+\end{equation}
+%
+%
+\begin{equation}
+	{\mathcal{E}}_M(t\to\infty)\equiv \bar{\mathcal{E}}=E/K,
+\end{equation}
+\end{subequations}
+%
+%
+\begin{subequations}\label{eq:qEqAlphaBeta}
+\begin{equation}
+	\alpha_M=\bar\alpha,\quad\forall M,
 \end{equation}
 %
 and
-%
 \begin{equation}
-	{\mathcal{E}}_M(t\to\infty)\equiv \bar{\mathcal{E}}=E/K.
+	\beta_M=\bar\beta, \quad\forall M.
 \end{equation}
-%
 \end{subequations}
 %
+Substituting Eqs.~(\ref{eq:qEqAlphaBeta}) into Eq.~(\ref{eq:qfMn}) yields the distribution
+function of each cell in equilibrium to be
+%
+\begin{equation}\label{eq:qfneq}
+    \bar f_{Mn}=\bar f_n =\frac{1}{\exp\big(-\bar\alpha-\bar\beta \epsilon_n\big)\pm 1},\quad\forall M.
+\end{equation}
+%
+By means of the above equation, we can recover the distribution function and the entropy of a diluted quantum gas in equilibrium as follows. Setting $\bar\alpha=\mu/kT$ and $\bar\beta=-1/kT$,
+and substituting them in Eq.~(\ref{eq:qfneq}) renders the Fermi-Dirac and Bose-Einstein
+distribution functions:
+%
+\begin{equation}
+    \bar{f}_{n}=\frac{1}{\exp\big(\frac{{\epsilon_n}-\mu}{kT}\big)\pm 1},
+\end{equation}
+%
+and substituting Eq.~(\ref{eq:qfneq}) into the negative of Eq.(\ref{eq:qHdef}) provides the entropy:
+%
+\begin{eqnarray}\label{eq:varEntropyDef}
+      S&=&\sum_{M=1}^{K}
+        \sum_n  \left[
+        		\left(\frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)
+           \commr{\ln \left(\frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)}
+         \right]\nonumber \\
+      &&\quad\pm  \ln \left[\prod_{M=1}^{K} \prod_{n}
+         \left(1 \mp \frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)
+         \right] \delta V_M.
+\end{eqnarray}
+%
+For obtaining the last result, we have used the well-known fact that the $H$-functional
+is the negative of the entropy. The property provided by Eq.(\ref{eq:varEntropyDef})
+is precisely what we call the ``variational entropy'',
+and this name reflects the fact that it was obtained \textit{via}
+the variational method.
+
+%=============================================
+\subsubsection{Proof of the quantum $H$-theorem for non-homogeneous systems}
+%=============================================
 
 \color{blue}
 
-%
-\commr{We can obtain
-from the variational procedure that
-%
-\begin{equation}
-    \alpha_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{N}_M}, \ \ \ \beta_M\propto \frac{\partial \ln \Omega_M}{\partial \mathcal{E}_M},\label{multipliers}
-\end{equation}
-%
-[What is $\Omega_M$?]
-}
-
-where we used that the $H$-functional in equilibrium is proportional to the
-entropy of the system.
-In other hand, in the expression (\ref{multipliers}), we expect that the
-variation of the logarithm with the number of particles by cells is indifferent
-from a particular cell. With this, we conclude 
-%
-\begin{equation}
-    \alpha_M=\alpha; \ \ \ \ \beta_M=\beta.
-\end{equation}
-%
-In equilibrium, the energy and the Lagrange multiplier do not depend on the
-cell number and time, therefore
-%
-\begin{equation}
-    \bar f_{Mn}(\epsilon_{n},t)=\bar f_n(\epsilon_{n}) =\frac{1}{e^{-\alpha-\beta \epsilon_n}\pm 1}.
-\end{equation}
-%
-If one compares those multipliers with the mean energy and the mean particle
-number from the statistical mechanic's results, we obtain
-%
-\begin{equation}
-    \alpha=\frac{\mu}{kT}\equiv \bar{\alpha}; \ \ \ \ \beta=-\frac{1}{kT}\equiv \bar{\beta},
-\end{equation}
-%
-and finally
-%
-\begin{eqnarray}
-    \bar{f}_{n}(\epsilon_{n})&=&\frac{1}{e^{(\frac{{\epsilon_n}-\bar{\mu}}{kT})}\pm 1}\equiv \bar{f}_{n}.
-\end{eqnarray}
-%
-We proved, when the system is in equilibrium, the Lagrange multipliers don't
-depend on the cell number. In other words, Lagrange multipliers are homogeneous
-in the system.
-
-We can calculate the entropy from an ideal system, in other words, if one
-substitute (\ref{distributionequilibrium}) to (\ref{entropy}) we obtain
-%
-\begin{eqnarray}
-      \mathcal{H}(t)&=&\sum_{M=1}^{K} \sum_n  \left[\left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right)\ln \left(\frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}} \right) \right]\nonumber \\
-      &&\pm  \ln \left[\prod_{M=1}^{K} \prod_{n}\left(1 \mp \frac{1}{e^{-\bar{\alpha}-\bar{\beta}\epsilon_{n}}\pm 1} \right) \right] \de V_M \delta \epsilon_n\label{H-entropy}.
-  \end{eqnarray}
-%
-This result allows us to calculate the entropy of a quantum ideal gases. This
-entropy could be used as a thermodynamic variable to describe those systems.
- 
- 
-%\subsection{The quantum analogous of the Boltzmann's $H$-theorem}
-We rewrite the \textit{variational entropy} (\ref{entropy}) as
+We rewrite the \textit{variational entropy} (\ref{eq:qHdef}) as
 %
 \begin{equation}
     \mathcal{H}(t)=\sum_{M=1}^{K} \sum_{n} \left[ f_{Mn} \ln f_{Mn} \pm (1 \mp f_{Mn}) \ln (1 \mp f_{Mn}) \right] \de V_M \delta \epsilon_n \label{entropy2},
