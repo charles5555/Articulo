@@ -12,29 +12,31 @@
 
 \section{Classical scheme}\label{sec:classical}
 
-Classical statistical mechanics is theoretically built upon the Boltzmann transport
-equation and the hypothesis of molecular chaos. The fundamental connection
-between the microscopic nature of matter and the phenomenological laws of thermodynamics
-is the $H$-theorem. In this article we propose an alternative approach, which is 
-developed by means of the variational method, applied to a functional that may include
-systems out-of-equilibrium (or non-homogeneous). Our proposal is limited to systems
-whose initial state is physically close to the equilibrium, in such a manner that the
-local equilibrium hypothesis is satisfied.
-
-We begin this section by quite briefly stating the Boltzmann transport equation, followed
-by an also quite brief review of the $H$-theorem demonstration, as performed in
-standard textbooks.
+Boltzmann Kinetic theory of gases is one of the theoretical basese of our present 
+knowledge of out equilibrium systems. This represent a fundamental connection
+between the microscopic nature of matter and the phenomenological macroscopic  laws of classical thermodynamics.
+The stochasticity introduced in the, in other way deterministic, kinetics of the
+particles of the gas, via the molecular chaos hypothesis, allows the demostration 
+of the celebreted Boltzmann $H$ theorem. In this article we propose an alternative approach, which is 
+developed by means of a variational method, applied to a functional.
+Let us start this section by briefly remaind of the important elements of the 
+standard derivation and demostration of the Boltzmann transport equation and the $H$ theorem as they are presented in classical textbooks \cite{bib:huang}. 
 
 \subsection{The Boltzmann transport equation}
 
-From the Boltzmann kinetic theory of gases, the probability for a particle to be in a given
-state of position and velocity at a time $t$,
-$f(\vec r,\vec v,t)$ (\textit{aka} the distribution function), must satify
-the transport equation (Eq.~(\ref{eq:transport}), below).
-This equation is traditionally obtained by exploiting the volume-invariance of the $\mu$-space
-(\textit{i.e.} the space formed by the direct product of position and velocity)
-and considering that elastic collisions constitute the predominant mechanism
-for exchanging energy among particles \cite{bib:huang}.
+Boltzmann kinetic theory of gases starts by defining the distribution function 
+$f(\vec{r},\vec{v},t)$ as the average number of molecules that at time $t$, has the 
+values of position and velocity in the element of volumen in the $\mu$ space.
+Assuming a deterministic Newtonian description of the movement of the molecules 
+and the invariance of the volume measure of the $\mu$ space, one arrives to the Boltzmann rate equation.
+%
+\begin{equation}
+	f(\vec{r}+\vec{v}\delta t, \vec{v}+\vec{F} \delta t, t+\delta t)=f(\vec{r},\vec{v},t)+\left( \frac{\partial f}{\partial t} \right)_{coll} \delta t.
+\end{equation}
+%
+The collision term $\left( \frac{\partial f}{\partial t}\right)$ of this equation 
+describes the fuxes in and out from the volume element due to the collisions.
+The integro-differential Boltzmann transpor equation can be cast into.
 %
 \begin{equation}\label{eq:transport}
 	%\left(\frac{\partial f_1}{\partial t}\right)_{\mathrm{coll}}=
@@ -50,11 +52,11 @@ scattering cross section, $\vec F$ the
 external force applied to the system, and $f_1$ and $f_2$ ($\tilde f_1$ and $\tilde f_2$) are the distribution
 functions of particles 1 and 2, respectively, before (after) the collision.
 
-Particle dynamics and external forces are described
+Particle dynamics and the effects of external forces are described
 by the left-hand side of Eq.~(\ref{eq:transport}), and the right-hand side
-is derived considering binary collisions between particles and
+is derived considering binary collisions between particles and accepting
 the \textit{molecular chaos hypothesis}, \textit{i.e.} it is assumed that
-the coordinates and velocities of the particles are not time-correlated.
+the positions and velocities of the particles are not time-correlated.
 
 
 %-------------------------
@@ -67,30 +69,30 @@ addressed by first defining the functional \cite{bib:tolman,bib:huang}
    H_{B}=\int f(\vec{v},t) \ln f(\vec{v},t) \mathrm{d}^{3}v.
 \end{equation} 
 %
-Here, $f(\vec{v},t)$ is a homogeneous distribution function, \textit{i.e.}
-$f$ is assumed to be independent of $\vec r$.
+Notice that $f(\vec{v},t)$ is a spacially homogeneous distribution function.
 The functional $H_B$,
 originally introduced by Boltzmann in 1872,
 describes a diluted gas, at temperature $T$, with a total energy $E$, a total
 number of free classical particles $N$, and occupying a volume $V$.
-(We deviate from the custommary notation in order to
-clearly distinguish the Boltzmann functional $H$ from our proposals, and
-$f_B$ to denote the Maxwell-Boltzmann distribution function.)
+In order to clearly distinguish the Boltzmann functional $H_B$, we denote here
+the Maxwell-Boltzmann distribution function as $f_B$.
 
-Under this scheme, the time-evolution of the gas towards equilibrium is obtained through the
-$H$-theorem. This theorem establishes that if $f(\vec{v},t)$ satisfies the Boltzmann
-transport equation and the molecular chaos hypothesis is valid, then
-$dH_B/dt\leq0$ in general, and if $dH_B/dt=0$, then the system is in the equilibrium state.
-The $H$-theorem is proven by taking the time derivative
-of Eq. (\ref{eq:hbfunctional}) and using the Boltzmann transport equation
-(\ref{eq:transport}) \cite{bib:huang}. The $H$-theorem fixes the direction of time-evolution
-of systems in nature, which is consistent with the second law of thermodynamics; in fact,
+The physically correct espontaneous time evolution of an out of equilibrium dilute gas 
+is corroborated by the $H$ theorem.
+This theorem establishes that if the homogeneous function $f(\vec{v},t)$ satisfies the Boltzmann
+transport equation and consequently, if the molecular chaos hypothesis is valid, then
+the system evolves in such a way that $dH_B/dt\leq0$, and if when $dH_B/dt=0$, 
+the system is in the equilibrium state. $H$-theorem is easily proven by 
+using the Boltzmann transport equation (\ref{eq:transport}) \cite{bib:huang}. 
+$H$-theorem assures that our microscopic approach to describe the spontaneous 
+time evolution of the system will be consistent with the phenomenological observations
+established in the 2nd-law of Classical; in fact,
 $H_B$ can be associated with an entropy density.
 
-On the other hand, considering a diluted gas in equilibrium (\textit{i.e.}
-$(\partial f/\partial t)=0$),
-with no applied external forces (\textit{i.e.} $f$ is independent of $\vec r$), 
-it can be proven that the equilibrium distribution function obtained from
+On the other hand, considering a diluted gas in equilibrium, \textit{i.e.}
+$(\partial f/\partial t)=0$,
+with no applied external forces $f$ is independent of $\vec r$, 
+it can be directly proven that the equilibrium distribution function obtained from
 Eq.~(\ref{eq:transport}) is precisely the Maxwell-Boltzmann
 distribution function. The proof of the above commences by finding the sufficient
 condition for $f$ to render a null r.h.s. of Eq. (\ref{eq:transport}). Such an
@@ -104,41 +106,39 @@ Subsequently, the Maxwell-Boltzmann distrubution function can be obtained by
 taking the logarithm to Eq.~(\ref{eq:neccondf0}), and exploiting mechanical
 conserved quantities (see \cite[ch. 4.2]{bib:huang}).
 
-Before introducing our proposal, we bring the reader's attention to the following. In defining
-Eq.~(\ref{eq:hbfunctional}), it is assumed that the distribution function does not
-depend on the coordinates, which implies that the initial state of the system may not in
-equilibrium, but the difference between the equilibrium and non-equilibrium is such
-that it does not cause inhomogeneities to the system.
+Before introducing our proposal, we call the reader's attention to the following. In defining
+$H_B$ Eq.~(\ref{eq:hbfunctional}), it is assumed that the distribution function 
+$f_B$ is spattially homogeneous. Clearly this assumption simplifies the demostration 
+of the $H$ theorem, nevertheless, it introduces as well a limitate-conception
+of an out of equilibrium condition in the gas. Given the relatively simple nature of a dilute 
+gas, one of the main characteristics of an out of equilibrium condition would be the existence of
+inhomogeneities in the system.
 
 %---------------------------
-\subsection{Alternative classical $H$-functional}
+\subsection{Non-homogeneous classical $H$-functional}
 
 As we saw in the previous section,
 the validity of the $H$-theorem relies significantly on assuming
 that the distribution function is homogeneous and that the hypothesis of
-molecular chaos is surmised. However, in order to consider systems whose
-distribution functions are not necessarily homogeneous, which
-allows for studying systems out of equilibrium,
-we introduce a modified $H$-functional as follows. Hereafter, we will
-use the term homogeneous distribution function to refer to a distribution
-function thad does not depend on the coordinates. In addition,
-in this section we will use primed functions
-and quantities to differentiate the classical case (this Section) \textit{vs} the quantum
-case (below, Section \ref{sec:quantum}).
+molecular chaos is fullfiled. In order to extend the procedure for systems whose
+distribution functions are not necessarily homogeneous, would possibilities allows 
+for studying systems been in a more general out of equilibrium condition, we introduce a modified $H$-functional 
+as follows. For the sake of clearity and simplicity we will use primed functions
+and quantities to denotate the classical case and differentiate it from the quantum
+case.
 
-Our proposed functional, denoted as $\mathcal{H}'$, describes a diluted classical
-gas occupying a volume, $V$,
+Our proposed functional, denoted as $\mathcal{H}'$, describes a dilute classical
+gas occupying a volume $V$. For our theoretical treatment we will consider this volume
 divided into $K$ cells, which, without loss of generality,
-have local identical volumes (\textit{i.e.} $\delta V_M = V/K,\ M=1,\,\dots\,,K$).
-Each cell has its own local
-$H$-functional, $\mathcal{H}'_M$, and local homogeneous distribution function,
-$f'_{M}(\vec{v},t)$; local number of particles, $\mathcal{N}'_M$;
-local temperature, $T'_M$; and a local energy, $\mathcal{E}'_M$. As a whole, the system has a
-global energy $E$, and a global number of free
-classical particles $N$, and it is considered to be perfectly isolated (\textit{i.e.} the
-global system is a microcanonical ensemble). We also assume that the number of particles
+have identical volumes $\delta V_M = V/K,\ M=1,\,\dots\,,K$.
+Locally the $\mathcal{H}'$-functional is denoted by $\mathcal{H}'_M$, and 
+the local homogeneous distribution function, $f'_{M}(\vec{v},t)$; local 
+number of particles, $\mathcal{N}'_M$; local temperature, $T'_M$; and a local 
+energy, $\mathcal{E}'_M$. As a whole, the system has a
+energy $E$, and a global number of free classical particles $N$. Let us assume that the system is 
+to be isolated. We also assume that the number of particles
 in each cell is sufficiently large, so as to obtain accurate averages.
-The functional takes the form
+We start our analysis by proposing the following inhomogeneous functional
 %
 \begin{equation}\label{eq:CH2}
    \mathcal{H}'(t)=\sum_{M=1}^{K}\int_{\delta V_M} f'_M(\vec{v},t) \ln f'_M(\vec{v},t)\mathrm{d}^3v.
@@ -148,7 +148,7 @@ The functional takes the form
 
 The distribution functions, $\{f'_M(\vec{v},t)\}$, depend implicitly on the position of the cells,
 relative to the global system, and on the velocity
-$\vec{v}$ and time $t$. Each $f'_M$ can be formally extended to the complete coordinate space
+$\vec{v}$ and time $t$. Notice that each $f'_M$ can be formally extended to the complete coordinate space
 by defining each $f'_M$ to be zero outside the $M$-th cell, in such a manner that
 the distribution function of the complete system is a piece-wise sum
 of $\{f'_M(\vec v,t)\}$:
@@ -160,7 +160,7 @@ of $\{f'_M(\vec v,t)\}$:
 Here $\vec r_M$ is the center of the cell of index $M$, and $f'_M(\vec v,t)\neq f'_N(\vec v,t)$
 for $M\neq N$. This extended definition
 allows us to omit the symbol $\delta V_M$ on all integrals performed over the cell volume.
-In terms of $f'_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
+In terms of $f'_M(\vec{v},t)$ and a local variable of energy, $\epsilon(\vec{v})$, we have:
 %
 \begin{subequations}\label{eq:cellrestrictions}
 \begin{eqnarray}
@@ -171,9 +171,8 @@ In terms of $f'_M(\vec{v},t)$ and the energy, $\epsilon(\vec{v})$, we have:
 \end{eqnarray}
 \end{subequations}
 %
-Notice that assuming homogeneous distribution functions per cell means that we are surmising the 
-local equilibrium hypothesis. In addition, the set $\{f'_{M}(\vec{v},t)\}$ must satisfy the following
-microcanonical restrictions:
+Notice that assuming homogeneous distribution functions per cell means that we are accepting valid the 
+local equilibrium hypothesis. In addition, the set $\{f'_{M}(\vec{v},t)\}$ must satisfy the following restrictions:
 %
 \begin{subequations}\label{eq:micro}
 \begin{equation}\label{eq:micron}
@@ -186,9 +185,9 @@ and
 \end{subequations}
 %
 
-We now use the variational method in order to maximize $\mathcal{H}'$, applying the restrictions
-given in Eqs.~(\ref{eq:cellrestrictions}) and (\ref{eq:micro}) through Lagrange
-multipliers ($\{\alpha_M\}$ and $\{\beta_M\}$). This yields
+We now use the variational method in order to find the extremal of $\mathcal{H}'$, consistent with the restrictions
+(\ref{eq:cellrestrictions}) and (\ref{eq:micro}) by using the corresponding Lagrange
+multipliers $\{\alpha_M\}$ and $\{\beta_M\}$. This yields
 %
 \begin{eqnarray}\label{eq:deltaHpdeltafpj}
     \frac{\delta \mathcal{H}'}{\delta f'_J(\vec{v}')} & = & \sum_{M=1}^{K}\int
@@ -218,8 +217,8 @@ Solving the last line for $f'_J(\vec{v}')$ renders
 	f'_J(\vec{v}') = C\exp\left({\alpha_J+\beta_J \epsilon(\vec{v}') }\right),
 \end{equation}
 %
-where $C$ is a constant. We notice that using the variational procedure on
-$\mathcal{H}'$ predicts that the
+where $C$ is a constant. We notice that the use of the variational procedure on
+$\mathcal{H}'$ predicts that when the equilibrium is reached, the
 distribution function of each cell has the form of the Maxwell-Boltzmann
 distribution function, which is consistent with the local equilibrium assumption.
 
@@ -247,16 +246,15 @@ In Eqs. (\ref{eq:eqNandE}) the bar implies averaged properties over the complete
 Moreover, the distribution function is homogeneous, hence $f'_M$
 does not depend on the cell number $M$ (\textit{i.e.} $f'_M(\vec v,t)=f'(\vec v,t)$,
 $\forall M$). Several properties follow directly from this, \textit{e.g.}
-from Eqs.~(\ref{eq:eqNandE}) $E=\sum_M\mathcal{E}'_M=K\bar{\mathcal{E}}'$, $N=\sum_M\mathcal{N}'_M=K\bar{\mathcal{N}}'$ (here we have used Eqs. (\ref{eq:Ecell})
-and (\ref{eq:Ncell})),
-and Eq.~(\ref{eq:CH2}), in terms of Eq.~(\ref{eq:hbfunctional}), reduces to
+from Eqs.~(\ref{eq:eqNandE}) $E=\sum_M\mathcal{E}'_M=K\bar{\mathcal{E}}'$, $N=\sum_M\mathcal{N}'_M=K\bar{\mathcal{N}}'$. Here we have used Eqs. (\ref{eq:Ecell}) and (\ref{eq:Ncell}).
+Eq.~(\ref{eq:CH2}), in terms of Eq.~(\ref{eq:hbfunctional}), can be cast into
 %
 \begin{equation}
     \mathcal{H}'(t)=\int \sum_{M=1}^{K} [f'(\vec{v},t)\ln f'(\vec{v},t)] \mathrm{d}^{3}v
          = K\int  f'(\vec{v},t) \ln f'(\vec{v},t) \mathrm{d}^{3}v= K H_{B}(t).
 \end{equation}
 %
-In order to identify $\mathcal{H}'$ with the entropy, it remains to show that $\mathcal{H}'(t)$ is extensive,
+In order to identify $\mathcal{H}'$ with the entropy, still we need to show that $\mathcal{H}'(t)$ is extensive,
 with respect to $Kf'_(\vec v,t)$.
 This is shown by analyzing the following expression
 %
@@ -266,7 +264,7 @@ This is shown by analyzing the following expression
         & = & K\int\Big\{ f'(\vec{v},t)\big[\ln K + \ln f'(\vec{v},t)\big] \Big\}\mathrm{d}^{3}v.
 \end{eqnarray}
 %
-We observe that if the number of particles in the $\mu$-space, $f'(\vec{v},t)$, is much greater than
+We observe that if the number of particles in the $\mu$-space, $f'(\vec{v},t)$, is much large than
 the number of cells $K$, then the first term of Eq.~(\ref{eq:sum-h}) is negligible, and consequently:
 %
 \begin{equation}\label{aditive-property}
@@ -276,8 +274,7 @@ the number of cells $K$, then the first term of Eq.~(\ref{eq:sum-h}) is negligib
 %
 \textit{i.e.} $\mathcal{H}'_M$ is extensive, and the sum $\sum_M\mathcal{H}'_M$ is the $H$-functional of the complete
 system, which reduces to the Boltzmann $H$-functional.
-\commb{Hence, $\mathcal{H}'$ can also be identified with the
-system's entropy.}
+\commb{Hence, $\mathcal{H}'$ can also be identified with a density of entropy for the system.}
 
 Furthermore, in equilibrium the Lagrange multipliers are position- and time-independent,
 thus $f'_M(\vec{v})$
@@ -296,18 +293,19 @@ functional:
     \ln f'_M(\vec{v},t)-f'_M(\vec{v},t)\right]\mathrm{d}^3v  \label{CH3},
 \end{equation}
 %
-however $\sum_{M=1}^{K} \int f'_M(\vec{v},t)\mathrm{d}^3v =N$.
-Since $N$ is a constant and we are mainly intersted in the time-derivative of $\mathcal{H}''$,
-$C$ can be conveniently omitted. In other words, $\mathcal{H}'$ renders the Maxwell-Boltzmann
+since $\sum_{M=1}^{K} \int f'_M(\vec{v},t)\mathrm{d}^3v =N$.
+$N$ is a constant and we are mainly intersted in the time-derivative of $\mathcal{H}''$, thus
+$C$ can be conveniently omitted. In other words, $\mathcal{H}'$ leads the Maxwell-Boltzmann
 distribution function for systems in equilibrium.
 
-\subsubsection{Alternative proof of the classical $H$-theorem}
+\subsubsection{Proof of the $H$-theorem for non-homogeneous distributions}
 
-Throughout this section, we will consider a classical gas
-whose initial condition is a state close to equilibrium,
+Along this section, we consider a classical gas
+whose initial condition is close to the equilibrium,
 which ensures that the local equilibrium hypothesis remains valid during
 the time-evolution of the system.
-Also we will use the following definitions:
+Also we will use the following definitions for the deviations of concentration 
+and energy from the equilibrium values:
 \begin{subequations}\label{eq:restrictionoutsideclassical}
 %
 \begin{equation}
@@ -323,8 +321,8 @@ and
 \end{equation}
 \end{subequations}
 %
-Here $\bar {\mathcal{N}}'\ (=N/K)$ and $\bar{\mathcal{E}}'\ (=E/K)$ are
-the local particle number and the local energy in equilibrium, respectively, which are given by:
+Here $\bar {\mathcal{N}}' =N/K$ and $\bar{\mathcal{E}}'=E/K$ are
+the cell particle number and the cell energy in equilibrium, respectively, they are given by:
 %
     \begin{equation}
       \bar{\mathcal{N}}'=
@@ -388,7 +386,7 @@ and substituting this into Eq.~(\ref{eq:dH1-1}) gives
 \end{eqnarray}
 %
 Substituting $\ln \bar f'(\vec{v})=\exp\left(\alpha+\beta \epsilon(\vec{v})\right)$,
-see Eq.~(\ref{eq:fbardef}) and text following it, and omitting $C$ yields
+see Eq.~(\ref{eq:fbardef}) and text following it, and omitting $C$ we obtain
 %
 \begin{equation}\label{eq:dH1-2}
     \frac{d\mathcal{H}'}{dt} = \sum_{M=1}^{K}\int\bar f(\vec{v})\left[
@@ -509,8 +507,8 @@ $\left|g'_M(\vec{v},t_0)\right|\to 0$ as $t\to\infty$, it follows that
 %
 
 In summary, if a gas occupying a volume V (which is divided into $K$ small cells), with a
-total energy $E$ and $N$ classical free particles, whose initial state is not in equilibrium,
-but sufficiently close to equilibrium ---such that the local equilibrium hypothesis apply---, then the funcional
+total energy $E$ and $N$ classical free particles, whose initial state is not in the equilibrium,
+but sufficiently close to equilibrium, then the funcional
 %
 \begin{equation}\label{eq:CH3}
    \mathcal{H}'(t)=\sum_{M=1}^{K}\int f'_M(\vec{v},t) \ln f'_M(\vec{v},t)\mathrm{d}^3v
@@ -519,10 +517,10 @@ but sufficiently close to equilibrium ---such that the local equilibrium hypothe
 ---where $f'_M(\vec{v},t)$ is the cell distribution function---,
 satisfies $d\mathcal{H}'/dt\leq0$, and the equality relation is attained at $t\to\infty$.
 In Eq.~(\ref{eq:CH3}), $f'_M(\vec{v},t)$ is the Maxwell-Boltzmann distribution
-function, which in general is different for different cells (\textit{i.e.} the complete system
-can be non-homogeneous), and each $f'_M(\vec v,t)$ is compatible
-with the cell properties (number of particles, $\mathcal{N}'_M$, energy, $\mathcal{E}'_M$, temperature,
-$T_M$, and Legendre multipliers $\alpha_M$ and $\beta_M$). 
+function, which in general is different for different cells \textit{i.e.} the complete system
+can be non-homogeneous, and each $f'_M(\vec v,t)$ is compatible
+with the cell properties, such as number of particles, $\mathcal{N}'_M$, energy, $\mathcal{E}'_M$, temperature,
+$T_M$, and Legendre multipliers $\alpha_M$ and $\beta_M$. 
 
 
 \begin{comment}

@@ -1,12 +1,12 @@
 \section{Quantum scheme}\label{sec:quantum}
 
 The classical $H$-theorem is even to these days one of the pillars whereon the classical statistical
-mechanics is founded. Unfortunately, regardless of several attempts have been made
+physics is founded. Unfortunately, regardless of several attempts have been made
 \commr{[CITE Q. H-THEOREM EXAMPLES]}, 
-the generality of the classical $H$-theorem has no quantum match. In this section, we shall
+the generality of the classical $H$-theorem has no an equally robust quantum match. In this section, we shall
 propose and analize an alternative quantum $H$-functional using the variational method.
 We start by briefly outline a typical textbook demonstration of the quantum $H$-theorem
-\cite{bib:tolman}, followed by the analysis of our proposed $H$-functional.
+\cite{bib:tolman}, then, we present the analysis of our proposed $H$-functional.
 
 \subsection{$H$-theorem and the Fermi-Dirac and Bose-Einstein distribution functions}
 
@@ -19,8 +19,8 @@ of entropy, the quantum $H$ functional is
    H_T=-\ln G,
 \end{equation}
 %
-where $G$ is the total number of possible quantum states of the gas that satisfy the
-above conditions \cite{bib:tolman}.
+where $G$ describes the total number of accessible quantum states of the gas that satisfy the
+above mentioned conditions \cite{bib:tolman}.
 The quantum $H$-theorem can be demostrated as follows.  $G$ can be divided into groups of neighboring states,
 $g_k$, and a certain occupation numbers, $n_k$, can be associated with each of these
 groups. Thus, the above functional takes the form:
@@ -38,8 +38,8 @@ Thus the time derivative of Eq.~(\ref{eq:quantumh}) is
 \end{equation}
 %
 
-Arguing that the energy exchange between particles is dominated by collisions between particles,
-and using perturbation theory, the rate of change in the number of particles in a group $\kappa$ is
+Assuming that the energy exchange between particles is produced by collisions between particles.
+By using perturbation theory, the rate of change in the number of particles in a group $\kappa$ is
 %
 \begin{eqnarray}\label{eq:changen}
     \frac{d n_{\kappa}}{dt}&=&-\sum_{\lambda,(\mu \nu)}A_{\kappa\lambda,\mu\nu} n_{\kappa}n_{\lambda}(g_{\mu}\pm n_{\mu})(g_{\nu}\pm n_{\nu})\nonumber \\
@@ -58,16 +58,15 @@ In Eq.~(\ref{eq:amnkldef}), $\Delta\epsilon$ is the net energy change occuring d
 collision and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where
 $V_{mn,kl}$ is the element of the transition matrix of a binary collision.
 It is important to remark that in deriving Eq.~(\ref{eq:changen}), the equal a priori
-probabilities and the random a priori phases hypotheses were surmised, and that 
+probabilities and the random a priori phases hypotheses were taken valid. The 
 the random a priori phases hypothesis can be
 considered an analogous to the molecular chaos hypothesis
-\cite{bib:das2018}.
+\cite{bib:das2018} as the mechanism to introduce stochasticity into the system.
 
-Substituting Eq.~(\ref{eq:changen}) into Eq.~(\ref{eq:quantumdHdt}), and performing
-the algebra, it can be proven that
+Substituting Eq.~(\ref{eq:changen}) into Eq.~(\ref{eq:quantumdHdt}) after some algebra, it can be proven that
 %
 \begin{equation}
-    \frac{dH_T}{dt}\leq 0.
+    \frac{dH_T}{dt}\leq 0. \label{eq:H-theorem-tolman}
 \end{equation}
 %
 
@@ -113,10 +112,9 @@ This expression also can be obtained also from the Boltzmann $H$-functional thro
 Consider a diluted gas enclosed by a perfectly isolated vessel of volume $V$, with
 total energy $E$, and total number of quantum particles $N$, which can be free fermions or
 bosons. For our purposes, the volume $V$ is divided into $K$ small cells, each of which
-has a constant volume $\delta V_M=V/K$ ($M=1,\,\dots\,,K$), a
-local temperature $T_M$, a local energy $\epsilon_M$,
-a local number of particles $\mathcal{N}_M$, and a local set of distribution functions,
-$\{f_{Mn}(t)\}$. Hereafter we will use the short-hand notation:
+has a constant volume $\delta V_M=V/K$ ($M=1,\,\dots\,,K$), a temperature $T_M$, an energy $\epsilon_M$,
+a number of particles $\mathcal{N}_M$, and a distribution function,
+$\{f_{Mn}(t)\}$. Hereafter we will use a short-hand notation:
 %
 \begin{equation}
    f_{Mn}(t)\equiv f(\vec r_M,\epsilon_{n},t),
@@ -138,7 +136,7 @@ for quantum non-homogeneous diluted gases:
 \end{eqnarray}
 %
 Here, the upper and lower sign refer to bosons and fermions respectively.
-In addition, when needed, each cell will have an associated local chemical potential,
+In addition, when needed, each cell will have an associated chemical potential,
 $\alpha_M$, and its local $H$-functional, which is defined by:
 %
 \begin{equation}\label{eq:qHMdef}
@@ -177,10 +175,10 @@ and
 \end{subequations}
 %
 
-Applying the variational method to $\mathcal{H}$, and using the using the
+Applying the variational method to $\mathcal{H}$, and using the
 Lagrange multipliers
-$\{\alpha_M\}$ and $\{\beta_M\}$ it is straightforward to obtain
-(see also text around Eq.~(\ref{eq:deltaHpdeltafpj})):
+$\{\alpha_M\}$ and $\{\beta_M\}$, it is straightforward to obtain
+(see also the discussion of Eq.~(\ref{eq:deltaHpdeltafpj})):
 %
 \begin{equation}\label{eq:relation}
 \ln \left(\frac{1\mp f_{Mn}(t)}{f_{Mn}(t)} \right)=-\alpha_M(t)-\beta_M(t) \epsilon_{n},
@@ -191,12 +189,14 @@ and solving for $f_{Mn}(t)$ yields
 \begin{equation}\label{eq:qfMn}
 f_{Mn}(t)=\frac{1}{\exp\big(-\alpha_M(t)-\beta_M(t) \epsilon_{n}\big)\pm 1}.
 \end{equation}
+%
+Thus, in this zero-order approximation the form of the distribution function is conserved.
 
 %============================================================
 \subsubsection{Properties of $\mathcal{H}$ in equilibrium}
 %============================================================
-If the system is in equilibrium (at $t\to\infty$), the local number of particles and the local
-energy do not depend on the cell number and they should be homogeneous, this is \commr{[This needs a rationale\dots]}
+According to Eq.~(\ref{eq:H-theorem-tolman}) the system is in equilibrium at $t\to\infty$, then 
+the cell number of particles and the cell energy do not depend on the cell number, this is \commr{[This needs a rationale\dots]}
 %
 \begin{subequations}
 \begin{equation}
