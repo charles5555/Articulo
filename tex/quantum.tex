@@ -422,63 +422,21 @@ is a monotonic function and $g_{nM}\to0$ as $t\to\infty$ as the system aproaches
 Another approach to prove Eq.~(\ref{eq:cambioH4}) consists of splitting the cells into two subsets,
 such as we did in the classical scenario, however, we will ommit this approach in this section.
 
-\color{blue}
-
-
-
+Succinctly, considering a diluted quantum gas contained in a vessel of volume $V$ (divided into
+$K$ small cells), with total energy $E$ and $N$ quantum free particles, which initially
+is slightly out of equilibrium ---so as to the local equilibrium hypothesis is valid---,
+the functional
 %
-Now, the summation over $M$ will be expressed in two summations, such as in the
-classical case
-%
-\begin{equation}
-    \frac{d\mathcal{H}}{dt}=\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} g^{+}_{nJ}\dot{g}^{+}_{nJ}\de V_J \delta \epsilon_n+\sum^{P}_J  g^{-}_{nJ}\dot{g}^{-}_{nJ} \de V_J\delta \epsilon_n \right), \label{cambioH5}
-\end{equation}
-%
-where $L+P=K$. Besides, $\dot{g}^{+}_{J}$ represents the change on the
-deviation on cells that have an excess of particles or energy while
-$\dot{g}^{-}_{J}$  represents the change on the deviations on cells that have
-missing particles or energy.
-On the other hand, $g^{+}_{J}$  represents the value of the deviation on cells
-that have an excess of particles or energy. In contrast, $g^{-}_{J}$ represents
-the value of the deviation on cells that have missing particles or energy.
-
-Also, on the one hand, $\dot{g}^{+}_{nJ}<0$ describes the loss of particles
-and/or energy and so, $g^{+}_{nJ}>0$. On the other hand, $\dot{g}^{-}_{nJ}>0$
-describes the gain of particles and/or energy and therefore $g^{-}_{nJ}<0$.
-
-We sort the previous ideas in the following form
-%
-\begin{eqnarray}
-   &&g^{+}_{nJ}=+|g^{+}_{nJ}|; \ \ \  \dot{g}^{+}_{nJ}=-|\dot{g}^{+}_{nJ}| \nonumber \\
-   &&g^{-}_{nJ}=-|g^{-}_{nJ}|; \ \ \ \dot{g}^{-}_{nJ}=+|\dot{g}^{-}_{nJ}| \label{separacion},
+\begin{eqnarray}\label{eq:qHfunctTheo}
+    \mathcal{H} (t)&=&\sum_{M=1}^{K} \sum_{n} \bigg[ f_{Mn}(t) \ln f_{Mn}(t)\pm \Big(1 \mp f_{Mn}(t)) \ln (1 \mp f_{Mn}(t)\Big) \Big]   \delta V_M,
 \end{eqnarray}
 %
+where $f_{Mn}$ is the $M$-th cell distribution function,
+satisfies $d\mathcal{H}/dt\leq0$, and the equality condition is attained when the system approaches
+the equilibrium state at $t\to\infty$. In Eq.~(\ref{eq:qHfunctTheo}), and for a Fermi (Bose)
+gas, $f_{Mn}$ corresponds to the Fermi-Dirac (Bose-Einstein) distrubution function for each
+cell and locally each cell is in equilibrium, although the complete system may be non-homogeneous,
+and is caracterized by the respective $f_{Mn}$, number of particles $\mathcal{N}_M$, energy $\mathcal{E}_M$,
+temperature $T_M$, and Legendre Multipliers $\alpha_M$ and $\beta_M$.
 
-
-and consequently, (\ref{cambioH5}) obtains the following form
-%
-\begin{equation}
-    \frac{d\mathcal{H}}{dt}=-\sum_n  e^{\bar{\alpha}+\bar{\beta}\epsilon_n}\left(\sum_J ^{L} |g^{+}_{nJ}||\dot{g}^{+}_{nJ}|\de V_J \delta \epsilon_n+\sum^{P}_J  |g^{-}_{nJ}||\dot{g}^{-}_{nJ}| \de V_J \delta \epsilon_n \right), \label{cambioH6}
-\end{equation}
-%
-and due to $e^{\bar{\alpha}+\bar{\beta}\epsilon_n}$ is always positive, then
-$\frac{d\mathcal{H}}{dt}<0$. With this, we proved that any quantum ideal gas perturbed
-(out of equilibrium but not so far from it), evolves such that
-$\frac{d\mathcal{H}}{dt}<0$.
-
-When the system is in equilibrium, $g_{nM}=0$ and in consequence of that, $\dot
-g_{nM}=0$ and finally from (\ref{eq:cambioH1}) $\frac{d\mathcal{H}}{dt}=0$. Then, we can
-say that any ideal quantum gas perturbed always evolves to the equilibrium
-state, such as the classical $H$-theorem. Then, we obtained the quantum version
-of the Boltzmann's $H$-theorem including inhomogeneities in the system.
-
-We obtained some results from the Statistical Mechanic in Quantum Mechanics
-scheme. However, the correspondence principle is important to recover all
-results from Classical Mechanics. This correspondence principle will be
-discussed in the next section.
-
-  %-----------------------------------------
- 
-
-%---------------------------------------------
 
