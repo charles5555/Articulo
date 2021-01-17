@@ -1,22 +1,22 @@
 
   \section{Relaxation processes in degenerated quantum gases}\label{sec:relaxproc}
-Consider that the distribution function $f_{nM}$ is a function of the local number of particles $\mathcal{N}_M$, the local number of particles in a quantum energy state $\mathcal{N}_{M}^{n}$ and the time $t$ as follow
+Consider that the distribution function $f_{nM}$ is a function of the local number of particles in a quantum energy state $\mathcal{N}_{M}^{n}$ and the time $t$ as follow
 \begin{equation}
-    f=f(\mathcal{N}_M,\mathcal{N}_M^{n},t),
+    f=f(\mathcal{N}_M^{n},t),
 \end{equation}
 where $\mathcal{N}_{M}^{n}$ is defined as
 \begin{equation}
     \mathcal{N}_{M}^{n}= f_{nM} \delta \epsilon_n.
 \end{equation}
-Besides the local number of particles is a function of time $\mathcal{N}_J=\mathcal{N}_J(t)$ and the local number of particles in a quantum energy state is a function of time and the local number of particles $\mathcal{N}_J^{j}=\mathcal{N}_J^{j}(\mathcal{N}_M,t)$. This is due to when a cell transfer particles to another cell, the particles in some defined state energy levels must change.\\
+Besides the local number of particles in a quantum energy state 
+is a function of time $\mathcal{N}_J^{j}=\mathcal{N}_J^{j}(t)$.\\
 In order to obtain the analogous transport equation to this system, we apply the variation method to the functional $\Ss$. Due to $\Ss$ in equilibrium is proportional to entropy, and therefore a maximum, the variation must be zero. Then the equation of motion is
 \begin{equation}
-    0=\sum_{M=1}^{K} \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \left[ \frac{\partial f_{nM}}{\partial t}+\frac{\partial f_{nM}}{\partial \mathcal{N}_J}\dot{\mathcal{N}}_J+\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}}\left( \frac{\partial \mathcal{N}_J^{j}}{\partial t}+\frac{\partial \mathcal{N}_J^{j}}{\partial \mathcal{N}_L}\dot{\mathcal{N}}_L \right) \right]. \label{transportequation1}
+    0=\sum_{M=1}^{K} \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \left[ \frac{\partial f_{nM}}{\partial t}++\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}} \frac{\partial \mathcal{N}_J^{j}}{\partial t} \right]. \label{transportequation1}
 \end{equation}
 This equation is valid in equilibrium. When the system is out of equilibrium, the variation is different from zero. Due to this, an expression has to be included in (\ref{transportequation1}). This term, in analogy to the Boltzmann transport equation, will be the collision term and will be expressed as $\left( \frac{df_{nM}}{dt} \right)_{coll}$. Moreover, we propose that this term contributes to the equation of motion per each cell.\footnote{The collision term is only in a defined cell and local group of energy. If we are describing the total system, we need to include all contributions (each cell and energy group).} Therefore, (\ref{transportequation1}) casts into
 \begin{eqnarray}
-    \sum_{M=1}^{K}\sum_n \left( \frac{df_{nM}}{dt} \right)_{coll}&=&\sum_{M=1}^{K} \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \nonumber \\
-    &&\times \left[ \frac{\partial f_{nM}}{\partial t}+\frac{\partial f_{nM}}{\partial \mathcal{N}_J}\dot{\mathcal{N}}_J+\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}}\left( \frac{\partial \mathcal{N}_J^{j}}{\partial t}+\frac{\partial \mathcal{N}_J^{j}}{\partial \mathcal{N}_L}\dot{\mathcal{N}}_L \right) \right].  \nonumber \\ \label{transportequation2}
+    \sum_{M=1}^{K}\sum_n \left( \frac{df_{nM}}{dt} \right)_{coll}&=&\sum_{M=1}^{K} \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \left[ \frac{\partial f_{nM}}{\partial t}+\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}} \frac{\partial \mathcal{N}_J^{j}}{\partial t} \right].  \nonumber \\ \label{transportequation2}
 \end{eqnarray}
 The equation (\ref{transportequation2}) is the time evolution equation to a quantum ideal gas. \\
 
