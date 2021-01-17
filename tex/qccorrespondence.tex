@@ -10,48 +10,31 @@ Both $H$-functionals defined in Eqs.~(\ref{eq:cHdef}) and
 for a classical gas, Fermi-Dirac for a Fermi gas, or Bose-Einstein for a Bose gas. Nevertheless,
 the functionals (\ref{eq:cHdef}) and
 (\ref{eq:qHdef}) are seemingly different, and in this section we will show that both are
-related by the correspondence principle. To this end, 
+related by the correspondence principle.
+
+We start by arguing that, in the classic limit, $f_{nM}\approx0$ for the following reasons.
+Systems at very low temperatures, where the quantum effects cannot be ignored, are obviously excluded
+from the current analysis. For systems at sufficently large temperature, the particles
+occupy almost exclusively high-energy levels. 
+Furthermore, the energy spectrum approaches to be a continuum, as is expected by taking the limit
+$\hbar\to0$, and the number of particles per level are very close to zero.
+
+Subsequently, we substitute $f_{nM}\approx0$ into Eq.~(\ref{eq:qHdef}) to obtain:
+%
+\begin{equation}\label{h-quantic2}
+    \mathcal{H}= \sum_{M=1}^{K} \sum_n
+    \left[ f_{nM}(t)\ln \left(f_{nM}(t)\right)\right] \delta V_M
+    =\sum_{M=1}^{K} \sum_n
+    \left[ f_{M}(\epsilon_n,t) \ln \left( f_{M}(\epsilon_n,t)\right)\right] \delta V_M.
+\end{equation}
+%
+
 
 
 \color{blue}
 
 
-%The variational entropy $H$ that was defined in (\ref{entropy2}) can be reduce to the Boltzmann's $H$-functional in the appropriated limit.\\
-We begin defining the distribution function as the number of particles in a defined cell and an energy level $N_{nM}$ inside a volume $\de V_M \delta \epsilon_n$ as
-\begin{equation}
-    f_{nM}=\frac{N_{nM}}{ \de V_M \delta \epsilon_{n} }.
-\end{equation}
-Using this definition on the variational entropy (\ref{entropy2}) we obtain
-\begin{eqnarray}
-    \Ss&=& \sum_{M=1}^{K} \sum_n
-    \left[  
-           \frac{N_{nM}}{ \de V_M\delta \epsilon_{n}} \ln 
-           \left( 
-                  \frac{N_{nM}}{ \de V_M\delta \epsilon_{n}}
-           \right)\pm 
-           \left(  
-                  1\mp \frac{N_{nM}}{ \de V_M \delta \epsilon_{n}}
-           \right) \ln 
-           \left(  
-                   1\mp \frac{N_{nM}}{ \de V_M \delta \epsilon_{n}}
-           \right)
-    \right] \de V_M \delta \epsilon_{n}. \nonumber \\
-    \label{h-quantic} 
-\end{eqnarray}
-In the classic limit, the particles occupy high energy levels, and the number of particles in most of the groups of state $n$ is small compared with the number of the elementary states $\epsilon_n$ of the group, that is
-\begin{equation}
-    \frac{N_{nM}}{ \de V_M \delta \epsilon_{n} } \approx 0,
-\end{equation}
-and with the previous approximation, the second term in (\ref{h-quantic}) is negligible, then (\ref{h-quantic}) yields
-\begin{eqnarray}
-    \Ss&=& \sum_{M=1}^{K} \sum_n
-    \left[  
-           \frac{N_{nM}}{ \de V_M \delta \epsilon_{n}} \ln 
-           \left( 
-                  \frac{N_{nM}}{ \de V_M \delta \epsilon_{n}}
-           \right)
-    \right] \de V_M \delta \epsilon_{n}. \label{h-quantic2}
-\end{eqnarray}
+
 In the case when the system is spatial-homogeneous, the definition of the distribution function is 
 \begin{equation}
     f_{n}=\frac{N_{n}}{ \delta \epsilon_{n} },
@@ -64,14 +47,14 @@ and using the same limit we obtain
            \left( 
                   \frac{N_{n}}{ \delta \epsilon_{n}}
            \right)
-    \right]  \de V_M \delta \epsilon_{n} = V \sum_n
+    \right]  \delta V_M \delta \epsilon_{n} = V \sum_n
     \left[  
            \frac{N_{n}}{ \delta \epsilon_{n}} \ln 
            \left( 
                   \frac{N_{n}}{ \delta \epsilon_{n}}
            \right)
     \right] \delta \epsilon_{n} \nonumber \\
-    &=& V \sum_n \left[N_n \ln N_n - N_n \ln \delta \epsilon_n  \right]=\de V_M K H_{B},\label{h-quantic4}
+    &=& V \sum_n \left[N_n \ln N_n - N_n \ln \delta \epsilon_n  \right]=\delta V_M K H_{B},\label{h-quantic4}
 \end{eqnarray}
 where $H_{B}$ now is (\ref{eq:cHdef}) expressed is the form of (\ref{reduce-h}) shown by Tolman.\footnote{See \cite{bib:tolman} eq. (102.6) for more information.}\\
 We can observe that if the number of particles is too big compared to the number of cells $K$, then we can conclude that the sum of the local variational entropy is equal to the variational entropy of the entire system.
