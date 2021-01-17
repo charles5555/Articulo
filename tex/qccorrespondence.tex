@@ -29,97 +29,25 @@ Subsequently, we substitute $f_{nM}\approx0$ into Eq.~(\ref{eq:qHdef}) to obtain
 \end{equation}
 %
 
-
-
-\color{blue}
-
-
-
-In the case when the system is spatial-homogeneous, the definition of the distribution function is 
-\begin{equation}
-    f_{n}=\frac{N_{n}}{ \delta \epsilon_{n} },
+Finally, the sum over the quatum energy levels can be replaced by an integral over the velocities
+by invoking both the uncertainty principle and the fact that, for free particles, the continuum
+energy spectrum
+can be written as a function of the velocity. Hence the quantum $H$-functional
+transforms, in the classical limit, to:
+%
+\begin{equation}\label{eq:qHclassLim}
+    \mathcal{H}= \sum_{M=1}^{K}\int C'f_M(\vec v,t)\ln\big[C' f_M(\vec v,t)\big] d\vec v,
 \end{equation}
-and using the same limit we obtain
-\begin{eqnarray}
-    \Ss&=& \sum_{M=1}^{K} \sum_n
-    \left[  
-           \frac{N_{n}}{ \delta \epsilon_{n}} \ln 
-           \left( 
-                  \frac{N_{n}}{ \delta \epsilon_{n}}
-           \right)
-    \right]  \delta V_M \delta \epsilon_{n} = V \sum_n
-    \left[  
-           \frac{N_{n}}{ \delta \epsilon_{n}} \ln 
-           \left( 
-                  \frac{N_{n}}{ \delta \epsilon_{n}}
-           \right)
-    \right] \delta \epsilon_{n} \nonumber \\
-    &=& V \sum_n \left[N_n \ln N_n - N_n \ln \delta \epsilon_n  \right]=\delta V_M K H_{B},\label{h-quantic4}
-\end{eqnarray}
-where $H_{B}$ now is (\ref{eq:cHdef}) expressed is the form of (\ref{reduce-h}) shown by Tolman.\footnote{See \cite{bib:tolman} eq. (102.6) for more information.}\\
-We can observe that if the number of particles is too big compared to the number of cells $K$, then we can conclude that the sum of the local variational entropy is equal to the variational entropy of the entire system.
+%
+where $C'$ collects the appropriate constants stemming from writing the energy spectrum as
+a function of $\vec v$.
 
-In the equilibrium case, we have the following variational entropy
-\begin{eqnarray}
-    \Ss&=& \sum_{M=1}^{K}\sum_{n}
-        \left[
-                \frac{1}{e^{-\alpha_M-\beta_M \epsilon}\pm 1} \ln 
-                    \left(
-                            \frac{1}{e^{-\alpha_M-\beta_M \epsilon}\pm 1}
-                    \right)
-        \right. \nonumber \\
-          && \pm \left. \left(
-                        1 \mp \frac{1}{e^{-\alpha_M-\beta_M \epsilon}\pm 1}
-                  \right) \ln
-                \left(
-                        1 \mp \frac{1}{e^{-\alpha_M-\beta_M \epsilon}\pm 1}            
-                \right) \right]. \label{equilibriumvariational}
-\end{eqnarray}
-To obtain the classical limit, that is, to recover the Maxwell-Boltzmann distribution from the Fermi-Dirac and Bose-Einstein distribution, it is necessary to hold the following approximation
-\begin{equation}
-    e^{-\alpha_M-\beta_M \epsilon}\gg 1, \label{classicalapproximation}
-\end{equation}
-and then
-\begin{equation}
-    \frac{1}{e^{-\alpha_M-\beta_M \epsilon}\pm 1} \approx e^{\alpha_M+\beta_M \epsilon}.
-\end{equation}
-If we apply (\ref{classicalapproximation}) to (\ref{equilibriumvariational}), we obtain
-\begin{eqnarray}
-    \Ss&=& \sum_{M=1}^{K}\sum_{n}
-        \left[
-                e^{\alpha_M+\beta_M \epsilon} \ln 
-                    \left(
-                            e^{\alpha_M+\beta_M \epsilon}
-                    \right)
-        \right. \nonumber \\
-          && \pm \left. \left(
-                        1 \mp e^{\alpha_M+\beta_M \epsilon}
-                  \right) \ln
-                \left(
-                        1 \mp e^{\alpha_M+\beta_M \epsilon}            
-                \right) \right],
-\end{eqnarray}
-but if (\ref{classicalapproximation}) holds, then 
-\begin{equation}
-     e^{\alpha_M+\beta_M \epsilon}\ll 1,
-\end{equation}
-consequently 
-\begin{equation}
-    \ln(1\mp e^{\alpha_M+\beta_M \epsilon}) \approx \ln 1 \approx 0,
-\end{equation}
-and finally
-\begin{equation}
-    \Ss=\sum_{M=1}^{K}\sum_{n}
-        \left[
-                e^{\alpha_M+\beta_M \epsilon} \ln 
-                    \left(
-                            e^{\alpha_M+\beta_M \epsilon}
-                    \right)
-        \right],
-\end{equation}
-that corresponds to the classical $H$-functional in equilibrium described in the energy space.
+Because we have shown that both classical and quantum $H$-functionals, Eqs.~(\ref{eq:cHdef}) and
+(\ref{eq:qHdef}) recover the Maxwell-Boltzmann, Bose-Einstein, or Fermi-Dirac distribution
+functions in equilibrium, we will omit the quantum classical correspondence of the distribution functions,
+as it has been thoroughly discussed in textbooks.
 
 
-Finally, as a complementary topic, in the next section, we propose a method to obtain the quantum analogous from the Boltzmann transport equation for relaxation processes.
+
 
 %--------------------------------------
