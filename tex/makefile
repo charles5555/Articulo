@@ -22,7 +22,7 @@ endif
 ifneq ($(DARWIN),)
   TEX          := /Library/TeX/texbin/pdflatex
 else
-  TEX          := pdflatex
+  TEX          := /usr/bin/pdflatex
 endif
 
 #TEXFLAGS       += 
