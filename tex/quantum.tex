@@ -325,7 +325,7 @@ omit this scenario and will only discuss Fermi gases whose temperature is non ze
 
 
 %\begin{proof}
-To proof the quantum $H$-theorem, we start by taking the time-derivative of Eq. (\ref{eq:qHdef}):
+To proof the quantum $H$-theorem, start by taking the time-derivative of Eq. (\ref{eq:qHdef}):
 %
 \begin{equation}\label{eq:deltaH}
    \frac{d \mathcal{H} (t)}{dt}= \sum_n \sum_{M=1}^{K} \dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right] \de V_M.
@@ -344,9 +344,8 @@ Subsequently, substitute Eq.~(\ref{eq:qFirstOrd}) in the above equation to obtai
     \right \}\delta V_M.
 \end{eqnarray}
 %
-By representing the logarithmic terms, corresponding to
-Fermi and Bose gases, through a Taylor series around $\bar f_n g_{nM}=0$, and
-substituting this into Eq.~(\ref{eq:cambioH1}), one obtains:
+Approximate the logarithmic terms, corresponding to
+Fermi and Bose gases, through a Taylor series around $\bar f_n g_{nM}=0$:
 %
 \begin{subequations}\label{eq:qlnApprox}
 \begin{equation}\label{eq:qlnApproxFermions}
@@ -366,14 +365,14 @@ $1-\bar{f}_n \gg \bar{f}_n|g_{nM}|$, and Eq.~(\ref{eq:qlnApproxBosons}) is fulfi
 for Boson gases,
 $1+\bar{f}_n \gg \bar{f}_n |g_{nM}|$ when $\bar{f}_n \gg \bar{f}_n |g_{nM}|$.
 
-Combining Eqs. (\ref{eq:cambioH1}) and (\ref{eq:qlnApprox}) yields:
+Combine Eqs. (\ref{eq:cambioH1}) and (\ref{eq:qlnApprox}):
 %
 \begin{eqnarray}\label{eq:cambioH2}
     \frac{d\mathcal{H}}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\} \de V_M \delta \epsilon_n \nonumber \\
     &&-\sum_{n}\sum_{M=1}^{K}\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\de V_M,
 \end{eqnarray}
 %
-and substituting Eq.~(\ref{eq:qfneq}) into Eq.~(\ref{eq:cambioH2}):
+and substitute Eq.~(\ref{eq:qfneq}) into Eq.~(\ref{eq:cambioH2}):
 %
 \begin{equation}\label{eq:cambioH3}
     \frac{d\mathcal{H}}{dt}=
@@ -407,11 +406,9 @@ Substitute the previous expression in Eq.~(\ref{eq:cambioH3}) to obtain:
 %
 \begin{equation}\label{eq:cambioH4}
    \frac{d\mathcal{H}}{dt}=\sum_n e^{\bar{\alpha}+\bar{\beta}\epsilon_n}
-   \sum_M  g_{nM}\dot{g}_{nM} \delta V_M \leq 0.
+   \sum_M  g_{nM}\dot{g}_{nM} \delta V_M \leq 0. \qquad\qquad\textrm{QED.}
 \end{equation}
 %\end{proof}
-Thus, the time evolution of the system occurs in such a way that 
-$\frac{d\mathcal{H}}{dt}$ is a decreasing function toward zero.
 %
 
 For obtaining the right-most hand side of Eq.~(\ref{eq:cambioH4}), 
@@ -426,7 +423,7 @@ just as we did in the classical scenario.
 
 Succinctly, considering a diluted quantum gas contained in a vessel of volume $V$ (divided into
 $K$ small cells), with total energy $E$ and $N$ quantum free particles, which initially
-is out of equilibrium ---but still the local equilibrium hypothesis is valid---,
+is out of equilibrium ---but in such a manner that the local equilibrium hypothesis is valid---,
 the functional
 %
 \begin{eqnarray}\label{eq:qHfunctTheo}
@@ -437,8 +434,8 @@ where $f_{Mn}$ is the $M$-th cell distribution function,
 evolves in time such that $d\mathcal{H}/dt\leq0$, and the equality 
 condition is attained when the system reaches
 the equilibrium state. In Eq.~(\ref{eq:qHfunctTheo}), and for a Fermi (Bose)
-gas, $f_{Mn}$ corresponds to the Fermi-Dirac (Bose-Einstein) distrubution function for each
-cell and locally each cell is in equilibrium, although the complete system may be non-homogeneous,
+gas, $f_{Mn}$ corresponds to the Fermi-Dirac (Bose-Einstein) distrubution function for each cell.
+Locally, each cell is in equilibrium, although the complete system may be non-homogeneous,
 and is caracterized by the respective $f_{Mn}$, number of particles $\mathcal{N}_M$, energy $\mathcal{E}_M$,
 temperature $T_M$, and Legendre Multipliers $\alpha_M$ and $\beta_M$.
 
