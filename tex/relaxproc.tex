@@ -1,24 +1,33 @@
 
   \section{Relaxation processes in degenerated quantum gases}\label{sec:relaxproc}
-Consider that the distribution function $f_{nM}$ is a function of the local number of particles in a quantum energy state $\mathcal{N}_{M}^{n}$ and the time $t$ as follow
-\begin{equation}
-    f=f(\mathcal{N}_M^{n},t),
-\end{equation}
-where $\mathcal{N}_{M}^{n}$ is defined as
-\begin{equation}
-    \mathcal{N}_{M}^{n}= f_{nM} \delta \epsilon_n.
-\end{equation}
-Besides the local number of particles in a quantum energy state 
-is a function of time $\mathcal{N}_J^{j}=\mathcal{N}_J^{j}(t)$.\\
-In order to obtain the analogous transport equation to this system, we apply the variation method to the functional $\Ss$. Due to $\Ss$ in equilibrium is proportional to entropy, and therefore a maximum, the variation must be zero. Then the equation of motion is
-\begin{equation}
-    0=\sum_{M=1}^{K} \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \left[ \frac{\partial f_{nM}}{\partial t}++\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}} \frac{\partial \mathcal{N}_J^{j}}{\partial t} \right]. \label{transportequation1}
-\end{equation}
-This equation is valid in equilibrium. When the system is out of equilibrium, the variation is different from zero. Due to this, an expression has to be included in (\ref{transportequation1}). This term, in analogy to the Boltzmann transport equation, will be the collision term and will be expressed as $\left( \frac{df_{nM}}{dt} \right)_{coll}$. Moreover, we propose that this term contributes to the equation of motion per each cell.\footnote{The collision term is only in a defined cell and local group of energy. If we are describing the total system, we need to include all contributions (each cell and energy group).} Therefore, (\ref{transportequation1}) casts into
-\begin{eqnarray}
-    \sum_{M=1}^{K}\sum_n \left( \frac{df_{nM}}{dt} \right)_{coll}&=&\sum_{M=1}^{K} \sum_n \ln \left[ \frac{f_{nM}}{1\mp f_{nM}} \right] \left[ \frac{\partial f_{nM}}{\partial t}+\frac{\partial f_{nM}}{\partial \mathcal{N}_J^{j}} \frac{\partial \mathcal{N}_J^{j}}{\partial t} \right].  \nonumber \\ \label{transportequation2}
+In order to obtain an equation of motion for the quantum gas, we evaluate 
+$\Delta H=H(t_2)-H(t_1)$ where the $H$ functional is evaluated in diferent times such that $t_2 > t_1$.
+We begin using the following notation $f_{nM}(t_2)\equiv f'_{nM}$ and 
+$f_{nM}(t_1) \equiv f''_{nM}$. 
+Now, using (\ref{eq:qHdef}) to calculate $\Delta H$ with the previous notation, we obtain
+\begin{eqnarray} \label{eq:deltaHdef}
+	\Delta H &=& \sum_{M}^{K}\sum_n [f'_{nM} \ln f'_{nM} - f''_{nM}	\ln f''_{nM}\nonumber \\ 
+			&&\pm (1\mp f'_{nM}) \ln(1\mp f'_{nM}) \mp (1\mp f''_{nM}) \ln (1\mp f''_{nM})]\delta V.  
 \end{eqnarray}
-The equation (\ref{transportequation2}) is the time evolution equation to a quantum ideal gas. \\
+In order to obtain a general equation of motion for the distribution function 
+$f_{nM}$, we only take the limit when $(t_2-t_1) \rightarrow 0 $. 
+However, our current work is focused on the deviation $g_{nM}$. So, keeping the same workline
+we apply the first order approximation (\ref{eq:qFirstOrd}) to (\ref{eq:deltaHdef}) to obtain the following expression
+\begin{eqnarray}\label{eq:deltaH1}
+	\Delta H &=& \sum_{M}^{K} \sum_n [\bar{f}_n(1+g'_{nM}) \ln \bar{f}_{n}(1+g'_{nM})  -  
+			\bar{f}_n(1+g''_{nM}) \ln \bar{f}_n(1+g''_{nM}) \nonumber \\
+		    &&  \pm (1 \mp \bar{f}_n \{1+g'_{nM}\}) \ln (1\mp \bar{f}_n\{1+g'_{nM} \})\nonumber \\
+		    &&  \mp (1\mp \bar{f}_n \{ 1+g''_{nM} \}) \ln (1\mp \bar{f}_n \{1+g''_{nM} \})]\delta V.\nonumber \\
+\end{eqnarray} 
+The equation (\ref{eq:deltaH1}) can be rewritten, after some approximations on the logarithm functions, as
+\begin{equation}\label{eq:deltaH2}
+\Delta H = \sum_{M}^{K}\sum_n [\bar{f}_n(1+\ln \bar{f}_n)-\bar{f}_n \{\ln(1\mp \bar{f}_n)\mp 1 \}](g'_{nM}-g''_{nM})\delta V.
+\end{equation}
+The equation (\ref{eq:deltaH2}) must be analyzed taking the limit $(t_2-t_1) \rightarrow 0$ 
+to obtain the equation of motion for the deviation $g_{nM}$.
+This analysis will not be treated in this article. 
+
+
 
 
   
