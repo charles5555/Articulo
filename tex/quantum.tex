@@ -1,11 +1,11 @@
 \section{Quantum scheme}\label{sec:quantum}
 
-The classical $H$-theorem is even to these days one of the pillars whereon the classical statistical
-physics is founded. Unfortunately, regardless of several attempts have been made \cite{bib:silva2010,bib:deroeck2006,bib:grabert1974,bib:han2015,bib:das2018,bib:vonneumann2010}, 
-the generality of the classical $H$-theorem has no an equally robust quantum match. In this section, we shall
+The classical $H$-theorem is even to these days one of the pillars on which the classical statistical
+physics is founded. Unfortunately, regardless of several attempts that have been made \cite{bib:silva2010,bib:deroeck2006,bib:grabert1974,bib:han2015,bib:das2018,bib:vonneumann2010}, 
+the generality of the classical $H$-theorem has no equally robust quantum match. In this section, we shall
 propose and analize an alternative quantum $H$-functional using the variational method.
-We start by briefly outline a typical textbook demonstration of the quantum $H$-theorem
-\cite{bib:tolman}, then, we present the analysis of our proposed $H$-functional.
+We start by briefly outlining a typical textbook demonstration of the quantum $H$-theorem
+\cite{bib:tolman}, and subsequently we present the analysis of our proposed $H$-functional.
 
 \subsection{$H$-theorem and the Fermi-Dirac and Bose-Einstein distribution functions}
 
@@ -19,9 +19,9 @@ of entropy, the quantum $H$ functional is
 \end{equation}
 %
 where $G$ describes the total number of accessible quantum states of the gas that satisfy the
-above mentioned conditions \cite{bib:tolman}.
+above conditions \cite{bib:tolman}.
 The quantum $H$-theorem can be demostrated as follows.  $G$ can be divided into groups of neighboring states,
-$g_k$, and a certain occupation numbers, $n_k$, can be associated with each of these
+$g_k$, and certain occupation numbers, $n_k$, can be associated with each of these
 groups. Thus, the above functional takes the form:
 %
 \begin{equation}\label{eq:quantumh}
@@ -37,8 +37,8 @@ Thus the time derivative of Eq.~(\ref{eq:quantumh}) is
 \end{equation}
 %
 
-Assuming that the energy exchange between particles is produced by collisions between particles.
-By using perturbation theory, the rate of change in the number of particles in a group $\kappa$ is
+Assuming that the energy exchange between particles is produced by collisions between particles,
+and using perturbation theory, the rate of change in the number of particles in a group $\kappa$ is
 %
 \begin{eqnarray}\label{eq:changen}
     \frac{d n_{\kappa}}{dt}&=&-\sum_{\lambda,(\mu \nu)}A_{\kappa\lambda,\mu\nu} n_{\kappa}n_{\lambda}(g_{\mu}\pm n_{\mu})(g_{\nu}\pm n_{\nu})\nonumber \\
@@ -54,15 +54,15 @@ expected number of collisions per unit time, in which two particles will be move
 \end{equation}
 %
 In Eq.~(\ref{eq:amnkldef}), $\Delta\epsilon$ is the net energy change occuring during the
-collision and $|I_1-I_2|^2=|V_{mn,kl}|^2$ where
+collision and $|I_1-I_2|^2=|V_{mn,kl}|^2$, where
 $V_{mn,kl}$ is the element of the transition matrix of a binary collision.
 It is important to remark that in deriving Eq.~(\ref{eq:changen}), the equal a priori
-probabilities and the random a priori phases hypotheses were taken valid. The 
-the random a priori phases hypothesis can be
-considered an analogous to the molecular chaos hypothesis
-\cite{bib:das2018} as the mechanism to introduce stochasticity into the system.
+probabilities and the random a priori phases hypotheses were taken as valid. The 
+random a priori phases hypothesis can be
+considered an analogue of the molecular chaos hypothesis
+\cite{bib:das2018}, as it is the mechanism by which stochasticity is introduced into the system.
 
-Substituting Eq.~(\ref{eq:changen}) into Eq.~(\ref{eq:quantumdHdt}) after some algebra, it can be proven that
+Substituting Eq.~(\ref{eq:changen}) into Eq.~(\ref{eq:quantumdHdt}), it is straightforward to prove that
 %
 \begin{equation}
     \frac{dH_T}{dt}\leq 0. \label{eq:H-theorem-tolman}
@@ -177,7 +177,7 @@ and
 Applying the variational method to $\mathcal{H}$, and using the
 Lagrange multipliers
 $\{\alpha_M\}$ and $\{\beta_M\}$, it is straightforward to obtain
-(see also the discussion of Eq.~(\ref{eq:deltaHpdeltafpj})):
+(see also the discussion related to Eq.~(\ref{eq:deltaHpdeltafpj})):
 %
 \begin{equation}\label{eq:relation}
 \ln \left(\frac{1\mp f_{Mn}(t)}{f_{Mn}(t)} \right)=-\alpha_M(t)-\beta_M(t) \epsilon_{n},
@@ -189,7 +189,7 @@ and solving for $f_{Mn}(t)$ yields
 f_{Mn}(t)=\frac{1}{\exp\big(-\alpha_M(t)-\beta_M(t) \epsilon_{n}\big)\pm 1}.
 \end{equation}
 %
-Thus, in this zero-order approximation the form of equilibrium distribution functions are conserved.
+Thus, in this zero-order approximation, the form of equilibrium distribution functions are conserved.
 
 %============================================================
 \subsubsection{Properties of $\mathcal{H}$ for systems in equilibrium}
@@ -244,23 +244,23 @@ the entropy of a quantum ideal gas is obtained
       S&=&\sum_{M=1}^{K}
         \sum_n  \left[
         		\left(\frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)
-           \commr{\ln \left(\frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)}
+           \ln \left(\frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)
          \right]\nonumber \\
       &&\quad\pm  \ln \left[\prod_{M=1}^{K} \prod_{n}
          \left(1 \mp \frac{1}{\exp\big(-\bar{\alpha}-\bar{\beta}\epsilon_{n}\big)\pm 1} \right)
          \right] \delta V_M.
 \end{eqnarray}
 %
-This quantity is what we refer to as ``variational entropy'',
+This quantity is what we will refer to as ``variational entropy'',
 and this name reflects the fact that it was obtained \textit{via}
-the variational method. {\color{blue} We will use it at the end of this article to analyze relaxation processes.}
+the variational method.
 
 %=============================================
 \subsubsection{Proof of the quantum $H$-theorem for non-homogeneous systems}
 %=============================================
 
 For quantum systems, we also accept the validity of the local equilibrium hypothesis
-for every cell in the system. This allows us to define non-homogeneous systems,
+for every cell in the system. This allows to define non-homogeneous systems,
 wherein thermodynamic quantities are well-defined on a cell-per-cell basis,
 and in terms of the equilibrium properties, we have
 
@@ -283,7 +283,7 @@ and $\delta_M(t) \ll \bar{\mathcal{E}}$.
 
 
 In the present context, $|\Delta_M|$ and $|\delta_M|$ are sufficiently large so they are not
-fluctuations of the system, but enough small so that the local equilibrium hypothesis is
+fluctuations of the system, and sufficiently small so that the local equilibrium hypothesis is
 valid for $t>0$ (we set $t_0=0$, and $t_0$ is the initial time at which the system is prepared).
 Therefore, it is reasonable to re-write the distribution functions as:
 %
@@ -345,7 +345,7 @@ Subsequently, substitute Eq.~(\ref{eq:qFirstOrd}) in the above equation to obtai
 \end{eqnarray}
 %
 Approximate the logarithmic terms, corresponding to
-Fermi and Bose gases, through a Taylor series around $\bar f_n g_{nM}=0$:
+Fermi and Bose gases, through a Taylor series around $\bar f_n g_{nM}=0$ as:
 %
 \begin{subequations}\label{eq:qlnApprox}
 \begin{equation}\label{eq:qlnApproxFermions}
