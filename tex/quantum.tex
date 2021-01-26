@@ -9,7 +9,7 @@ We start by briefly outlining a typical textbook demonstration of the quantum $H
 
 \subsection{$H$-theorem and the Fermi-Dirac and Bose-Einstein distribution functions}
 
-Consider a diluted gas of $N$ non-interacting quantum particles (either bosons or fermions),
+Consider a dilute gas of $N$ non-interacting quantum particles (either bosons or fermions),
 contained by a vessel of volume
 $V$, at some temperature $T$, and total energy E. Starting from the Boltzmann definition
 of entropy, the quantum $H$ functional is
@@ -108,7 +108,7 @@ This expression also can be obtained also from the Boltzmann $H$-functional thro
 
 \subsection{Out of equilibrium, non-homogeneous quantum systems}
 
-Consider a diluted gas enclosed by a perfectly isolated vessel of volume $V$, with
+Consider a dilute gas enclosed by a perfectly isolated vessel of volume $V$, with
 total energy $E$, and total number of quantum particles $N$, which can be free fermions or
 bosons. For our purposes, the volume $V$ is divided into $K$ small cells, each of which
 has a constant volume $\delta V_M=V/K$ ($M=1,\,\dots\,,K$), a temperature $T_M$, an energy $\epsilon_M$,
@@ -127,7 +127,7 @@ depend on the cell properties, \textit{i.e.} the energy spectrum, $\{\epsilon_n\
 cells; thus there is no need to label $\epsilon_n$ with an index $M$.
 
 We propose the following functional as an alternative $H$-functional
-for quantum non-homogeneous diluted gases:
+for quantum non-homogeneous dilute gases:
 %
 \begin{eqnarray}\label{eq:qHdef}
     \mathcal{H} (t)&=&\sum_{M=1}^{K} \sum_{n} \bigg[ f_{Mn}(t) \ln f_{Mn}(t)\bigg.\nonumber \\
@@ -194,7 +194,7 @@ Thus, in this zero-order approximation, the form of equilibrium distribution fun
 %============================================================
 \subsubsection{Properties of $\mathcal{H}$ for systems in equilibrium}
 %============================================================
-If the system is in equilibrium (we will show that it will also be valid at $t\to\infty$), the temperature becomes homogeneous throughout
+If the system is in equilibrium, the temperature becomes homogeneous throughout
 the complete system. Also, the local number of particles, the local
 energy, and the Lagrange multipliers do not depend on the cell number and they should be homogeneous,
 this is 
@@ -229,7 +229,7 @@ function of each cell in equilibrium to be
     \bar f_{Mn}=\bar f_n =\frac{1}{\exp\big(-\bar\alpha-\bar\beta \epsilon_n\big)\pm 1},\quad\forall M.
 \end{equation}
 %
-By means of the above equation, we can recover the distribution function and the entropy of a diluted quantum gas in equilibrium as follows. Setting $\bar\alpha=\mu/kT$ and $\bar\beta=-1/kT$,
+By means of the above equation, we can recover the distribution function and the entropy of a dilute quantum gas in equilibrium as follows. Setting $\bar\alpha=\mu/kT$ and $\bar\beta=-1/kT$,
 and substituting them in Eq.~(\ref{eq:qfneq}), it renders the Fermi-Dirac and Bose-Einstein
 distribution functions:
 %
@@ -308,20 +308,18 @@ and
 \end{subequations}
 %
 
-\commr{
-An additional consideration is necessary for treating gases composed of fermions,
-which must obey the relation $f_{Mn}(t)\leq1$, hence
+An additional consideration is necessary for treating Fermi gases.
+Since, for these systems, $f_{Mn}(t)\leq1$, we have
 %
 \begin{eqnarray}\label{eq:fermionrestriction}
    1-\bar f_n -\bar f_n g_{nM}\geq0 \ \ \Rightarrow \ \ \frac{1}{\bar f_n}\geq1+g_{nM}.
 \end{eqnarray}
 %
 $\bar f_{n}=1$ is certainly satisfied if the system is at zero temperature. In this state,
-all energy levels below and including the Fermi energy are occupied because of
-the exclusion principle, therefore the system will
+all energy levels below and including the Fermi energy are occupied, thus the system will
 necessarily be homogeneous , and consequently $g_{nM}=0$. In this article, we will
 omit this scenario and will only discuss Fermi gases whose temperature is non zero.
-}
+
 
 
 %\begin{proof}
@@ -421,7 +419,7 @@ is a monotonic function and $g_{nM}\to0$ as $t\to\infty$ as the system aproaches
 Another approach to prove Eq.~(\ref{eq:cambioH4}) consists of splitting the cells into two subsets,
 just as we did in the classical scenario.
 
-Succinctly, considering a diluted quantum gas contained in a vessel of volume $V$ (divided into
+Succinctly, considering a dilute quantum gas contained in a vessel of volume $V$ (divided into
 $K$ small cells), with total energy $E$ and $N$ quantum free particles, which initially
 is out of equilibrium ---but in such a manner that the local equilibrium hypothesis is valid---,
 the functional
