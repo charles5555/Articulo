@@ -27,7 +27,7 @@ such as they are presented in classical textbooks \cite{bib:huang}.
 In Boltzmann kinetic theory of gases, one starts by defining the distribution function, 
 $f(\vec{r},\vec{v},t)$, as the average number of molecules that, at time $t$, have 
 position $\vec r$ and velocity $\vec v$, and are contained in a $\mu$-space volume element $d^3rd^3v$.
-Assuming a deterministic Newtonian description of the molecules motion, 
+Assuming a deterministic Newtonian description of the molecules' motion, 
 as well as the invariance of the $\mu$-space volume measure, one arrives to the Boltzmann rate equation:
 %
 \begin{equation}
@@ -72,12 +72,12 @@ addressed by first defining the $H$-functional \cite{bib:tolman,bib:huang}:
 Notice that $f_B(\vec{v},t)$ is a spatially homogeneous distribution function.
 The functional $H_B$,
 originally introduced by Boltzmann in 1872,
-describes a diluted gas occupying a volume $V$, at temperature $T$, with total energy $E$, and total
+describes a dilute gas occupying a volume $V$, at temperature $T$, with total energy $E$, and total
 number of free classical particles $N$.
 In order to clearly distinguish the Boltzmann functional $H_B$, we denote hereafter
 the Maxwell-Boltzmann distribution function as $f_B$.
 
-The physically correct espontaneous time-evolution of an out of equilibrium diluted gas 
+The physically correct espontaneous time-evolution of an out of equilibrium dilute gas 
 is corroborated by the $H$-theorem.
 This theorem establishes that if the two conditions, a) the homogeneous
 function $f(\vec{v},t)$ satisfies the Boltzmann
@@ -90,9 +90,9 @@ time-evolution and the phenomenological observations
 established by the $2^{\textrm{nd}}$ law of classical thermodynamics; in fact,
 $H_B$ can be associated with an entropy density.
 
-On the other hand, considering a diluted gas in equilibrium
+On the other hand, considering a dilute gas in equilibrium
 with no applied external forces, \textit{i.e.}
-$(\partial f/\partial t)=0$ and $f$ is independent of $\vec r$), 
+$(\partial f/\partial t)=0$ and $f$ is independent of $\vec r$, 
 it can be directly proven that the equilibrium distribution function obtained from
 Eq.~(\ref{eq:transport}) is precisely the Maxwell-Boltzmann
 distribution function. The proof of the above commences by finding the sufficient
@@ -113,7 +113,7 @@ $f$ is spatially homogeneous. This assumption simplifies the demostration
 of the $H$ theorem, however, it introduces as well a limited conception
 of the out-of-equilibrium condition of the gas. Given the relatively simple nature of a dilute 
 gas, one of the salient features of an out-of-equilibrium condition is the existence of
-inhomogeneities in the system.
+inhomogeneities in the system, which is not considered in the above.
 
 %---------------------------
 \subsection{Non-homogeneous classical $H$-functional}
@@ -121,10 +121,10 @@ inhomogeneities in the system.
 As we saw in the previous section,
 the validity of the $H$-theorem relies significantly on assuming
 that the distribution function is homogeneous and that the hypothesis of
-molecular chaos is fullfiled. In order to extend the previous procedure to systems whose
+molecular chaos is fulfilled. In order to extend the previous procedure to systems whose
 distribution functions are non-homogeneous, which might allow for studying systems
 being in a more general out-of-equilibrium condition, we introduce a modified $H$-functional 
-in the following. For the sake of clearity and simplicity, we will use primed functions
+in the following. For the sake of clarity and simplicity, we will use primed functions
 and quantities to denote the classical case, so as to differentiate them from the quantum
 analogues.
 
@@ -219,7 +219,7 @@ Solving the last line for $f'_J(\vec{v}')$ renders
 	f'_J(\vec{v}') = C\exp\left({\alpha_J+\beta_J \epsilon(\vec{v}') }\right),
 \end{equation}
 %
-where $C$ is a constant. We notice that the use of the variational procedure on
+where $C$ is a constant. We notice that applying the variational procedure on
 $\mathcal{H}'$ predicts that when the equilibrium is reached, the
 distribution function of each cell has the form of the Maxwell-Boltzmann
 distribution function, which is consistent with the local equilibrium assumption.
@@ -291,9 +291,9 @@ reduces to
 The constant $C$ can be omitted, which is shown by defining the following $\mathcal{H}''$
 functional:
 %
-\begin{equation}
+\begin{equation}\label{CH3}
    \mathcal{H}''(t)=\sum_{M=1}^{K}\int \left[f'_M(\vec{v},t)
-    \ln f'_M(\vec{v},t)-f'_M(\vec{v},t)\right]\mathrm{d}^3v  \label{CH3},
+    \ln f'_M(\vec{v},t)-f'_M(\vec{v},t)\right]\mathrm{d}^3v.
 \end{equation}
 %
 Since $\sum_{M=1}^{K} \int f'_M(\vec{v},t)\mathrm{d}^3v =N$ (a constant)

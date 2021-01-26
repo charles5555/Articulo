@@ -4,28 +4,27 @@ The theoretical basis and the procedures that allow to describe equilibrium syst
 are well-stablished. These procedures can be applied to treat a wide range of the systems
 present in nature, and include both the macroscopic phenomenological methods (thermodynamics)
 as well as the microscopic description (statistical mechanics).
-(Of course, regarding out-of equilibrium systems, the present situation is still a challenge.) 
+(Of course, regarding out-of equilibrium systems, the present situation is still a challenge.)
 For instance,
 in the Kinetic Theory of gases, the behavior of a dilute classical gas
 is described through the Boltzmann transport equation \cite{bib:huang},
-and the time-evolution of a system towards the equilibrium is proved by
-means of the Boltzmann $H$-theorem, wherein the
-spatial-homogeneous distribution function hypothesis plays a crucial role.
+and the time-evolution of a system towards the equilibrium is finely accounted for
+through the Boltzmann $H$-theorem.
 
-On the other hand, for quantum equilibrium systems, the construction of a framework,
-with the same level of
-success and universality as the classical version, is still an open problem. For instance,
+On the other hand, for quantum out-of-equilibrium systems, the construction of a
+kinetic framework, with the same level of
+success and universality as the classical version, still presents some fundamental challenges. For instance,
 in order to obtain a complete correspondence principle, between classical mechanics
 and quantum mechanics, the quantum analogous of both the Boltzmann $H$-theorem
 and the Boltzmann transport equation have not attained a fully accepted form.
 In this context, Tolman was one of the earliest physicists to propose a quantum
 $H$-theorem \cite{bib:tolman}, using probability transition relations, the random
-phases hypothesis, and a spatially homogeneous distribution function.
+phases hypothesis, and an $H$-functional defined in terms of a spatially homogeneous distribution function.
 Also, Tolman proposed a potential quantum analogous of the transport equation,
-in terms of the occupation number,
+in terms of the occupation numbers,
 by applying time perturbation theory. Further attempts, under the quantum operator
 formalism, have addressed the description of quantum transport phenomena by means of the Hamiltonian
-of the system and the master equation (which here is the analogous
+of the system and the master equation (which is, in these works, the analogous
 of the Boltzmann transport equation)
 \cite{bib:grabert1974,%
 bib:angel2017,
@@ -36,10 +35,11 @@ and attempted to proof a
 quantum $H$-theorem \cite{bib:gorban2014,bib:bennaim2017,bib:silva2010,%
 bib:deroeck2006,bib:acharya2019,bib:kastner2017,bib:han2015,bib:das2018,bib:vonneumann2010}.
 However, whether or not the homogeneous distribution function hypothesis is assumed, or
-if their framework obeys the correspondence principle is unclear or not discussed whatsoever.
-Furthermore, the general validity
-of the quantum $H$-theorem, the second law of thermodynamics, and the
-interpretation of the quantum entropy is still in discussion %[19-26].
+if their framework fulfills the correspondence principle is unclear or not discussed whatsoever.
+After the pioneering work of Tolman, at several stages, there has been some discussion regarding
+the general validity of the quantum $H$-theorem,
+some possible violations of the second law of thermodynamics, and the
+interpretation of the quantum entropy  %[19-26].
 \cite{bib:silva2010,bib:acharya2019,bib:kastner2017,bib:han2015,bib:brown2008,%
 bib:dragoljub2009,bib:vonneumann2010,%
 bib:syros1999,bib:lesovik2016,
@@ -47,11 +47,11 @@ bib:lesovik2019}.
 
 On the other hand, the framework to describe spatially non-homogeneous systems is still
 under construction, although several approaches have been developed. For instance,
-the celebrated Onsager formulation (\textit{aka} linear thermodynamics)
+the celebrated Onsager formulation (linear thermodynamics)
 \cite{bib:keizer1987,bib:onsager1931} have been successful in describing irreversible chemical 
-and physical phenomena. Nonetheless, some aspects such as describing the internal behavior of glasses
+and physical phenomena. Nonetheless, some topics, such as describing the internal behavior of glasses
 \cite{bib:zanotto2018} and the entropy measurement
-\cite{bib:schmelzer2018,bib:nemilov2018} cannot be completely addressed with linear thermodynamics.
+\cite{bib:schmelzer2018,bib:nemilov2018}, cannot be completely addressed with linear thermodynamics.
 
 In addition, some aspects regarding the classical $H$-theorem and the
 Boltzmann $H$-functional require to be revised, for the purpose of improving their mutual consistency.
@@ -66,7 +66,7 @@ quantum $H$-theorem, within a formalism that describes out-of-equilibrium
 non-homogeneous systems, in this article we propose a new theoretical framework.
 Specifically, for both classical and quantum systems, we include non-homogeneous distribution functions in
 the $H$-functionals, and consider non-homogeneous systems in the proofs of the resulting
-$H$-theorems. Our proposed $H$-functionals obey
+$H$-theorems. Our proposed $H$-functionals satisfy
 the correspondence principle, but more importantly, these functionals describe
 the time-evolution of spatially non-homogeneous
 systems towards equilibrium.
@@ -81,14 +81,14 @@ the respective $H$-theorem . In Section~\ref{sec:quantum}
 we review the Tolman proposal for the quantum
 version of the $H$-theorem (quantum $H$-theorem)
 and how the Bose-Einstein and Fermi-Dirac distributions are treated within
-this framework, subsequently we present our proposal for a quantum $H$-functional
+this framework, subsequently we present our proposal for a quantum $H$-functional,
 and the proof of the corresponding quantum $H$-theorem. In 
 Section~\ref{sec:qccorrespondence}
 the classical-quantum correspondence between the
 quantum and classical $H$-functionals is analyzed.
 In Section~\ref{sec:relaxproc} we explore how relaxation processes occur
-in a quantum ideal gas; \commb{here we provide a time-evolution equation that could be
-considered the analogous of the classical Boltzmann transport equation.} Finally,
+in a quantum ideal gas and, on the basis of what we call variational entropy,
+we propose a time-evolution equation for the distribution function. Finally,
 we discuss some key ideas derived from our approach and close with a brief summary
 in Section~\ref{sec:disscussion}.
 

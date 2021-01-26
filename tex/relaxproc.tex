@@ -1,35 +1,48 @@
 
-  \section{Relaxation processes in degenerated quantum gases}\label{sec:relaxproc}
-In order to obtain an equation of motion for the quantum gas, we evaluate 
-$\Delta H=H(t_2)-H(t_1)$ where the $H$ functional is evaluated in diferent times such that $t_2 > t_1$.
-We begin using the following notation $f_{nM}(t_2)\equiv f'_{nM}$ and 
-$f_{nM}(t_1) \equiv f''_{nM}$. 
-Now, using (\ref{eq:qHdef}) to calculate $\Delta H$ with the previous notation, we obtain
-\begin{eqnarray} \label{eq:deltaHdef}
-	\Delta H &=& \sum_{M}^{K}\sum_n [f'_{nM} \ln f'_{nM} - f''_{nM}	\ln f''_{nM}\nonumber \\ 
-			&&\pm (1\mp f'_{nM}) \ln(1\mp f'_{nM}) \mp (1\mp f''_{nM}) \ln (1\mp f''_{nM})]\delta V.  
+\section{Relaxation processes in degenerated quantum gases}\label{sec:relaxproc}
+
+In order to obtain a time-evolution equation for an out-of-equilibrium quantum gas,
+we propose the following approach. We start by evaluating $\Delta\mathcal{H}=
+\mathcal{H}(t_2)-\mathcal{H}(t_1)$,
+where our quantum $H$-functional ---Eq.~(\ref{eq:qHdef})--- is evaluated at diferent times $t_1$ and $t_2$, with
+$t_2 > t_1$. This yields:
+%
+\begin{eqnarray}\label{eq:deltaHdef}
+	\Delta\mathcal H &=& \sum_{M=1}^{K}\sum_n [f''_{nM} \ln f''_{nM} - f'_{nM}	\ln f'_{nM}\nonumber \\ 
+			&&\pm (1\mp f''_{nM}) \ln(1\mp f''_{nM}) \mp (1\mp f'_{nM}) \ln (1\mp f'_{nM})]\delta V_M. 
 \end{eqnarray}
-In order to obtain a general equation of motion for the distribution function 
-$f_{nM}$, we only take the limit when $(t_2-t_1) \rightarrow 0 $. 
-However, our current work is focused on the deviation $g_{nM}$. So, keeping the same workline
-we apply the first order approximation (\ref{eq:qFirstOrd}) to (\ref{eq:deltaHdef}) to obtain the following expression
+%
+In the above equation, and for the rest of this section, we use the short-hand notation
+$f_{nM}(t_2)\equiv f''_{nM}$ and 
+$f_{nM}(t_1) \equiv f'_{nM}$.
+Subsequently, in Eq.~(\ref{eq:deltaHdef}), we replace the distribution functions by their expresions in terms
+of deviations from equilibrium ---Eq.~(\ref{eq:qFirstOrd})---, which renders:
 \begin{eqnarray}\label{eq:deltaH1}
-	\Delta H &=& \sum_{M}^{K} \sum_n [\bar{f}_n(1+g'_{nM}) \ln \bar{f}_{n}(1+g'_{nM})  -  
-			\bar{f}_n(1+g''_{nM}) \ln \bar{f}_n(1+g''_{nM}) \nonumber \\
-		    &&  \pm (1 \mp \bar{f}_n \{1+g'_{nM}\}) \ln (1\mp \bar{f}_n\{1+g'_{nM} \})\nonumber \\
-		    &&  \mp (1\mp \bar{f}_n \{ 1+g''_{nM} \}) \ln (1\mp \bar{f}_n \{1+g''_{nM} \})]\delta V.\nonumber \\
-\end{eqnarray} 
-The equation (\ref{eq:deltaH1}) can be rewritten, after some approximations on the logarithm functions, as
+	\Delta\mathcal H &=& \sum_{M=1}^{K} \sum_n\Big[\bar{f}_n(1+g''_{nM}) \ln \bar{f}_{n}(1+g''_{nM})  -  
+			\bar{f}_n(1+g'_{nM}) \ln \bar{f}_n(1+g'_{nM})\Big. \nonumber \\
+		    &&  \pm \big(1 \mp \bar{f}_n \{1+g''_{nM}\}\big) \ln \big(1\mp \bar{f}_n\{1+g''_{nM} \}\big)\nonumber \\
+		    &&  \mp \big(1\mp \bar{f}_n \{ 1+g'_{nM} \}\big) \ln\big(1\mp \bar{f}_n \{1+g'_{nM} \}\big)\Big.\Big]
+		    \delta V_M.
+\end{eqnarray}
+Afterwards, we expand the logarithmic terms up to the first-order in $g'_{nM}$ and $g''_{nM}$
+and rearrange the result, which gives:
+%
 \begin{equation}\label{eq:deltaH2}
-\Delta H = \sum_{M}^{K}\sum_n [\bar{f}_n(1+\ln \bar{f}_n)-\bar{f}_n \{\ln(1\mp \bar{f}_n)\mp 1 \}](g'_{nM}-g''_{nM})\delta V.
+\Delta\mathcal H = \sum_{M}^{K}\sum_n [\bar{f}_n(1
+	+\ln \bar{f}_n)-\bar{f}_n \{\ln(1\mp \bar{f}_n)\mp 1 \}](g''_{nM}-g'_{nM})\delta V_M.
 \end{equation}
-The equation (\ref{eq:deltaH2}) must be analyzed taking the limit $(t_2-t_1) \rightarrow 0$ 
-to obtain the equation of motion for the deviation $g_{nM}$.
-This analysis will not be treated in this article.
+%
+Finally we divide Eq.~(\ref{eq:deltaH2}) by $\Delta t\equiv t_2-t_1$, and take the limit
+$\Delta t\to0$ to obtain:
+%
+\begin{equation}\label{eq:deltaH3}
+\frac{d\mathcal H}{dt} = \sum_{M}^{K}\sum_n [\bar{f}_n(1
+	+\ln \bar{f}_n)-\bar{f}_n \{\ln(1\mp \bar{f}_n)\mp 1 \}]\left(\frac{g_{nM}}{dt}\right)\delta V_M.
+\end{equation}
+%
 
-Eq. 68 can be seen as a time-evolution equation for  g. The specific form of g'-g''
-must be made in order to have a \dots
-
+Eq.~(\ref{eq:deltaH3}) is, within our framework, the time-evolution equation for $g_{nM}$.
+Clearly, for describing a concrete situation, it is required to provide a specific approximation for the deviation function $g_{nM}$, however this will be the subject of future work.
 
   
   %----------------------------------------
