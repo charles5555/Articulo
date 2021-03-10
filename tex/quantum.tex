@@ -1,17 +1,17 @@
 \section{Quantum scheme}\label{sec:quantum}
 
-The classical $H$-theorem is even to these days one of the pillars on which the classical statistical
-physics is founded. Unfortunately, regardless of several attempts that have been made \cite{bib:silva2010,bib:deroeck2006,bib:grabert1974,bib:han2015,bib:das2018,bib:vonneumann2010}, 
+The classical $H$-theorem is still considered one pillar on which classical statistical
+physics is founded. Unfortunately, despite multiple attempts \cite{bib:silva2010,bib:deroeck2006,bib:grabert1974,bib:han2015,bib:das2018,bib:vonneumann2010}, 
 the generality of the classical $H$-theorem has no equally robust quantum match. In this section, we shall
-propose and analize an alternative quantum $H$-functional using the variational method.
+propose and analyze an alternative quantum $H$-functional using the variational method.
 We start by briefly outlining a typical textbook demonstration of the quantum $H$-theorem
-\cite{bib:tolman}, and subsequently we present the analysis of our proposed $H$-functional.
+\cite{bib:tolman}, and subsequently present the analysis of our proposed $H$-functional.
 
 \subsection{$H$-theorem and the Fermi-Dirac and Bose-Einstein distribution functions}
 
 Consider a dilute gas of $N$ non-interacting quantum particles (either bosons or fermions),
 contained by a vessel of volume
-$V$, at some temperature $T$, and total energy E. Starting from the Boltzmann definition
+$V$, temperature $T$, and total energy E. Starting from the Boltzmann definition
 of entropy, the quantum $H$ functional is
 %
 \begin{equation}
@@ -20,9 +20,9 @@ of entropy, the quantum $H$ functional is
 %
 where $G$ describes the total number of accessible quantum states of the gas that satisfy the
 above conditions \cite{bib:tolman}.
-The quantum $H$-theorem can be demostrated as follows.  $G$ can be divided into groups of neighboring states,
+The quantum $H$-theorem can be demonstrated as follows.  $G$ can be divided into groups of neighboring states,
 $g_k$, and certain occupation numbers, $n_k$, can be associated with each of these
-groups. Thus, the above functional takes the form:
+groups. Thus, the above functional takes the form
 %
 \begin{equation}\label{eq:quantumh}
     H_T=\sum_i n_i \ln n_i -(n_i\pm g_i)\ln (g_i \pm n_i)\pm g_i\ln g_i, 
@@ -37,7 +37,7 @@ Thus the time derivative of Eq.~(\ref{eq:quantumh}) is
 \end{equation}
 %
 
-Assuming that the energy exchange between particles is produced by collisions between particles,
+Assuming that the energy exchange between particles is produced by interparticle collisions,
 and using perturbation theory, the rate of change in the number of particles in a group $\kappa$ is
 %
 \begin{eqnarray}\label{eq:changen}
@@ -53,12 +53,12 @@ expected number of collisions per unit time, in which two particles will be move
   A_{\kappa\lambda,\mu\nu}=\frac{4\pi^{2}}{h}\frac{|I_1\pm I_2|^2}{\Delta \epsilon}.
 \end{equation}
 %
-In Eq.~(\ref{eq:amnkldef}), $\Delta\epsilon$ is the net energy change occuring during the
+In Eq.~(\ref{eq:amnkldef}), $\Delta\epsilon$ is the net energy change occurring during the
 collision and $|I_1-I_2|^2=|V_{mn,kl}|^2$, where
 $V_{mn,kl}$ is the element of the transition matrix of a binary collision.
 It is important to remark that in deriving Eq.~(\ref{eq:changen}), the equal a priori
-probabilities and the random a priori phases hypotheses were taken as valid. The 
-random a priori phases hypothesis can be
+probabilities and the random a priori phase hypotheses were assumed valid. The 
+random a priori phase hypothesis can be
 considered an analogue of the molecular chaos hypothesis
 \cite{bib:das2018}, as it is the mechanism by which stochasticity is introduced into the system.
 
@@ -69,13 +69,13 @@ Substituting Eq.~(\ref{eq:changen}) into Eq.~(\ref{eq:quantumdHdt}), it is strai
 \end{equation}
 %
 
-In equilibrium (at $t\to\infty$), $dn_{\kappa}/dt=0$, hence from Eq.~(\ref{eq:changen})
+At equilibrium (at $t\to\infty$), $dn_{\kappa}/dt=0$, hence from Eq.~(\ref{eq:changen})
 %
 \begin{equation}\label{eq:boseiferdirdistfnctsrc}
     \ln \frac{n_{\kappa}}{g_{\kappa}\pm n_{\kappa}}+\ln \frac{n_{\lambda}}{g_{\lambda}\pm n_{\lambda}}=\ln \frac{n_{\mu}}{g_{\mu}\pm n_{\nu}}+\ln \frac{n_{\nu}}{g_{\nu}\pm n_{\nu}}.
 \end{equation}
 %
-Considering that the energy is conserved during the collsion, the Bose-Einstein or Fermi-Dirac distribution
+Considering that energy is conserved during the collision, the Bose-Einstein or Fermi-Dirac distribution
 functions can be recovered from Eq.~(\ref{eq:boseiferdirdistfnctsrc}):
 %
 \begin{equation}
@@ -83,29 +83,29 @@ functions can be recovered from Eq.~(\ref{eq:boseiferdirdistfnctsrc}):
 \end{equation}
 %
 
-\textit{I.e.}, in equilibrium $dH_T/dt=0$ and the distribution function obtained from
+\textit In other words, at equilibrium $dH_T/dt=0$, the distribution function obtained from
 Eq.~(\ref{eq:quantumh}) is the expected distribution function.
 
 
-\subsection{Out of equilibrium, non-homogeneous quantum systems}
+\subsection{Out-of-equilibrium, non-homogeneous quantum systems}
 
 Consider a dilute gas enclosed by a perfectly isolated vessel of volume $V$, with
 total energy $E$, and total number of quantum particles $N$, which can be free fermions or
 bosons. For our purposes, the volume $V$ is divided into $K$ small cells, each of which
-has a constant volume $\delta V_M=V/K$ ($M=1,\,\dots\,,K$), a temperature $T_M$, an energy $\epsilon_M$,
-a number of particles $\mathcal{N}_M$, and a distribution function,
-$\{f_{Mn}(t)\}$. Hereafter we will use a short-hand notation:
+has constant volume $\delta V_M=V/K$ ($M=1,\,\dots\,,K$), temperature $T_M$, energy $\epsilon_M$,
+number of particles $\mathcal{N}_M$, and distribution function,
+$\{f_{Mn}(t)\}$. Hereafter we will use the following short-hand notation:
 %
 \begin{equation}
    f_{Mn}(t)\equiv f(\vec r_M,\epsilon_{n},t),
 \end{equation}
 %
 where $\vec r_M$ is the radius vector pointing at the center of the $M$-th cell.
-$f_{Mn}(t)$ represent the number
-of particles contained in the $M$-th cell that occupy the energy level $\epsilon_n$ at
+$f_{Mn}(t)$ represents the number
+of particles contained in the $M$-th cell that occupies the energy level $\epsilon_n$ at
 time $t$. Since the particles are considered to be free, the energy levels should not
 depend on the cell properties, \textit{i.e.} the energy spectrum, $\{\epsilon_n\}$, is the same for all
-cells; thus there is no need to label $\epsilon_n$ with an index $M$.
+cells; thus, there is no need to label $\epsilon_n$ with an index $M$.
 
 We propose the following functional as an alternative $H$-functional
 for quantum non-homogeneous dilute gases:
@@ -115,16 +115,16 @@ for quantum non-homogeneous dilute gases:
     &&\qquad\qquad\bigg.\pm \Big(1 \mp f_{Mn}(t)) \ln (1 \mp f_{Mn}(t)\Big) \Big]   \delta V_M.
 \end{eqnarray}
 %
-Here, the upper and lower sign refer to fermions and bosons respectively.
-In addition, when needed, each cell will have an associated local chemical potential,
-$\alpha_M$, and a local $H$-functional, which is defined by:
+Here, the upper and lower signs refer to fermions and bosons, respectively.
+In addition, when needed, each cell has an associated local chemical potential,
+$\alpha_M$, and a local $H$-functional, which is defined by
 %
 \begin{equation}\label{eq:qHMdef}
    \mathcal{H}_M(t)=\sum_{n} \bigg[ f_{Mn}(t) \ln f_{Mn}(t)
    \pm \Big(1 \mp f_{Mn}(t)\Big) \ln \Big(1 \mp f_{Mn}(t)\Big) \bigg] \de V_M.
 \end{equation}
 %
-Therefore, $\mathcal{N}_M$ and $\mathcal{E}_M$ as functions of time are given by:
+Therefore, $\mathcal{N}_M$ and $\mathcal{E}_M$ as functions of time are given by
 %
 \begin{subequations}
 \begin{equation}
@@ -157,7 +157,7 @@ and
 
 Applying the variational method to $\mathcal{H}$, and using the
 Lagrange multipliers
-$\{\alpha_M\}$ and $\{\beta_M\}$, it is straightforward to obtain
+$\{\alpha_M\}$ and $\{\beta_M\}$, we readily obtain
 (see also the discussion related to Eq.~(\ref{eq:deltaHpdeltafpj})):
 %
 \begin{equation}\label{eq:relation}
@@ -170,15 +170,15 @@ and solving for $f_{Mn}(t)$ yields
 f_{Mn}(t)=\frac{1}{\exp\big(-\alpha_M(t)-\beta_M(t) \epsilon_{n}\big)\pm 1}.
 \end{equation}
 %
-Thus, in this zero-order approximation, the form of equilibrium distribution functions are conserved.
+Thus, in this zero-order approximation, the form of equilibrium distribution functions is conserved.
 
 %============================================================
 \subsubsection{Properties of $\mathcal{H}$ for systems in equilibrium}
 %============================================================
 If the system is in equilibrium, the temperature becomes homogeneous throughout
 the complete system. Also, the local number of particles, the local
-energy, and the Lagrange multipliers do not depend on the cell number and they should be homogeneous,
-this is 
+energy, and the Lagrange multipliers do not depend on the cell number, and they should be homogeneous.
+This is represented by
 %
 \begin{subequations}\label{eq:qEqRestrictions}
 \begin{equation}
@@ -204,14 +204,14 @@ and
 \end{subequations}
 %
 Substituting Eqs.~(\ref{eq:qEqAlphaBeta}) into Eq.~(\ref{eq:qfMn}) yields the distribution
-function of each cell in equilibrium to be
+function of each cell in equilibrium:
 %
 \begin{equation}\label{eq:qfneq}
     \bar f_{Mn}=\bar f_n =\frac{1}{\exp\big(-\bar\alpha-\bar\beta \epsilon_n\big)\pm 1},\quad\forall M.
 \end{equation}
 %
-By means of the above equation, we can recover the distribution function and the entropy of a dilute quantum gas in equilibrium as follows. Setting $\bar\alpha=\mu/kT$ and $\bar\beta=-1/kT$,
-and substituting them in Eq.~(\ref{eq:qfneq}), it renders the Fermi-Dirac and Bose-Einstein
+Using the above equation, we can recover the distribution function and the entropy of a dilute quantum gas in equilibrium as follows. Setting $\bar\alpha=\mu/kT$ and $\bar\beta=-1/kT$,
+and substituting them into Eq.~(\ref{eq:qfneq}), it renders the Fermi-Dirac and Bose-Einstein
 distribution functions:
 %
 \begin{equation}\label{eq:qfneqtwo}
@@ -219,7 +219,7 @@ distribution functions:
 \end{equation}
 %
 and substituting Eq.~(\ref{eq:qfneq}) into the negative of Eq.(\ref{eq:qHdef}), 
-the entropy of a quantum ideal gas is obtained
+the entropy of a quantum ideal gas is 
 %
 \begin{eqnarray}\label{eq:varEntropyDef}
       S&=&\sum_{M=1}^{K}
@@ -232,8 +232,8 @@ the entropy of a quantum ideal gas is obtained
          \right] \delta V_M.
 \end{eqnarray}
 %
-This quantity is what we will refer to as ``variational entropy'',
-and this name reflects the fact that it was obtained \textit{via}
+This quantity is what we will refer to as ``variational entropy,''
+and this name reflects the fact that it was obtained via
 the variational method.
 
 %=============================================
@@ -241,9 +241,9 @@ the variational method.
 %=============================================
 
 For quantum systems, we also accept the validity of the local equilibrium hypothesis
-for every cell in the system. This allows to define non-homogeneous systems,
-wherein thermodynamic quantities are well-defined on a cell-per-cell basis,
-and in terms of the equilibrium properties, we have
+for every cell in the system. This allows us to define non-homogeneous systems,
+wherein thermodynamic quantities are well-defined on a per-cell basis.
+In terms of the equilibrium properties, we have
 
 %
 \begin{subequations}\label{eq:restrictionoutside}
@@ -263,10 +263,10 @@ and $\bar{\mathcal{E}}$, respectively, with $\Delta_M(t)\ll \bar{\mathcal{N}}$
 and $\delta_M(t) \ll \bar{\mathcal{E}}$. 
 
 
-In the present context, $|\Delta_M|$ and $|\delta_M|$ are sufficiently large so they are not
+In the present context, $|\Delta_M|$ and $|\delta_M|$ are sufficiently large to not be
 fluctuations of the system, and sufficiently small so that the local equilibrium hypothesis is
 valid for $t>0$ (we set $t_0=0$, and $t_0$ is the initial time at which the system is prepared).
-Therefore, it is reasonable to re-write the distribution functions as:
+Therefore, the distribution functions can be rewritten as
 %
 \begin{equation}\label{eq:qFirstOrd}
    f_{Mn}(t)=\bar{f}_n(1+g_{Mn}(t)),\quad
@@ -274,7 +274,7 @@ Therefore, it is reasonable to re-write the distribution functions as:
 \end{equation}
 %
 from which it follows, by substituting Eq.~(\ref{eq:qFirstOrd}) into
-Eq.~(\ref{eq:restrictionoutside}), that $\Delta_M$ and $\delta_M$ satisfy:
+Eq.~(\ref{eq:restrictionoutside}), that $\Delta_M$ and $\delta_M$ satisfy
 %
 \begin{subequations}
 \begin{equation}
@@ -296,21 +296,21 @@ Since, for these systems, $f_{Mn}(t)\leq1$, we have
    1-\bar f_n -\bar f_n g_{nM}\geq0 \ \ \Rightarrow \ \ \frac{1}{\bar f_n}\geq1+g_{nM}.
 \end{eqnarray}
 %
-$\bar f_{n}=1$ is certainly satisfied if the system is at zero temperature. In this state,
+$\bar f_{n}=1$ is certainly satisfied if the system temperature is zero. In this state,
 all energy levels below and including the Fermi energy are occupied, thus the system will
-necessarily be homogeneous , and consequently $g_{nM}=0$. In this article, we will
-omit this scenario and will only discuss Fermi gases whose temperature is non zero.
+necessarily be homogeneous, and consequently, $g_{nM}=0$. In this article, we will
+omit this scenario and will only discuss Fermi gases with non-zero temperatures.
 
 
 
 %\begin{proof}
-To proof the quantum $H$-theorem, start by taking the time-derivative of Eq. (\ref{eq:qHdef}):
+To proof the quantum $H$-theorem, we start by taking the time-derivative of Eq. (\ref{eq:qHdef}):
 %
 \begin{equation}\label{eq:deltaH}
    \frac{d \mathcal{H} (t)}{dt}= \sum_n \sum_{M=1}^{K} \dot{f}_{nM}(t)\ln \left[ \frac{f_{nM}(t)}{1\mp f_{nM}(t)} \right] \de V_M.
 \end{equation}
 %
-Subsequently, substitute Eq.~(\ref{eq:qFirstOrd}) in the above equation to obtain:
+Subsequently, we substitute Eq.~(\ref{eq:qFirstOrd}) into the above equation to obtain
 %
 \begin{eqnarray}\label{eq:cambioH1}
     \frac{d\mathcal{H} (t)}{dt}&=&
@@ -323,8 +323,8 @@ Subsequently, substitute Eq.~(\ref{eq:qFirstOrd}) in the above equation to obtai
     \right \}\delta V_M.
 \end{eqnarray}
 %
-Approximate the logarithmic terms, corresponding to
-Fermi and Bose gases, through a Taylor series around $\bar f_n g_{nM}=0$ as:
+The logarithmic terms, corresponding to
+Fermi and Bose gases, are approximated through a Taylor series around $\bar f_n g_{nM}=0$ as
 %
 \begin{subequations}\label{eq:qlnApprox}
 \begin{equation}\label{eq:qlnApproxFermions}
@@ -340,18 +340,18 @@ and
 \end{subequations}
 %
 respectively. Eq.~(\ref{eq:qlnApproxFermions}) is valid because, for non-extremely degenerated Fermi gases, 
-$1-\bar{f}_n \gg \bar{f}_n|g_{nM}|$, and Eq.~(\ref{eq:qlnApproxBosons}) is fulfilled because,
+$1-\bar{f}_n \gg \bar{f}_n|g_{nM}|$ and Eq.~(\ref{eq:qlnApproxBosons}) is fulfilled because,
 for Boson gases,
 $1+\bar{f}_n \gg \bar{f}_n |g_{nM}|$ when $\bar{f}_n \gg \bar{f}_n |g_{nM}|$.
 
-Combine Eqs. (\ref{eq:cambioH1}) and (\ref{eq:qlnApprox}):
+Combining Eqs. (\ref{eq:cambioH1}) and (\ref{eq:qlnApprox}),
 %
 \begin{eqnarray}\label{eq:cambioH2}
     \frac{d\mathcal{H}}{dt}&=&\sum_n \sum_{M=1}^{K} \bar{f}_n\left \{ (\ln \bar{f}_n+ g_{nM})\dot{g}_{nM}\right\} \de V_M \delta \epsilon_n \nonumber \\
-    &&-\sum_{n}\sum_{M=1}^{K}\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\de V_M,
+    &&-\sum_{n}\sum_{M=1}^{K}\bar f_n\left\{ \left( \ln[1\mp\bar{f}_n]\mp \left[\frac{\bar{f}_n}{1\mp\bar{f}_n} \right] g_{nM}\right)\dot{g}_{nM} \right \}\de V_M
 \end{eqnarray}
 %
-and substitute Eq.~(\ref{eq:qfneq}) into Eq.~(\ref{eq:cambioH2}):
+and substituting Eq.~(\ref{eq:qfneq}) into Eq.~(\ref{eq:cambioH2}):
 %
 \begin{equation}\label{eq:cambioH3}
     \frac{d\mathcal{H}}{dt}=
@@ -363,8 +363,8 @@ and substitute Eq.~(\ref{eq:qfneq}) into Eq.~(\ref{eq:cambioH2}):
 %
 
 Since both the total number of particles and the total energy 
-of the system are constant, it follows,
-from Eqs.~(\ref{eq:qGlobRest}) and (\ref{eq:restrictionoutside}) that:
+of the system are constant, it follows
+from Eqs.~(\ref{eq:qGlobRest}) and (\ref{eq:restrictionoutside}) that
 %
 \begin{subequations}
 \begin{equation}
@@ -381,7 +381,7 @@ and
 \end{subequations}
 %
 
-Substitute the previous expression in Eq.~(\ref{eq:cambioH3}) to obtain:
+Substitute the previous expression in Eq.~(\ref{eq:cambioH3}) to obtain
 %
 \begin{equation}\label{eq:cambioH4}
    \frac{d\mathcal{H}}{dt}=\sum_n e^{\bar{\alpha}+\bar{\beta}\epsilon_n}
@@ -390,19 +390,19 @@ Substitute the previous expression in Eq.~(\ref{eq:cambioH3}) to obtain:
 %\end{proof}
 %
 
-For obtaining the right-most hand side of Eq.~(\ref{eq:cambioH4}), 
-we have used the relation $g_{nM}\dot{g}_{nM}\leq0$ for $t>0$. This can be proven 
+To obtain the far right side of Eq.~(\ref{eq:cambioH4}), 
+we have used the relationship $g_{nM}\dot{g}_{nM}\leq0$ for $t>0$. This can be proven 
 by simply arguing that, in the initial
 state, if a cell is described by $g_{nM}(t_0)>0$ then $g_{nM}(t)\geq0$ and $\dot g_{nM}(t)\leq0$, and if
-$g_{nM}(t_0)<0$ then $g_{nM}(t)\leq0$ and $\dot g_{nM}(t)\geq0$. Here we have used the facts that
+$g_{nM}(t_0)<0$ then $g_{nM}(t)\leq0$ and $\dot g_{nM}(t)\geq0$. Here we have exploited the fact that
 the system in equilibrium is homogeneous, and that, by accepting the local equilibrium hypothesis, $g_{Mn}(t)$
-is a monotonic function and $g_{nM}\to0$ as $t\to\infty$ as the system aproaches to the equilibrium state.
+is a monotonic function and $g_{nM}\to0$ as $t\to\infty$ as the system approaches the equilibrium state.
 Another approach to prove Eq.~(\ref{eq:cambioH4}) consists of splitting the cells into two subsets,
 just as we did in the classical scenario.
 
-Succinctly, considering a dilute quantum gas contained in a vessel of volume $V$ (divided into
+Briefly, considering a dilute quantum gas contained in a vessel of volume $V$ (divided into
 $K$ small cells), with total energy $E$ and $N$ quantum free particles, which initially
-is out of equilibrium ---but in such a manner that the local equilibrium hypothesis is valid---,
+is out of equilibrium---but in such a manner that the local equilibrium hypothesis is valid---
 the functional
 %
 \begin{eqnarray}\label{eq:qHfunctTheo}
@@ -413,9 +413,8 @@ where $f_{Mn}$ is the $M$-th cell distribution function,
 evolves in time such that $d\mathcal{H}/dt\leq0$, and the equality 
 condition is attained when the system reaches
 the equilibrium state. In Eq.~(\ref{eq:qHfunctTheo}), and for a Fermi (Bose)
-gas, $f_{Mn}$ corresponds to the Fermi-Dirac (Bose-Einstein) distrubution function for each cell.
+gas, $f_{Mn}$ corresponds to the Fermi-Dirac (Bose-Einstein) distribution function for each cell.
 Locally, each cell is in equilibrium, although the complete system may be non-homogeneous,
-and is caracterized by the respective $f_{Mn}$, number of particles $\mathcal{N}_M$, energy $\mathcal{E}_M$,
-temperature $T_M$, and Legendre Multipliers $\alpha_M$ and $\beta_M$.
-
+and is characterized by the respective $f_{Mn}$, number of particles $\mathcal{N}_M$, energy $\mathcal{E}_M$,
+temperature $T_M$, and Legendre multipliers $\alpha_M$ and $\beta_M$.
 

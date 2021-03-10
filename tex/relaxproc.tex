@@ -1,11 +1,10 @@
-
 \section{Relaxation processes in degenerated quantum gases}\label{sec:relaxproc}
 
-In order to obtain a time-evolution equation for an out-of-equilibrium quantum gas,
+To obtain a time-evolution equation for an out-of-equilibrium quantum gas,
 we propose the following approach. We start by evaluating $\Delta\mathcal{H}=
 \mathcal{H}(t_2)-\mathcal{H}(t_1)$,
-where our quantum $H$-functional ---Eq.~(\ref{eq:qHdef})--- is evaluated at diferent times $t_1$ and $t_2$, with
-$t_2 > t_1$. This yields:
+where our quantum $H$-functional---Eq.~(\ref{eq:qHdef})---is evaluated at different times $t_1$ and $t_2$, with
+$t_2 > t_1$. This yields
 %
 \begin{eqnarray}\label{eq:deltaHdef}
 	\Delta\mathcal H &=& \sum_{M=1}^{K}\sum_n [f''_{nM} \ln f''_{nM} - f'_{nM}	\ln f'_{nM}\nonumber \\ 
@@ -15,8 +14,8 @@ $t_2 > t_1$. This yields:
 In the above equation, and for the rest of this section, we use the short-hand notation
 $f_{nM}(t_2)\equiv f''_{nM}$ and 
 $f_{nM}(t_1) \equiv f'_{nM}$.
-Subsequently, in Eq.~(\ref{eq:deltaHdef}), we replace the distribution functions by their expresions in terms
-of deviations from equilibrium ---Eq.~(\ref{eq:qFirstOrd})---, which renders:
+Subsequently, in Eq.~(\ref{eq:deltaHdef}), we replace the distribution functions with their expressions in terms
+of deviations from equilibrium---Eq.~(\ref{eq:qFirstOrd})---which renders:
 \begin{eqnarray}\label{eq:deltaH1}
 	\Delta\mathcal H &=& \sum_{M=1}^{K} \sum_n\Big[\bar{f}_n(1+g''_{nM}) \ln \bar{f}_{n}(1+g''_{nM})  -  
 			\bar{f}_n(1+g'_{nM}) \ln \bar{f}_n(1+g'_{nM})\Big. \nonumber \\
@@ -24,8 +23,8 @@ of deviations from equilibrium ---Eq.~(\ref{eq:qFirstOrd})---, which renders:
 		    &&  \mp \big(1\mp \bar{f}_n \{ 1+g'_{nM} \}\big) \ln\big(1\mp \bar{f}_n \{1+g'_{nM} \}\big)\Big.\Big]
 		    \delta V_M.
 \end{eqnarray}
-Afterwards, we expand the logarithmic terms up to the first-order in $g'_{nM}$ and $g''_{nM}$
-and rearrange the result, which gives:
+Subsequently, we expand the logarithmic terms up to the first-order in $g'_{nM}$ and $g''_{nM}$
+and rearrange the result, which gives
 %
 \begin{equation}\label{eq:deltaH2}
 \Delta\mathcal H = \sum_{M}^{K}\sum_n [\bar{f}_n(1
@@ -33,7 +32,7 @@ and rearrange the result, which gives:
 \end{equation}
 %
 Finally we divide Eq.~(\ref{eq:deltaH2}) by $\Delta t\equiv t_2-t_1$, and take the limit
-$\Delta t\to0$ to obtain:
+$\Delta t\to0$ to obtain
 %
 \begin{equation}\label{eq:deltaH3}
 \frac{d\mathcal H}{dt} = \sum_{M}^{K}\sum_n [\bar{f}_n(1
@@ -42,11 +41,5 @@ $\Delta t\to0$ to obtain:
 %
 
 Eq.~(\ref{eq:deltaH3}) is, within our framework, the time-evolution equation for $g_{nM}$.
-Clearly, for describing a concrete situation, it is required to provide a specific approximation for the deviation function $g_{nM}$, however this will be the subject of future work.
-
-  
-  %----------------------------------------
-
-
-%-------------------------------------------------
+Clearly, to describe a realistic situation, providing a specific approximation for the deviation function $g_{nM}$ is required. This subject will be explored in future work.
 
