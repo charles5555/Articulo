@@ -1,15 +1,3 @@
-%\section{Classical}
-%\subsection{Boltzmann transport equation}
-%\subsection{H theorem and the Maxwell-Boltzmann distribution}
-%Todo esto de arriba en la forma tradicional y muy resumido. Solo remarcando lo fundamental.
-%\subsection{Out of equilibrium, non-homogeneous distributions}.
-%Entrar a la generalizacion, ahi si de manera muy detallada y con amplitud discutida
-%fisicamente, del tratamiento con las celdas. Es decir, la demostracion del teorema H
-%clasico pero con el enfoque de funciones de distribucion no homogeneas y por tanto
-%con el tratamiento de celdas.
-
-%----------------------------------
-
 \section{Classical scheme}\label{sec:classical}
 
 Boltzmann Kinetic theory of gases represents a fundamental connection
@@ -207,14 +195,6 @@ multipliers $\{\alpha_M\}$ and $\{\beta_M\}$. This yields:
 %
 Solving the last line for $f'_J(\vec{v}')$ renders
 %
-\begin{comment}
-\begin{eqnarray}
-    \ln f'_J(\vec{v}') & = & \alpha_J+\beta_J \epsilon(\vec{v}')
-       -1\quad\Rightarrow\quad f_J(\vec{v}')\\
-    & = & e^{\alpha_J +\beta_J \epsilon(\vec{v}')-1}\nonumber\\
-    & = & Ce^{\alpha_J+\beta_J \epsilon(\vec{v}') } \label{eq:relacion1},
-\end{eqnarray}
-\end{comment}
 \begin{equation}\label{eq:relacion1}
 	f'_J(\vec{v}') = C\exp\left({\alpha_J+\beta_J \epsilon(\vec{v}') }\right),
 \end{equation}
@@ -441,48 +421,6 @@ or a $g'_J(\vec{v},t_0)<0$,
 which we denote as ${{\dot{g}}'}_I\phantom{.}\!^{+}(\vec{v},t)$
 or ${{\dot{g}}'}_J\phantom{.}\!^{-}(\vec{v},t)$, respectively.
 %
-%---------------------------------------
-%The text below is not needed, also it may be wrong. $g(t_0)>0$ indicates $f(t_0)>\bar f$, but this does
-%not necessarily imply excess of particles and/or energy. E.g., a particular combination of a
-%few missing particles and a considerable energy excess might render the corresponding
-% $g(t_0)$ to be greater than zero.
-\begin{comment}
-Cells with ${{\dot{g}}'}_I\phantom{.}\!^{+}(\vec{v},t)$, $I=1,\,\dots\,,L$, 
-have an excess of particles and/or energy (relative to the mean value in equilibrium).
-In contrast, cells with ${{\dot{g}}'}_J\phantom{.}\!^{-}(\vec{v},t)$, $J=1,\,\dots\,,P$,
-have a scarcity of particles and/or energy
-(relative to the mean value in equilibrium).
-In addition, $\dot{g}^{+}_{J}$ represents the
-change on the deviation on cells that have an excess of particles or energy
-while $\dot{g}^{-}_{J}$  represents the change on the deviations on cells that
-have missing particles or energy.
-On the other hand, $g^{+}_{J}$  represents the value of the deviation on cells
-that have an excess of particles or energy. In contrast, $g^{-}_{J}$ represents
-the value of the deviation on cells that have missing particles or energy.
-Also, on the one hand, $\dot{g}^{+}_{J}<0$ describes the loss of particles
-and/or energy and so, $g^{+}_{J}>0$. On the other hand, $\dot{g}^{-}_{J}>0$
-describes the gain of particles and/or energy and therefore $g^{-}_{J}<0$.
-
-We sort the previous ideas in the following form
-%
-\begin{equation}\label{separacionclassical}
-\begin{array}{rl}
-  g^{+}_{J}=+|g^{+}_{J}|; & \dot{g}^{+}_{J}=-|\dot{g}^{+}_{J}|,\\
-  g^{-}_{J}=-|g^{-}_{J}|; & \dot{g}^{-}_{J}=+|\dot{g}^{-}_{J}|,
- \end{array}
-\end{equation}
-%
-and consequently, (\ref{classicalH3}) obtains the following form
-
-
-We can observe that $\bar{f}(\vec{v})$ in (\ref{eq:classicalH4}) is always
-positive. Also the deviation and its derivative are positive, then all the
-expression is positive. However, the global sign makes the derivative of the
-$\mathcal{H}'$ with respect to time is always less to zero. With this we proved that
-$\frac{d\mathcal{H}'}{dt}<0$. If the system is in equilibrium,
-$g_{J}(\vec{v},t)=\dot g_J(\vec{v},t)=0$, therefore $\frac{d\mathcal{H}'}{dt}=0$.
-\end{comment}
-%-----------------------------
 %
 If the system's initial state is sufficiently close to equilibrium, it is
 physically suitable
@@ -524,31 +462,5 @@ function, which in general is different for different cells ---\textit{i.e.} the
 can be non-homogeneous---, and each $f'_M(\vec v,t)$ is compatible
 with the cell properties, such as number of particles, $\mathcal{N}'_M$, energy, $\mathcal{E}'_M$, temperature,
 $T_M$, and Legendre multipliers $\alpha_M$ and $\beta_M$. 
-
-
-\begin{comment}
-Joining both results, we can say the following statement:
-Consider a classical gas in a total volume $V$ (divided in $K$ cells of equal
-volume elements), total energy $E$ and total number of free particles $N$.
-Consider also the system has inhomogeneities and suffers a relaxation process.
-If we define the following functional
-%
-\begin{equation}\label{CH3}
-   \mathcal{H}'(t)=\sum_{M=1}^{K}\int f_M(\vec{v},t) \ln f_M(\vec{v},t)\mathrm{d}^3v,
-\end{equation}
-%
-where $f_M(\vec{v},t)$ is the local distribution function of each cell in the
-system, then in the first-order approximation
-%
-\begin{equation}
-    \frac{d\mathcal{H}'}{dt} \leq 0.
-\end{equation}
-%
-This statement will be the classical $H$-theorem with inhomogeneities.
-
-In the next section, we present a proposal quantum version of the
-$H$-theorem defined by Tolman and our proposal quantum version of the $H$
-theorem applying the method of the volume divided into cells.
-\end{comment}
 
 
